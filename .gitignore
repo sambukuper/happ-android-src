@@ -1,0 +1,11 @@
+# Ghidra project database files (local binary caches)
+/ghidra/proj/
+
+# Local logs and temporary files at repo root
+/logs/
+/ghidra/*.log
+/ghidra/*.err
+/.system_generated/
+
+# Apktool temporary build cache
+/apktool/build/

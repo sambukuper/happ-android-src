@@ -1,0 +1,22 @@
+package defpackage;
+
+/* JADX INFO: compiled from: r8-map-id-44e235b9ef01a485f680d0275e0bd7ddccd9597cc07e9835722c2ab00d70acf5 */
+/* JADX INFO: loaded from: C:\Users\nzboost\Documents\workspace\happ-src\raw\classes2.dex */
+public final class oq6 implements qq6 {
+    public static final oq6 a = new oq6();
+
+    /* JADX DEBUG: Don't trust debug lines info. Lines numbers was adjusted: min line is 1 */
+    public final boolean equals(Object obj) {
+        return this == obj || (obj instanceof oq6);
+    }
+
+    /* JADX DEBUG: Don't trust debug lines info. Lines numbers was adjusted: min line is 1 */
+    public final int hashCode() {
+        return 268446545;
+    }
+
+    /* JADX DEBUG: Don't trust debug lines info. Lines numbers was adjusted: min line is 1 */
+    public final String toString() {
+        return "Load";
+    }
+}

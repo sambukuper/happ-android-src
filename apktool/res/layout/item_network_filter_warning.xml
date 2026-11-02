@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tistory.zladnrms.roundablelayout.RoundableLayout android:id="@id/warning_card" android:tag="layout/item_network_filter_warning_0" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="0.0dip" app:backgroundColor="@android:color/transparent" app:strokeLineColor="@android:color/transparent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:background="@drawable/bg_server_config" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_warning" android:background="?android:selectableItemBackground" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <View android:id="@id/config_activated" android:background="@drawable/bg_selected_server" android:layout_width="4.0dip" android:layout_height="fill_parent" />
+            <androidx.appcompat.widget.AppCompatImageView android:id="@id/iv_warning_triangle" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_warning" android:layout_marginStart="@dimen/layout_margin_spacing" />
+            <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="@dimen/layout_margin_spacing_quaternary">
+                <su.happ.proxyutility.ui.foundation.component.HappTextView android:textSize="@dimen/cardview_text_size_secondary" android:textStyle="bold" android:textColor="?colorText" android:ellipsize="end" android:id="@id/tv_warning_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/layout_margin_spacing" android:singleLine="true" android:textAlignment="viewStart" />
+                <su.happ.proxyutility.ui.foundation.component.HappTextView android:textSize="@dimen/cardview_text_size_tertiary" android:textColor="?colorTextTertiary" android:ellipsize="end" android:id="@id/tv_warning_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/layout_margin_spacing" android:text="@string/network_filter_description" android:singleLine="true" android:textAlignment="viewStart" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</com.tistory.zladnrms.roundablelayout.RoundableLayout>

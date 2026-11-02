@@ -1,0 +1,42 @@
+package defpackage;
+
+/* JADX INFO: compiled from: r8-map-id-44e235b9ef01a485f680d0275e0bd7ddccd9597cc07e9835722c2ab00d70acf5 */
+/* JADX INFO: loaded from: classes.dex */
+public final class ej5 extends jj5 {
+    public final float c;
+    public final float d;
+    public final float e;
+    public final float f;
+
+    public ej5(float f, float f2, float f3, float f4) {
+        super(1);
+        this.c = f;
+        this.d = f2;
+        this.e = f3;
+        this.f = f4;
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof ej5)) {
+            return false;
+        }
+        ej5 ej5Var = (ej5) obj;
+        return Float.compare(this.c, ej5Var.c) == 0 && Float.compare(this.d, ej5Var.d) == 0 && Float.compare(this.e, ej5Var.e) == 0 && Float.compare(this.f, ej5Var.f) == 0;
+    }
+
+    public final int hashCode() {
+        return Float.hashCode(this.f) + pc6.d(pc6.d(Float.hashCode(this.c) * 31, this.d, 31), this.e, 31);
+    }
+
+    public final String toString() {
+        StringBuilder sbK = ie2.k("RelativeQuadTo(dx1=", this.c, ", dy1=", this.d, ", dx2=");
+        sbK.append(this.e);
+        sbK.append(", dy2=");
+        sbK.append(this.f);
+        sbK.append(")");
+        return sbK.toString();
+    }
+}

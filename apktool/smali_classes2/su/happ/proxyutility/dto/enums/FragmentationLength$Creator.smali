@@ -1,0 +1,78 @@
+.class public final Lsu/happ/proxyutility/dto/enums/FragmentationLength$Creator;
+.super Ljava/lang/Object;
+.source "r8-map-id-44e235b9ef01a485f680d0275e0bd7ddccd9597cc07e9835722c2ab00d70acf5"
+
+# interfaces
+.implements Landroid/os/Parcelable$Creator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lsu/happ/proxyutility/dto/enums/FragmentationLength;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "Creator"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Landroid/os/Parcelable$Creator<",
+        "Lsu/happ/proxyutility/dto/enums/FragmentationLength;",
+        ">;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    k = 0x3
+    mv = {
+        0x2,
+        0x4,
+        0x0
+    }
+    xi = 0x530
+.end annotation
+
+
+# virtual methods
+.method public final createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 2
+    .line 3
+    .line 4
+    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+
+    .line 5
+    .line 6
+    .line 7
+    move-result-object p0
+
+    .line 8
+    new-instance p1, Lsu/happ/proxyutility/dto/enums/FragmentationLength;
+
+    .line 9
+    .line 10
+    invoke-direct {p1, p0}, Lsu/happ/proxyutility/dto/enums/FragmentationLength;-><init>(Ljava/lang/String;)V
+
+    .line 11
+    .line 12
+    .line 13
+    return-object p1
+.end method
+
+.method public final newArray(I)[Ljava/lang/Object;
+    .locals 0
+
+    .line 1
+    new-array p0, p1, [Lsu/happ/proxyutility/dto/enums/FragmentationLength;
+
+    .line 2
+    .line 3
+    return-object p0
+.end method

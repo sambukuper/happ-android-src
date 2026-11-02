@@ -1,0 +1,16 @@
+package defpackage;
+
+import android.view.View;
+import android.widget.TextView;
+import androidx.recyclerview.widget.l;
+
+/* JADX INFO: compiled from: r8-map-id-44e235b9ef01a485f680d0275e0bd7ddccd9597cc07e9835722c2ab00d70acf5 */
+/* JADX INFO: loaded from: classes.dex */
+public final class bn5 extends l {
+    public final TextView u;
+
+    public bn5(View view, TextView textView) {
+        super(view);
+        this.u = textView;
+    }
+}

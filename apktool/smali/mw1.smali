@@ -1,0 +1,202 @@
+.class public abstract Lmw1;
+.super Ljava/lang/Object;
+.source "r8-map-id-44e235b9ef01a485f680d0275e0bd7ddccd9597cc07e9835722c2ab00d70acf5"
+
+
+# instance fields
+.field public final a:Lj20;
+
+.field public final b:Landroid/graphics/Path;
+
+.field public final c:Landroid/graphics/Path;
+
+.field public final d:Landroid/graphics/PathMeasure;
+
+.field public final e:Landroid/graphics/Matrix;
+
+
+# direct methods
+.method public constructor <init>(Lj20;)V
+    .locals 3
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    new-instance v0, Landroid/graphics/Path;
+
+    .line 5
+    .line 6
+    invoke-direct {v0}, Landroid/graphics/Path;-><init>()V
+
+    .line 7
+    .line 8
+    .line 9
+    iput-object v0, p0, Lmw1;->b:Landroid/graphics/Path;
+
+    .line 10
+    .line 11
+    new-instance v1, Landroid/graphics/Path;
+
+    .line 12
+    .line 13
+    invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
+
+    .line 14
+    .line 15
+    .line 16
+    iput-object v1, p0, Lmw1;->c:Landroid/graphics/Path;
+
+    .line 17
+    .line 18
+    new-instance v1, Landroid/graphics/PathMeasure;
+
+    .line 19
+    .line 20
+    const/4 v2, 0x0
+
+    .line 21
+    invoke-direct {v1, v0, v2}, Landroid/graphics/PathMeasure;-><init>(Landroid/graphics/Path;Z)V
+
+    .line 22
+    .line 23
+    .line 24
+    iput-object v1, p0, Lmw1;->d:Landroid/graphics/PathMeasure;
+
+    .line 25
+    .line 26
+    iput-object p1, p0, Lmw1;->a:Lj20;
+
+    .line 27
+    .line 28
+    new-instance p1, Landroid/graphics/Matrix;
+
+    .line 29
+    .line 30
+    invoke-direct {p1}, Landroid/graphics/Matrix;-><init>()V
+
+    .line 31
+    .line 32
+    .line 33
+    iput-object p1, p0, Lmw1;->e:Landroid/graphics/Matrix;
+
+    .line 34
+    .line 35
+    return-void
+.end method
+
+.method public static h([F)F
+    .locals 4
+
+    .line 1
+    const/4 v0, 0x1
+
+    .line 2
+    aget v0, p0, v0
+
+    .line 3
+    .line 4
+    float-to-double v0, v0
+
+    .line 5
+    const/4 v2, 0x0
+
+    .line 6
+    aget p0, p0, v2
+
+    .line 7
+    .line 8
+    float-to-double v2, p0
+
+    .line 9
+    invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->atan2(DD)D
+
+    .line 10
+    .line 11
+    .line 12
+    move-result-wide v0
+
+    .line 13
+    invoke-static {v0, v1}, Ljava/lang/Math;->toDegrees(D)D
+
+    .line 14
+    .line 15
+    .line 16
+    move-result-wide v0
+
+    .line 17
+    double-to-float p0, v0
+
+    .line 18
+    return p0
+.end method
+
+
+# virtual methods
+.method public abstract a(Landroid/graphics/Canvas;Landroid/graphics/Rect;FZZ)V
+.end method
+
+.method public b(IILandroid/graphics/Canvas;Landroid/graphics/Paint;)V
+    .locals 0
+
+    .line 1
+    return-void
+.end method
+
+.method public abstract c(Landroid/graphics/Canvas;Landroid/graphics/Paint;Lkw1;I)V
+.end method
+
+.method public abstract d(Landroid/graphics/Canvas;Landroid/graphics/Paint;FFIII)V
+.end method
+
+.method public e()I
+    .locals 1
+
+    .line 1
+    iget-object p0, p0, Lmw1;->a:Lj20;
+
+    .line 2
+    .line 3
+    move-object v0, p0
+
+    .line 4
+    check-cast v0, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;
+
+    .line 5
+    .line 6
+    iget v0, v0, Lj20;->a:I
+
+    .line 7
+    .line 8
+    check-cast p0, Lcom/google/android/material/progressindicator/LinearProgressIndicatorSpec;
+
+    .line 9
+    .line 10
+    iget p0, p0, Lj20;->l:I
+
+    .line 11
+    .line 12
+    mul-int/lit8 p0, p0, 0x2
+
+    .line 13
+    .line 14
+    add-int/2addr p0, v0
+
+    .line 15
+    return p0
+.end method
+
+.method public f()I
+    .locals 0
+
+    .line 1
+    const/4 p0, -0x1
+
+    .line 2
+    return p0
+.end method
+
+.method public abstract g()V
+.end method

@@ -1,0 +1,37 @@
+package defpackage;
+
+import su.happ.proxyutility.dto.XRayConfig;
+import su.happ.proxyutility.feature.settings.SettingsActivity;
+
+/* JADX INFO: compiled from: r8-map-id-44e235b9ef01a485f680d0275e0bd7ddccd9597cc07e9835722c2ab00d70acf5 */
+/* JADX INFO: loaded from: C:\Users\nzboost\Documents\workspace\happ-src\raw\classes2.dex */
+public final class a67 implements dn2 {
+    public final /* synthetic */ byte X;
+    public final /* synthetic */ SettingsActivity Y;
+
+    /* JADX DEBUG: Don't trust debug lines info. Lines numbers was adjusted: min line is 1 */
+    public /* synthetic */ a67(SettingsActivity settingsActivity, byte b) {
+        this.X = b;
+        this.Y = settingsActivity;
+    }
+
+    /* JADX DEBUG: Don't trust debug lines info. Lines numbers was adjusted: min line is 1 */
+    public final Object invoke() {
+        byte b = this.X;
+        SettingsActivity settingsActivity = this.Y;
+        switch (b) {
+            case 0:
+                return settingsActivity.c();
+            case XRayConfig.OutboundBean.StreamSettingsBean.KcpSettingsBean.cwndMultiplierMin /* 1 */:
+                return settingsActivity.e();
+            case XRayConfig.OutboundBean.StreamSettingsBean.HysteriaSettingsBean.udpIdleTimeoutMin /* 2 */:
+                return settingsActivity.d();
+            case 3:
+                return settingsActivity.c();
+            case 4:
+                return settingsActivity.e();
+            default:
+                return settingsActivity.d();
+        }
+    }
+}

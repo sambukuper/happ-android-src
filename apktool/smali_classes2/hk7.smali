@@ -1,0 +1,266 @@
+.class public final synthetic Lhk7;
+.super Ljava/lang/Object;
+.source "r8-map-id-44e235b9ef01a485f680d0275e0bd7ddccd9597cc07e9835722c2ab00d70acf5"
+
+# interfaces
+.implements Landroid/view/View$OnTouchListener;
+
+
+# instance fields
+.field public final synthetic X:B
+
+.field public final synthetic Y:Lok7;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lok7;B)V
+    .locals 0
+
+    .line 1
+    iput-byte p2, p0, Lhk7;->X:B
+
+    .line 2
+    .line 3
+    iput-object p1, p0, Lhk7;->Y:Lok7;
+
+    .line 4
+    .line 5
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 6
+    .line 7
+    .line 8
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+    .locals 3
+
+    .line 1
+    iget-byte p1, p0, Lhk7;->X:B
+
+    .line 2
+    .line 3
+    const/4 v0, 0x0
+
+    .line 4
+    const/4 v1, 0x1
+
+    .line 5
+    iget-object p0, p0, Lhk7;->Y:Lok7;
+
+    .line 6
+    .line 7
+    packed-switch p1, :pswitch_data_0
+
+    .line 8
+    .line 9
+    .line 10
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+
+    .line 11
+    .line 12
+    .line 13
+    move-result p1
+
+    .line 14
+    const/4 p2, 0x0
+
+    .line 15
+    const-string v2, "binding"
+
+    .line 16
+    .line 17
+    if-eqz p1, :cond_2
+
+    .line 18
+    .line 19
+    if-eq p1, v1, :cond_0
+
+    .line 20
+    .line 21
+    goto :goto_1
+
+    .line 22
+    :cond_0
+    iget-object p0, p0, Lok7;->t1:Lwk2;
+
+    .line 23
+    .line 24
+    if-eqz p0, :cond_1
+
+    .line 25
+    .line 26
+    iget-object p0, p0, Lwk2;->s0:Lsu/happ/proxyutility/feature/stories/StoryProgressView;
+
+    .line 27
+    .line 28
+    invoke-virtual {p0}, Lsu/happ/proxyutility/feature/stories/StoryProgressView;->c()V
+
+    .line 29
+    .line 30
+    .line 31
+    :goto_0
+    move v0, v1
+
+    .line 32
+    goto :goto_1
+
+    .line 33
+    :cond_1
+    invoke-static {v2}, Ldh3;->T(Ljava/lang/String;)V
+
+    .line 34
+    .line 35
+    .line 36
+    throw p2
+
+    .line 37
+    :cond_2
+    iget-object p0, p0, Lok7;->t1:Lwk2;
+
+    .line 38
+    .line 39
+    if-eqz p0, :cond_3
+
+    .line 40
+    .line 41
+    iget-object p0, p0, Lwk2;->s0:Lsu/happ/proxyutility/feature/stories/StoryProgressView;
+
+    .line 42
+    .line 43
+    invoke-virtual {p0}, Lsu/happ/proxyutility/feature/stories/StoryProgressView;->b()V
+
+    .line 44
+    .line 45
+    .line 46
+    goto :goto_0
+
+    .line 47
+    :goto_1
+    return v0
+
+    .line 48
+    :cond_3
+    invoke-static {v2}, Ldh3;->T(Ljava/lang/String;)V
+
+    .line 49
+    .line 50
+    .line 51
+    throw p2
+
+    .line 52
+    :pswitch_0
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+
+    .line 53
+    .line 54
+    .line 55
+    move-result p1
+
+    .line 56
+    if-eqz p1, :cond_6
+
+    .line 57
+    .line 58
+    if-eq p1, v1, :cond_5
+
+    .line 59
+    .line 60
+    const/4 v1, 0x2
+
+    .line 61
+    if-eq p1, v1, :cond_4
+
+    .line 62
+    .line 63
+    goto :goto_2
+
+    .line 64
+    :cond_4
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
+
+    .line 65
+    .line 66
+    .line 67
+    move-result p1
+
+    .line 68
+    iput p1, p0, Lok7;->w1:F
+
+    .line 69
+    .line 70
+    goto :goto_2
+
+    .line 71
+    :cond_5
+    iget p1, p0, Lok7;->w1:F
+
+    .line 72
+    .line 73
+    iget p2, p0, Lok7;->v1:F
+
+    .line 74
+    .line 75
+    sub-float/2addr p1, p2
+
+    .line 76
+    const/4 p2, 0x0
+
+    .line 77
+    iput p2, p0, Lok7;->v1:F
+
+    .line 78
+    .line 79
+    iput p2, p0, Lok7;->w1:F
+
+    .line 80
+    .line 81
+    const/high16 p2, 0x42c80000    # 100.0f
+
+    .line 82
+    .line 83
+    cmpl-float p1, p1, p2
+
+    .line 84
+    .line 85
+    if-lez p1, :cond_7
+
+    .line 86
+    .line 87
+    invoke-virtual {p0, v0, v0}, Lsn1;->R(ZZ)V
+
+    .line 88
+    .line 89
+    .line 90
+    goto :goto_2
+
+    .line 91
+    :cond_6
+    invoke-virtual {p2}, Landroid/view/MotionEvent;->getRawX()F
+
+    .line 92
+    .line 93
+    .line 94
+    move-result p1
+
+    .line 95
+    iput p1, p0, Lok7;->v1:F
+
+    .line 96
+    .line 97
+    :cond_7
+    :goto_2
+    return v0
+
+    .line 98
+    nop
+
+    .line 99
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_0
+    .end packed-switch
+.end method

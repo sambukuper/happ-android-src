@@ -1,0 +1,20 @@
+.class public interface abstract Lt74;
+.super Ljava/lang/Object;
+.source "r8-map-id-44e235b9ef01a485f680d0275e0bd7ddccd9597cc07e9835722c2ab00d70acf5"
+
+# interfaces
+.implements Ljava/util/List;
+
+
+# virtual methods
+.method public abstract C()Lon8;
+.end method
+
+.method public abstract D(Lmc4;)V
+.end method
+
+.method public abstract g()Ljava/util/List;
+.end method
+
+.method public abstract u(I)Ljb0;
+.end method

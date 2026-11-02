@@ -1,0 +1,12 @@
+package io.sentry;
+
+/* JADX INFO: compiled from: r8-map-id-44e235b9ef01a485f680d0275e0bd7ddccd9597cc07e9835722c2ab00d70acf5 */
+/* JADX INFO: loaded from: classes.dex */
+public final class c3 implements c4 {
+    public static final c3 a = new c3();
+
+    @Override // io.sentry.c4
+    public final io.sentry.rrweb.b a(g gVar) {
+        return null;
+    }
+}

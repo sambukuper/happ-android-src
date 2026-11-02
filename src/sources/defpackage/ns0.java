@@ -1,0 +1,25 @@
+package defpackage;
+
+/* JADX INFO: compiled from: r8-map-id-44e235b9ef01a485f680d0275e0bd7ddccd9597cc07e9835722c2ab00d70acf5 */
+/* JADX INFO: loaded from: classes.dex */
+public final class ns0 {
+    public final qs0 a;
+    public final hs0 b;
+
+    public ns0(qs0 qs0Var, hs0 hs0Var) {
+        qs0Var.getClass();
+        this.a = qs0Var;
+        this.b = hs0Var;
+    }
+
+    public final boolean equals(Object obj) {
+        if (obj instanceof ns0) {
+            return dh3.f(this.a, ((ns0) obj).a);
+        }
+        return false;
+    }
+
+    public final int hashCode() {
+        return this.a.hashCode();
+    }
+}

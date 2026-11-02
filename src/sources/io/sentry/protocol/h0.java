@@ -1,0 +1,18 @@
+package io.sentry.protocol;
+
+import java.util.Locale;
+
+/* JADX INFO: compiled from: r8-map-id-44e235b9ef01a485f680d0275e0bd7ddccd9597cc07e9835722c2ab00d70acf5 */
+/* JADX INFO: loaded from: classes.dex */
+public enum h0 {
+    CUSTOM,
+    URL,
+    ROUTE,
+    VIEW,
+    COMPONENT,
+    TASK;
+
+    public String apiName() {
+        return name().toLowerCase(Locale.ROOT);
+    }
+}

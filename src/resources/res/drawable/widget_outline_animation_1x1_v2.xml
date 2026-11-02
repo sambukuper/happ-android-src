@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rotate xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+    android:fromDegrees="0"
+    android:toDegrees="360"
+    android:pivotX="50%"
+    android:pivotY="50%">
+    <vector
+        android:height="128dp"
+        android:width="128dp"
+        android:viewportWidth="128"
+        android:viewportHeight="128">
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M64,64m-63.5,0a63.5,63.5 0,1 1,127 0a63.5,63.5 0,1 1,-127 0"
+            android:strokeColor="@drawable/_widget_outline_animation_1x1_v2__0_res_0x7f0805d9"
+            android:strokeWidth="3"/>
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M64,64m-63.5,0a63.5,63.5 0,1 1,127 0a63.5,63.5 0,1 1,-127 0"
+            android:strokeColor="@drawable/_widget_outline_animation_1x1_v2__1_res_0x7f0805da"
+            android:strokeWidth="2"/>
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M64,64m-63.5,0a63.5,63.5 0,1 1,127 0a63.5,63.5 0,1 1,-127 0"
+            android:strokeColor="@drawable/_widget_outline_animation_1x1_v2__2_res_0x7f0805db"
+            android:strokeWidth="1"/>
+    </vector>
+</rotate>

@@ -1,0 +1,16 @@
+package defpackage;
+
+/* JADX INFO: compiled from: r8-map-id-44e235b9ef01a485f680d0275e0bd7ddccd9597cc07e9835722c2ab00d70acf5 */
+/* JADX INFO: loaded from: classes.dex */
+public final class x07 extends jx4 implements w07 {
+    public final /* synthetic */ gn2 q0;
+
+    public x07(gn2 gn2Var) {
+        this.q0 = gn2Var;
+    }
+
+    @Override // defpackage.w07
+    public final void h(f17 f17Var) {
+        this.q0.B(f17Var);
+    }
+}

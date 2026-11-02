@@ -1,0 +1,28 @@
+package defpackage;
+
+import android.view.View;
+import android.widget.LinearLayout;
+import su.happ.proxyutility.ui.foundation.component.HappForwardField;
+import su.happ.proxyutility.ui.foundation.component.HappSpinnerField;
+
+/* JADX INFO: compiled from: r8-map-id-44e235b9ef01a485f680d0275e0bd7ddccd9597cc07e9835722c2ab00d70acf5 */
+/* JADX INFO: loaded from: C:\Users\nzboost\Documents\workspace\happ-src\raw\classes2.dex */
+public final class em2 implements ov8 {
+    public final LinearLayout X;
+    public final HappForwardField Y;
+    public final HappForwardField Z;
+    public final HappSpinnerField f0;
+
+    /* JADX DEBUG: Don't trust debug lines info. Lines numbers was adjusted: min line is 1 */
+    public em2(LinearLayout linearLayout, HappForwardField happForwardField, HappForwardField happForwardField2, HappSpinnerField happSpinnerField) {
+        this.X = linearLayout;
+        this.Y = happForwardField;
+        this.Z = happForwardField2;
+        this.f0 = happSpinnerField;
+    }
+
+    /* JADX DEBUG: Don't trust debug lines info. Lines numbers was adjusted: min line is 1 */
+    public final View getRoot() {
+        return this.X;
+    }
+}

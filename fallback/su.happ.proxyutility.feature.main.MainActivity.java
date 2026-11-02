@@ -1,0 +1,5689 @@
+package su.happ.proxyutility.feature.main;
+
+import android.R;
+import android.animation.ValueAnimator;
+import android.app.Application;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.TransitionDrawable;
+import android.net.ConnectivityManager;
+import android.net.NetworkCapabilities;
+import android.net.NetworkRequest;
+import android.net.Uri;
+import android.net.VpnService;
+import android.os.Build;
+import android.os.Bundle;
+import android.os.Parcelable;
+import android.text.TextUtils;
+import android.util.TypedValue;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.DecelerateInterpolator;
+import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.AppCompatImageButton;
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.cardview.widget.CardView;
+import androidx.compose.ui.platform.ComposeView;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentContainerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.imageview.ShapeableImageView;
+import com.google.gson.a;
+import com.tencent.mmkv.MMKV;
+import com.tistory.zladnrms.roundablelayout.RoundableLayout;
+import defpackage.a23;
+import defpackage.a45;
+import defpackage.ae1;
+import defpackage.ak4;
+import defpackage.ay2;
+import defpackage.b6;
+import defpackage.b61;
+import defpackage.be;
+import defpackage.bk4;
+import defpackage.bl4;
+import defpackage.bm4;
+import defpackage.bt;
+import defpackage.c71;
+import defpackage.ck4;
+import defpackage.cl4;
+import defpackage.dh3;
+import defpackage.dk4;
+import defpackage.dm4;
+import defpackage.dn8;
+import defpackage.dr2;
+import defpackage.dt7;
+import defpackage.dw7;
+import defpackage.e46;
+import defpackage.eu;
+import defpackage.fk4;
+import defpackage.fm7;
+import defpackage.fs7;
+import defpackage.g33;
+import defpackage.g83;
+import defpackage.g94;
+import defpackage.gk7;
+import defpackage.gv3;
+import defpackage.gv7;
+import defpackage.gw5;
+import defpackage.gx1;
+import defpackage.hk4;
+import defpackage.ho4;
+import defpackage.hu;
+import defpackage.hv2;
+import defpackage.i83;
+import defpackage.ik4;
+import defpackage.iq0;
+import defpackage.j31;
+import defpackage.jm4;
+import defpackage.jo1;
+import defpackage.jy2;
+import defpackage.k32;
+import defpackage.k42;
+import defpackage.k83;
+import defpackage.km4;
+import defpackage.ko1;
+import defpackage.kr7;
+import defpackage.kw2;
+import defpackage.kw4;
+import defpackage.l40;
+import defpackage.l81;
+import defpackage.l90;
+import defpackage.la2;
+import defpackage.ld6;
+import defpackage.ln7;
+import defpackage.lx1;
+import defpackage.m02;
+import defpackage.m51;
+import defpackage.m83;
+import defpackage.mb6;
+import defpackage.mj4;
+import defpackage.ml2;
+import defpackage.mm7;
+import defpackage.my2;
+import defpackage.n6;
+import defpackage.n69;
+import defpackage.n83;
+import defpackage.nf1;
+import defpackage.nj4;
+import defpackage.nk4;
+import defpackage.nv0;
+import defpackage.o;
+import defpackage.o15;
+import defpackage.o61;
+import defpackage.o83;
+import defpackage.oc;
+import defpackage.og7;
+import defpackage.oh7;
+import defpackage.oj4;
+import defpackage.ok7;
+import defpackage.om4;
+import defpackage.oo4;
+import defpackage.oq6;
+import defpackage.ow7;
+import defpackage.p83;
+import defpackage.pi;
+import defpackage.pl4;
+import defpackage.pu;
+import defpackage.pw7;
+import defpackage.pz7;
+import defpackage.q02;
+import defpackage.q15;
+import defpackage.q36;
+import defpackage.q51;
+import defpackage.q83;
+import defpackage.qc4;
+import defpackage.qe4;
+import defpackage.qg5;
+import defpackage.qj4;
+import defpackage.qk4;
+import defpackage.qs7;
+import defpackage.r00;
+import defpackage.r15;
+import defpackage.r6;
+import defpackage.r83;
+import defpackage.rd2;
+import defpackage.rg8;
+import defpackage.rj4;
+import defpackage.rj6;
+import defpackage.rp7;
+import defpackage.s51;
+import defpackage.s83;
+import defpackage.sd2;
+import defpackage.sh4;
+import defpackage.sj4;
+import defpackage.sj6;
+import defpackage.sq6;
+import defpackage.ss8;
+import defpackage.t46;
+import defpackage.t83;
+import defpackage.tp1;
+import defpackage.u70;
+import defpackage.u77;
+import defpackage.u84;
+import defpackage.ue3;
+import defpackage.uh3;
+import defpackage.uj4;
+import defpackage.uq0;
+import defpackage.uu7;
+import defpackage.uy7;
+import defpackage.v26;
+import defpackage.v77;
+import defpackage.v83;
+import defpackage.vh;
+import defpackage.vj4;
+import defpackage.vj8;
+import defpackage.vm4;
+import defpackage.vr1;
+import defpackage.vw1;
+import defpackage.vz7;
+import defpackage.w39;
+import defpackage.w51;
+import defpackage.wj4;
+import defpackage.wk4;
+import defpackage.wl4;
+import defpackage.wu7;
+import defpackage.wv0;
+import defpackage.x83;
+import defpackage.x90;
+import defpackage.xl4;
+import defpackage.xm4;
+import defpackage.xn4;
+import defpackage.y42;
+import defpackage.y45;
+import defpackage.y46;
+import defpackage.y5;
+import defpackage.y65;
+import defpackage.yb6;
+import defpackage.ye1;
+import defpackage.yj4;
+import defpackage.ys0;
+import defpackage.yz4;
+import defpackage.z27;
+import defpackage.z81;
+import defpackage.za3;
+import defpackage.zb6;
+import defpackage.zj4;
+import defpackage.zl4;
+import defpackage.zw8;
+import defpackage.zx2;
+import defpackage.zy0;
+import java.io.BufferedReader;
+import java.io.Closeable;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.CancellationException;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.atomic.AtomicBoolean;
+import kotlin.Metadata;
+import libxray.XRayPoint;
+import okhttp3.internal.url._UrlKt;
+import org.conscrypt.FileClientSessionCache;
+import org.conscrypt.PSKKeyManager;
+import su.happ.proxyutility.HappApplication;
+import su.happ.proxyutility.domain.sub.GuId;
+import su.happ.proxyutility.domain.sub.SubId;
+import su.happ.proxyutility.dto.ConfigGroupCache;
+import su.happ.proxyutility.dto.HWID;
+import su.happ.proxyutility.dto.ImportResult;
+import su.happ.proxyutility.dto.MetaParams;
+import su.happ.proxyutility.dto.ServerCache;
+import su.happ.proxyutility.dto.ServerConfig;
+import su.happ.proxyutility.dto.SubscriptionItem;
+import su.happ.proxyutility.dto.enums.EDeeplinkType;
+import su.happ.proxyutility.dto.enums.SubscriptionAutoConnectType;
+import su.happ.proxyutility.feature.main.MainActivity;
+import su.happ.proxyutility.feature.main.MainViewModel;
+import su.happ.proxyutility.feature.settings.SettingsActivity;
+import su.happ.proxyutility.ui.BaseActivity;
+import su.happ.proxyutility.ui.SnackbarHostActivity;
+import su.happ.proxyutility.ui.foundation.component.HappSnackbarHost;
+import su.happ.proxyutility.ui.foundation.component.HappTextView;
+import su.happ.proxyutility.ui.foundation.component.button.HappDebouncedImageButton;
+import su.happ.proxyutility.ui.foundation.component.button.HappDebouncedTextButton;
+
+/* JADX INFO: compiled from: r8-map-id-44e235b9ef01a485f680d0275e0bd7ddccd9597cc07e9835722c2ab00d70acf5 */
+/* JADX INFO: loaded from: classes2.dex */
+@Metadata(d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0007\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u0004B\u0007¢\u0006\u0004\b\u0005\u0010\u0006¨\u0006\u0007"}, d2 = {"Lsu/happ/proxyutility/feature/main/MainActivity;", "Lsu/happ/proxyutility/ui/SnackbarHostActivity;", "Lgv7;", "Lzl4;", "Luu7;", "<init>", "()V", "app"}, k = 1, mv = {2, 4, 0}, xi = 48)
+public final class MainActivity extends SnackbarHostActivity implements gv7, zl4, uu7 {
+    public static final /* synthetic */ int y1 = 0;
+    public b6 Q0;
+    public final m51 R0;
+    public final vz7 S0;
+    public final vz7 T0;
+    public final vz7 U0;
+    public final vz7 V0;
+    public final vz7 W0;
+    public final vz7 X0;
+    public final r6 Y0;
+    public final x90 Z0;
+    public final r6 a1;
+    public final r6 b1;
+    public og7 c1;
+    public final u77 d1;
+    public final y5 e1;
+    public final y5 f1;
+    public final y5 g1;
+    public final y5 h1;
+    public final y5 i1;
+    public final y5 j1;
+    public final AtomicBoolean k1;
+    public final gk7 l1;
+    public final AtomicBoolean m1;
+    public final ConcurrentHashMap n1;
+    public final q02 o1;
+    public final vz7 p1;
+    public final q15 q1;
+    public final vz7 r1;
+    public final vz7 s1;
+    public final vz7 t1;
+    public final vz7 u1;
+    public boolean v1;
+    public ValueAnimator w1;
+    public final r6 x1;
+
+    public MainActivity() {
+        ow7 ow7VarB = pw7.b();
+        nf1 nf1Var = tp1.a;
+        this.R0 = gv3.c(g33.K(ow7VarB, ye1.Z));
+        byte b = 0;
+        this.S0 = new vz7(new mj4(this, b));
+        byte b2 = 12;
+        this.T0 = new vz7(new mj4(this, b2));
+        byte b3 = 5;
+        this.U0 = new vz7(new sh4(b3));
+        byte b4 = 6;
+        this.V0 = new vz7(new sh4(b4));
+        byte b5 = 13;
+        this.W0 = new vz7(new mj4(this, b5));
+        byte b6 = 3;
+        this.X0 = new vz7(new sh4(b6));
+        byte b7 = 2;
+        this.Y0 = m(new nj4(this, b), new n6(b7));
+        byte b8 = 1;
+        byte b9 = 4;
+        this.Z0 = gv3.b(1, l90.Y, null, 4);
+        this.a1 = m(new nj4(this, b8), new n6(b7));
+        this.b1 = m(new nj4(this, b7), new n6(b7));
+        this.d1 = v77.b(0, 7, null);
+        uj4 uj4Var = new uj4(this, (byte) 10);
+        zb6 zb6Var = yb6.a;
+        this.e1 = new y5(zb6Var.b(MainViewModel.class), new uj4(this, (byte) 11), uj4Var, new uj4(this, b2));
+        this.f1 = new y5(zb6Var.b(sq6.class), new uj4(this, (byte) 14), new uj4(this, b5), new uj4(this, (byte) 15));
+        byte b10 = 18;
+        this.g1 = new y5(zb6Var.b(gw5.class), new uj4(this, (byte) 17), new uj4(this, (byte) 16), new uj4(this, b10));
+        this.h1 = new y5(zb6Var.b(dr2.class), new uj4(this, b7), new uj4(this, b8), new uj4(this, b6));
+        this.i1 = new y5(zb6Var.b(za3.class), new uj4(this, b3), new uj4(this, b9), new uj4(this, b4));
+        byte b11 = 9;
+        this.j1 = new y5(zb6Var.b(kr7.class), new uj4(this, (byte) 8), new uj4(this, (byte) 7), new uj4(this, b11));
+        this.k1 = new AtomicBoolean(false);
+        HappApplication happApplication = HappApplication.M0;
+        this.l1 = k32.i().g();
+        this.m1 = new AtomicBoolean(false);
+        this.n1 = new ConcurrentHashMap();
+        this.o1 = new q02(this, b10);
+        this.p1 = new vz7(new mj4(this, b8));
+        this.q1 = r15.a();
+        this.r1 = new vz7(new mj4(this, b7));
+        this.s1 = new vz7(new sh4(b9));
+        this.t1 = new vz7(new mj4(this, b4));
+        this.u1 = new vz7(new mj4(this, b11));
+        this.w1 = ValueAnimator.ofFloat(0.0f, 360.0f);
+        this.x1 = m(new nj4(this, b6), new n6(b7));
+    }
+
+    public static Object L(MainActivity mainActivity, String str, boolean z, String str2, Boolean bool, Boolean bool2, s51 s51Var, int i) {
+        SubId.Companion.getClass();
+        return mainActivity.K(str, z, SubId.EMPTY, (i & 16) != 0 ? null : str2, (i & 32) != 0 ? null : bool, (i & 64) != 0 ? null : bool2, (i & 128) != 0, s51Var);
+    }
+
+    /* JADX WARN: Code duplicated, block: B:100:0x02b7  */
+    /* JADX WARN: Code duplicated, block: B:101:0x02c2  */
+    /* JADX WARN: Code duplicated, block: B:104:0x02e5  */
+    /* JADX WARN: Code duplicated, block: B:106:0x02ec  */
+    /* JADX WARN: Code duplicated, block: B:109:0x02fd  */
+    /* JADX WARN: Code duplicated, block: B:111:0x031c  */
+    /* JADX WARN: Code duplicated, block: B:120:0x0336  */
+    /* JADX WARN: Code duplicated, block: B:124:0x0340  */
+    /* JADX WARN: Code duplicated, block: B:126:0x034a  */
+    /* JADX WARN: Code duplicated, block: B:130:0x037e A[RETURN] */
+    /* JADX WARN: Code duplicated, block: B:137:? A[RETURN, SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:68:0x0226  */
+    /* JADX WARN: Code duplicated, block: B:71:0x022c  */
+    /* JADX WARN: Code duplicated, block: B:73:0x022f  */
+    /* JADX WARN: Code duplicated, block: B:75:0x0235  */
+    /* JADX WARN: Code duplicated, block: B:77:0x0239  */
+    /* JADX WARN: Code duplicated, block: B:7:0x001d  */
+    /* JADX WARN: Code duplicated, block: B:80:0x0244  */
+    /* JADX WARN: Code duplicated, block: B:82:0x0247  */
+    /* JADX WARN: Code duplicated, block: B:85:0x0273  */
+    /* JADX WARN: Code duplicated, block: B:98:0x02b4  */
+    public static final Object M(String str, MainActivity mainActivity, boolean z, boolean z2, String str2, String str3, Boolean bool, Boolean bool2, s51 s51Var) throws Throwable {
+        ik4 ik4Var;
+        String str4;
+        Boolean bool3;
+        String str5;
+        boolean z3;
+        Boolean bool4;
+        String str6;
+        MainActivity mainActivity2;
+        boolean z4;
+        Object value;
+        xm4 xm4Var;
+        qg5 qg5Var;
+        boolean z5;
+        boolean z6;
+        List list;
+        Boolean bool5;
+        String str7;
+        MainActivity mainActivity3;
+        String str8;
+        String str9;
+        Boolean bool6;
+        boolean z7;
+        boolean z8;
+        boolean z9;
+        Object next;
+        ImportResult importResult;
+        Object obj;
+        c71 c71Var;
+        boolean z10;
+        Object obj2;
+        ImportResult importResult2;
+        boolean z11;
+        String str10;
+        Boolean bool7;
+        String strA;
+        boolean z12;
+        boolean z13;
+        String str11;
+        SubscriptionItem subscriptionItemF;
+        c71 c71Var2;
+        Object objS;
+        ImportResult importResult3;
+        boolean z14;
+        boolean z15;
+        boolean z16;
+        ImportResult importResult4;
+        boolean z17 = z;
+        if (s51Var instanceof ik4) {
+            ik4Var = (ik4) s51Var;
+            int i = ik4Var.t0;
+            if ((i & Integer.MIN_VALUE) != 0) {
+                ik4Var.t0 = i - Integer.MIN_VALUE;
+            } else {
+                ik4Var = new ik4(s51Var);
+            }
+        } else {
+            ik4Var = new ik4(s51Var);
+        }
+        Object objD = ik4Var.s0;
+        int i2 = ik4Var.t0;
+        byte b = 1;
+        c71 c71Var3 = c71.X;
+        if (i2 == 0) {
+            w39.n0(objD);
+            if (str == null || str.length() == 0) {
+                mainActivity.W(new ImportResult(0, m83.a, null, 5), z17, z2);
+                return Boolean.FALSE;
+            }
+            mainActivity.getClass();
+            if (ae1.b(str) == EDeeplinkType.ROUTING) {
+                ((sq6) mainActivity.f1.getValue()).f(oq6.a);
+                oh7 oh7Var = mainActivity.G().w;
+                do {
+                    value = oh7Var.getValue();
+                    xm4Var = (xm4) value;
+                    xm4Var.getClass();
+                } while (!oh7Var.k(value, xm4.a(xm4Var, null, 0L, null, null, false, 0, 0, null, null, false, new vm4(str), false, null, false, false, null, 64511)));
+                return Boolean.TRUE;
+            }
+            boolean zC = mainActivity.H().c("pref_reject_duplicates_subscription", true);
+            nf1 nf1Var = tp1.a;
+            ye1 ye1Var = ye1.Z;
+            vh vhVar = new vh(2, null, b);
+            ik4Var.f0 = str;
+            ik4Var.g0 = mainActivity;
+            str4 = str2;
+            ik4Var.h0 = str4;
+            ik4Var.i0 = str3;
+            ik4Var.j0 = bool;
+            bool3 = bool2;
+            ik4Var.k0 = bool3;
+            ik4Var.n0 = z17;
+            ik4Var.o0 = z2;
+            ik4Var.p0 = zC;
+            ik4Var.t0 = 1;
+            Object objW = w51.W(ye1Var, vhVar, ik4Var);
+            if (objW != c71Var3) {
+                str5 = str;
+                z3 = zC;
+                objD = objW;
+                bool4 = bool;
+                str6 = str3;
+                mainActivity2 = mainActivity;
+                z4 = z2;
+            }
+            return c71Var3;
+        }
+        if (i2 == 1) {
+            z3 = ik4Var.p0;
+            z4 = ik4Var.o0;
+            z17 = ik4Var.n0;
+            Boolean bool8 = ik4Var.k0;
+            bool4 = ik4Var.j0;
+            str6 = ik4Var.i0;
+            str4 = ik4Var.h0;
+            mainActivity2 = ik4Var.g0;
+            str5 = ik4Var.f0;
+            w39.n0(objD);
+            bool3 = bool8;
+        } else {
+            if (i2 == 2) {
+                z9 = ik4Var.r0;
+                z6 = ik4Var.q0;
+                z8 = ik4Var.p0;
+                z5 = ik4Var.o0;
+                z7 = ik4Var.n0;
+                String str12 = ik4Var.m0;
+                List list2 = ik4Var.l0;
+                Boolean bool9 = ik4Var.k0;
+                Boolean bool10 = ik4Var.j0;
+                String str13 = ik4Var.i0;
+                MainActivity mainActivity4 = ik4Var.g0;
+                String str14 = ik4Var.f0;
+                w39.n0(objD);
+                str7 = str14;
+                str9 = str12;
+                str8 = str13;
+                bool6 = bool10;
+                bool5 = bool9;
+                mainActivity3 = mainActivity4;
+                list = list2;
+                importResult = (ImportResult) objD;
+                HappApplication happApplication = HappApplication.M0;
+                obj = objD;
+                c71Var = c71Var3;
+                z10 = z9;
+                k32.i().d().h(new qj4(importResult, (byte) 0));
+                if (!(importResult.getStatus() instanceof r83) || (importResult.getLastParseError() instanceof r83) || (importResult.getLastParseError() instanceof m83) || (importResult.getLastParseError() instanceof p83) || !mainActivity3.W(importResult, z7, z5)) {
+                    obj2 = obj;
+                } else {
+                    obj2 = null;
+                }
+                importResult2 = (ImportResult) obj2;
+                if (importResult2 == null) {
+                    return Boolean.FALSE;
+                }
+                if (importResult2.getCount() <= 0) {
+                    ss8 ss8Var = ss8.a;
+                    if (str7 != null) {
+                        bt.q("Required value was null.");
+                        return null;
+                    }
+                    strA = ss8.a(str7);
+                    if (strA.length() <= 0) {
+                        strA = null;
+                    }
+                    if (strA != null) {
+                        kw2 kw2Var = kw2.a;
+                        ik4Var.f0 = str7;
+                        ik4Var.g0 = mainActivity3;
+                        ik4Var.h0 = null;
+                        ik4Var.i0 = str8;
+                        ik4Var.j0 = bool6;
+                        ik4Var.k0 = bool5;
+                        ik4Var.l0 = list;
+                        ik4Var.m0 = str9;
+                        ik4Var.n0 = z7;
+                        ik4Var.o0 = z5;
+                        ik4Var.p0 = z8;
+                        ik4Var.q0 = z6;
+                        ik4Var.r0 = z10;
+                        ik4Var.t0 = 3;
+                        objD = kw2Var.d(strA, str9, z10, ik4Var);
+                        c71Var3 = c71Var;
+                        if (objD != c71Var3) {
+                            z13 = z10;
+                        }
+                        return c71Var3;
+                    }
+                    c71Var3 = c71Var;
+                    z11 = z10;
+                    z12 = z5;
+                    importResult2 = new ImportResult(0, null, r83.a, 3);
+                    z8 = z8;
+                    z6 = z6;
+                    c71Var = c71Var3;
+                    str10 = str7;
+                    bool7 = bool6;
+                    z5 = z12;
+                } else {
+                    z11 = z10;
+                    str10 = str7;
+                    bool7 = bool6;
+                }
+                boolean z18 = z7;
+                String str15 = str8;
+                MainActivity mainActivity5 = mainActivity3;
+                str11 = str9;
+                if (importResult2.getCount() <= 0) {
+                    kw2 kw2Var2 = kw2.a;
+                    importResult2 = kw2.a(str10, z11, str11);
+                    k32.i().d().h(new qj4(importResult2, (byte) 2));
+                    if (!(importResult2.getStatus() instanceof r83) && !(importResult2.getLastParseError() instanceof r83) && !(importResult2.getLastParseError() instanceof m83) && mainActivity5.W(importResult2, z18, z5)) {
+                        importResult2 = null;
+                    }
+                    if (importResult2 == null) {
+                        return Boolean.FALSE;
+                    }
+                }
+                ImportResult importResult5 = importResult2;
+                if (fm7.o0(str11)) {
+                    subscriptionItemF = null;
+                } else {
+                    kw4 kw4Var = kw4.a;
+                    subscriptionItemF = kw4.f(str11);
+                }
+                ik4Var.f0 = null;
+                ik4Var.g0 = null;
+                ik4Var.h0 = null;
+                ik4Var.i0 = null;
+                ik4Var.j0 = null;
+                ik4Var.k0 = null;
+                ik4Var.l0 = null;
+                ik4Var.m0 = null;
+                ik4Var.n0 = z18;
+                ik4Var.o0 = z5;
+                ik4Var.p0 = z8;
+                ik4Var.q0 = z6;
+                ik4Var.r0 = z11;
+                ik4Var.t0 = 4;
+                c71Var2 = c71Var;
+                objS = mainActivity5.S(importResult5, str11, subscriptionItemF, false, z6, str15, bool7, bool5, z18, z5, list, ik4Var);
+                if (objS == c71Var2) {
+                    return c71Var2;
+                }
+                return objS;
+            }
+            if (i2 != 3) {
+                if (i2 == 4) {
+                    w39.n0(objD);
+                    return objD;
+                }
+                bt.i("call to 'resume' before 'invoke' with coroutine");
+                return null;
+            }
+            z13 = ik4Var.r0;
+            z6 = ik4Var.q0;
+            z8 = ik4Var.p0;
+            z5 = ik4Var.o0;
+            z7 = ik4Var.n0;
+            str9 = ik4Var.m0;
+            list = ik4Var.l0;
+            bool5 = ik4Var.k0;
+            bool6 = ik4Var.j0;
+            str8 = ik4Var.i0;
+            mainActivity3 = ik4Var.g0;
+            str7 = ik4Var.f0;
+            w39.n0(objD);
+        }
+        importResult3 = (ImportResult) objD;
+        HappApplication happApplication2 = HappApplication.M0;
+        z14 = z13;
+        z15 = z6;
+        z16 = z8;
+        k32.i().d().h(new qj4(importResult3, (byte) 1));
+        if (!(importResult3.getStatus() instanceof r83) && !(importResult3.getLastParseError() instanceof r83) && !(importResult3.getLastParseError() instanceof m83) && mainActivity3.W(importResult3, z7, z5)) {
+            objD = null;
+        }
+        importResult4 = (ImportResult) objD;
+        if (importResult4 == null) {
+            return Boolean.FALSE;
+        }
+        z11 = z14;
+        z6 = z15;
+        z8 = z16;
+        z12 = z5;
+        importResult2 = importResult4;
+        c71Var = c71Var3;
+        str10 = str7;
+        bool7 = bool6;
+        z5 = z12;
+        boolean z19 = z7;
+        String str16 = str8;
+        MainActivity mainActivity6 = mainActivity3;
+        str11 = str9;
+        if (importResult2.getCount() <= 0) {
+            kw2 kw2Var3 = kw2.a;
+            importResult2 = kw2.a(str10, z11, str11);
+            k32.i().d().h(new qj4(importResult2, (byte) 2));
+            if (!(importResult2.getStatus() instanceof r83)) {
+                importResult2 = null;
+            }
+            if (importResult2 == null) {
+                return Boolean.FALSE;
+            }
+        }
+        ImportResult importResult6 = importResult2;
+        if (fm7.o0(str11)) {
+            kw4 kw4Var2 = kw4.a;
+            subscriptionItemF = kw4.f(str11);
+        } else {
+            subscriptionItemF = null;
+        }
+        ik4Var.f0 = null;
+        ik4Var.g0 = null;
+        ik4Var.h0 = null;
+        ik4Var.i0 = null;
+        ik4Var.j0 = null;
+        ik4Var.k0 = null;
+        ik4Var.l0 = null;
+        ik4Var.m0 = null;
+        ik4Var.n0 = z19;
+        ik4Var.o0 = z5;
+        ik4Var.p0 = z8;
+        ik4Var.q0 = z6;
+        ik4Var.r0 = z11;
+        ik4Var.t0 = 4;
+        c71Var2 = c71Var;
+        objS = mainActivity6.S(importResult6, str11, subscriptionItemF, false, z6, str16, bool7, bool5, z19, z5, list, ik4Var);
+        if (objS == c71Var2) {
+            return c71Var2;
+        }
+        return objS;
+        List list3 = (List) objD;
+        String strX0 = fm7.x0("happ://add/", str5);
+        if (z3) {
+            Iterator it = list3.iterator();
+            do {
+                if (!it.hasNext()) {
+                    next = null;
+                    break;
+                }
+                next = it.next();
+            } while (!((SubscriptionItem) ((qg5) next).Y).Y(strX0));
+            qg5 qg5Var2 = (qg5) next;
+            qg5Var = qg5Var2 == null ? new qg5(Boolean.FALSE, new SubId(str4)) : new qg5(Boolean.TRUE, qg5Var2.X);
+        } else {
+            qg5Var = new qg5(Boolean.FALSE, new SubId(str4));
+        }
+        boolean zBooleanValue = ((Boolean) qg5Var.X).booleanValue();
+        String value2 = ((SubId) qg5Var.Y).getValue();
+        boolean zO0 = fm7.o0(value2);
+        kw2 kw2Var4 = kw2.a;
+        ik4Var.f0 = str5;
+        ik4Var.g0 = mainActivity2;
+        ik4Var.h0 = null;
+        ik4Var.i0 = str6;
+        ik4Var.j0 = bool4;
+        ik4Var.k0 = bool3;
+        ik4Var.l0 = list3;
+        ik4Var.m0 = value2;
+        ik4Var.n0 = z17;
+        ik4Var.o0 = z4;
+        ik4Var.p0 = z3;
+        ik4Var.q0 = zBooleanValue;
+        ik4Var.r0 = zO0;
+        ik4Var.t0 = 2;
+        Object objD2 = kw2Var4.d(str5, value2, zO0, ik4Var);
+        if (objD2 != c71Var3) {
+            z5 = z4;
+            z6 = zBooleanValue;
+            MainActivity mainActivity7 = mainActivity2;
+            list = list3;
+            objD = objD2;
+            bool5 = bool3;
+            str7 = str5;
+            mainActivity3 = mainActivity7;
+            str8 = str6;
+            str9 = value2;
+            bool6 = bool4;
+            z7 = z17;
+            z8 = z3;
+            z9 = zO0;
+            importResult = (ImportResult) objD;
+            HappApplication happApplication3 = HappApplication.M0;
+            obj = objD;
+            c71Var = c71Var3;
+            z10 = z9;
+            k32.i().d().h(new qj4(importResult, (byte) 0));
+            if (importResult.getStatus() instanceof r83) {
+                obj2 = obj;
+            } else {
+                obj2 = obj;
+            }
+            importResult2 = (ImportResult) obj2;
+            if (importResult2 == null) {
+                return Boolean.FALSE;
+            }
+            if (importResult2.getCount() <= 0) {
+                ss8 ss8Var2 = ss8.a;
+                if (str7 != null) {
+                    bt.q("Required value was null.");
+                    return null;
+                }
+                strA = ss8.a(str7);
+                if (strA.length() <= 0) {
+                    strA = null;
+                }
+                if (strA != null) {
+                    kw2 kw2Var5 = kw2.a;
+                    ik4Var.f0 = str7;
+                    ik4Var.g0 = mainActivity3;
+                    ik4Var.h0 = null;
+                    ik4Var.i0 = str8;
+                    ik4Var.j0 = bool6;
+                    ik4Var.k0 = bool5;
+                    ik4Var.l0 = list;
+                    ik4Var.m0 = str9;
+                    ik4Var.n0 = z7;
+                    ik4Var.o0 = z5;
+                    ik4Var.p0 = z8;
+                    ik4Var.q0 = z6;
+                    ik4Var.r0 = z10;
+                    ik4Var.t0 = 3;
+                    objD = kw2Var5.d(strA, str9, z10, ik4Var);
+                    c71Var3 = c71Var;
+                    if (objD != c71Var3) {
+                        z13 = z10;
+                        importResult3 = (ImportResult) objD;
+                        HappApplication happApplication4 = HappApplication.M0;
+                        z14 = z13;
+                        z15 = z6;
+                        z16 = z8;
+                        k32.i().d().h(new qj4(importResult3, (byte) 1));
+                        if (!(importResult3.getStatus() instanceof r83)) {
+                            objD = null;
+                        }
+                        importResult4 = (ImportResult) objD;
+                        if (importResult4 == null) {
+                            return Boolean.FALSE;
+                        }
+                        z11 = z14;
+                        z6 = z15;
+                        z8 = z16;
+                        z12 = z5;
+                        importResult2 = importResult4;
+                    }
+                } else {
+                    c71Var3 = c71Var;
+                    z11 = z10;
+                    z12 = z5;
+                    importResult2 = new ImportResult(0, null, r83.a, 3);
+                    z8 = z8;
+                    z6 = z6;
+                }
+                c71Var = c71Var3;
+                str10 = str7;
+                bool7 = bool6;
+                z5 = z12;
+            } else {
+                z11 = z10;
+                str10 = str7;
+                bool7 = bool6;
+            }
+            boolean z110 = z7;
+            String str17 = str8;
+            MainActivity mainActivity8 = mainActivity3;
+            str11 = str9;
+            if (importResult2.getCount() <= 0) {
+                kw2 kw2Var6 = kw2.a;
+                importResult2 = kw2.a(str10, z11, str11);
+                k32.i().d().h(new qj4(importResult2, (byte) 2));
+                if (!(importResult2.getStatus() instanceof r83)) {
+                    importResult2 = null;
+                }
+                if (importResult2 == null) {
+                    return Boolean.FALSE;
+                }
+            }
+            ImportResult importResult7 = importResult2;
+            if (fm7.o0(str11)) {
+                kw4 kw4Var3 = kw4.a;
+                subscriptionItemF = kw4.f(str11);
+            } else {
+                subscriptionItemF = null;
+            }
+            ik4Var.f0 = null;
+            ik4Var.g0 = null;
+            ik4Var.h0 = null;
+            ik4Var.i0 = null;
+            ik4Var.j0 = null;
+            ik4Var.k0 = null;
+            ik4Var.l0 = null;
+            ik4Var.m0 = null;
+            ik4Var.n0 = z110;
+            ik4Var.o0 = z5;
+            ik4Var.p0 = z8;
+            ik4Var.q0 = z6;
+            ik4Var.r0 = z11;
+            ik4Var.t0 = 4;
+            c71Var2 = c71Var;
+            objS = mainActivity8.S(importResult7, str11, subscriptionItemF, false, z6, str17, bool7, bool5, z110, z5, list, ik4Var);
+            if (objS == c71Var2) {
+                return c71Var2;
+            }
+            return objS;
+        }
+        return c71Var3;
+    }
+
+    public static /* synthetic */ Object P(MainActivity mainActivity, String str, SubscriptionItem subscriptionItem, boolean z, boolean z2, boolean z3, String str2, boolean z4, boolean z5, Boolean bool, g83 g83Var, s51 s51Var, int i) {
+        if ((i & 16) != 0) {
+            z3 = false;
+        }
+        if ((i & 32) != 0) {
+            str2 = null;
+        }
+        if ((i & 64) != 0) {
+            z4 = false;
+        }
+        if ((i & 128) != 0) {
+            z5 = true;
+        }
+        if ((i & PSKKeyManager.MAX_KEY_LENGTH_BYTES) != 0) {
+            bool = null;
+        }
+        if ((i & 512) != 0) {
+            g83Var = null;
+        }
+        return mainActivity.O(str, subscriptionItem, z, z2, z3, str2, z4, z5, bool, g83Var, s51Var);
+    }
+
+    /* JADX WARN: Code duplicated, block: B:7:0x0025  */
+    /* JADX WARN: Code restructure failed: missing block: B:22:0x009e, code lost:
+    
+        if (defpackage.w51.W(r8, r10, r9) == r15) goto L23;
+     */
+    /* JADX WARN: Code restructure failed: missing block: B:24:0x00a3, code lost:
+    
+        r7 = r28;
+        r0 = r33;
+        r5 = r35;
+     */
+    /* JADX WARN: Code restructure failed: missing block: B:27:0x00e0, code lost:
+    
+        if (defpackage.w51.W(r8, r10, r9) == r15) goto L23;
+     */
+    /* JADX WARN: Code restructure failed: missing block: B:39:0x015c, code lost:
+    
+        return r15;
+     */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct add '--show-bad-code' argument
+    */
+    public static final java.lang.Object T(java.lang.String r28, boolean r29, java.lang.Boolean r30, java.lang.Boolean r31, su.happ.proxyutility.feature.main.MainActivity r32, boolean r33, java.lang.String r34, su.happ.proxyutility.dto.SubscriptionItem r35, defpackage.s51 r36) {
+        /*
+            Method dump skipped, instruction units count: 352
+            To view this dump add '--comments-level debug' option
+        */
+        throw new UnsupportedOperationException("Method not decompiled: su.happ.proxyutility.feature.main.MainActivity.T(java.lang.String, boolean, java.lang.Boolean, java.lang.Boolean, su.happ.proxyutility.feature.main.MainActivity, boolean, java.lang.String, su.happ.proxyutility.dto.SubscriptionItem, s51):java.lang.Object");
+    }
+
+    public static final void U(View view) {
+        view.animate().scaleX(1.1f).scaleY(1.1f).setDuration(150L).start();
+    }
+
+    public static final void V(View view) {
+        view.animate().scaleX(1.0f).scaleY(1.0f).setDuration(150L).start();
+    }
+
+    @Override // su.happ.proxyutility.ui.SnackbarHostActivity
+    public final HappSnackbarHost A() {
+        b6 b6Var = this.Q0;
+        if (b6Var != null) {
+            return b6Var.B0;
+        }
+        dh3.T("binding");
+        throw null;
+    }
+
+    public final void B(ServerCache serverCache) {
+        if (serverCache == null || G().u()) {
+            return;
+        }
+        G().H(serverCache.getGuid());
+        jm4.Q(ys0.z(this.X), null, new wj4(this, null, (byte) 0), 3);
+    }
+
+    public final void C() {
+        b6 b6Var = this.Q0;
+        if (b6Var == null) {
+            dh3.T("binding");
+            throw null;
+        }
+        HappTextView happTextView = b6Var.l0;
+        rp7.e(happTextView, G().u());
+        happTextView.setText(getString(y46.btn_disconnect));
+        b6 b6Var2 = this.Q0;
+        if (b6Var2 == null) {
+            dh3.T("binding");
+            throw null;
+        }
+        rp7.e(b6Var2.k0, G().u());
+        b0(G().u());
+    }
+
+    /* JADX WARN: Code duplicated, block: B:55:0x00f4 A[Catch: all -> 0x0110, TRY_LEAVE, TryCatch #0 {all -> 0x0110, blocks: (B:53:0x00ee, B:55:0x00f4), top: B:70:0x00ee }] */
+    /* JADX WARN: Code duplicated, block: B:77:0x010f A[SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:79:? A[LOOP:0: B:70:0x00ee->B:79:?, LOOP_END, SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:8:0x0018  */
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r3v16 */
+    /* JADX WARN: Type inference failed for: r3v2, types: [java.io.Closeable] */
+    /* JADX WARN: Type inference failed for: r3v3 */
+    /* JADX WARN: Type inference failed for: r3v8 */
+    public final Object D(Intent intent, s51 s51Var) throws FileNotFoundException {
+        zj4 zj4Var;
+        int i;
+        Throwable th;
+        ?? r3;
+        String str;
+        Closeable closeable;
+        Iterator it;
+        Closeable closeable2;
+        Closeable closeable3;
+        String str2;
+        int i2;
+        if (s51Var instanceof zj4) {
+            zj4Var = (zj4) s51Var;
+            i2 = zj4Var.j0;
+            if ((i2 & Integer.MIN_VALUE) != 0) {
+                int i3 = i2 - Integer.MIN_VALUE;
+                zj4Var.j0 = i3;
+                i = i3;
+            } else {
+                zj4Var = new zj4(this, s51Var);
+                i = i2;
+            }
+        } else {
+            zj4Var = new zj4(this, s51Var);
+            i = i2;
+        }
+        zj4 zj4Var2 = zj4Var;
+        Object objL = zj4Var2.h0;
+        int i4 = zj4Var2.j0;
+        Object objValueOf = dn8.a;
+        Object obj = null;
+        c71 c71Var = c71.X;
+        try {
+            if (i4 == 0) {
+                w39.n0(objL);
+                Uri data = intent.getData();
+                if (data == null) {
+                    return Boolean.FALSE;
+                }
+                InputStream inputStreamOpenInputStream = getContentResolver().openInputStream(data);
+                if (inputStreamOpenInputStream != null) {
+                    try {
+                        ArrayList arrayListD = dt7.d(new BufferedReader(new InputStreamReader(inputStreamOpenInputStream, iq0.a), 8192));
+                        String path = data.getPath();
+                        if (path == null || !mm7.R(path, false, ".json")) {
+                            String str3 = (String) wv0.t0(arrayListD);
+                            if ((str3 == null || !fm7.G0('[', str3)) && ((str = (String) wv0.t0(arrayListD)) == null || !fm7.G0('{', str))) {
+                                Iterator it2 = arrayListD.iterator();
+                                closeable = inputStreamOpenInputStream;
+                                it = it2;
+                                while (it.hasNext()) {
+                                    str2 = (String) it.next();
+                                    zj4Var2.f0 = closeable;
+                                    zj4Var2.g0 = it;
+                                    zj4Var2.j0 = 2;
+                                    if (L(this, str2, false, null, null, null, zj4Var2, 248) == c71Var) {
+                                    }
+                                }
+                                closeable3 = closeable;
+                            } else {
+                                String strY0 = wv0.y0(arrayListD, _UrlKt.FRAGMENT_ENCODE_SET, null, null, null, 62);
+                                zj4Var2.f0 = inputStreamOpenInputStream;
+                                zj4Var2.j0 = 1;
+                                objL = L(this, strY0, false, null, null, null, zj4Var2, 120);
+                                if (objL != c71Var) {
+                                    closeable2 = inputStreamOpenInputStream;
+                                    objValueOf = Boolean.valueOf(!((Boolean) objL).booleanValue());
+                                    closeable3 = closeable2;
+                                }
+                            }
+                            return c71Var;
+                        }
+                        Q(wv0.y0(arrayListD, _UrlKt.FRAGMENT_ENCODE_SET, null, null, null, 62), false);
+                        closeable3 = inputStreamOpenInputStream;
+                        oc.h(closeable3, null);
+                        obj = objValueOf;
+                    } catch (Throwable th2) {
+                        th = th2;
+                        r3 = inputStreamOpenInputStream;
+                        throw th;
+                    }
+                }
+            } else if (i4 == 1) {
+                Closeable closeable4 = zj4Var2.f0;
+                w39.n0(objL);
+                closeable2 = closeable4;
+                objValueOf = Boolean.valueOf(!((Boolean) objL).booleanValue());
+                closeable3 = closeable2;
+                oc.h(closeable3, null);
+                obj = objValueOf;
+            } else {
+                if (i4 != 2) {
+                    bt.i("call to 'resume' before 'invoke' with coroutine");
+                    return null;
+                }
+                Iterator it3 = zj4Var2.g0;
+                Closeable closeable5 = zj4Var2.f0;
+                w39.n0(objL);
+                it = it3;
+                closeable = closeable5;
+                while (it.hasNext()) {
+                    try {
+                        str2 = (String) it.next();
+                        zj4Var2.f0 = closeable;
+                        zj4Var2.g0 = it;
+                        zj4Var2.j0 = 2;
+                        if (L(this, str2, false, null, null, null, zj4Var2, 248) == c71Var) {
+                            return c71Var;
+                        }
+                    } catch (Throwable th3) {
+                        th = th3;
+                        r3 = closeable;
+                        try {
+                            throw th;
+                        } catch (Throwable th4) {
+                            oc.h(r3, th);
+                            throw th4;
+                        }
+                    }
+                }
+                closeable3 = closeable;
+                oc.h(closeable3, null);
+                obj = objValueOf;
+            }
+            return Boolean.valueOf(obj != null);
+        } catch (Throwable th5) {
+            th = th5;
+            r3 = i;
+        }
+    }
+
+    /* JADX WARN: Code duplicated, block: B:75:0x0173 A[ADDED_TO_REGION] */
+    /* JADX WARN: Code duplicated, block: B:7:0x0017  */
+    /* JADX WARN: Code duplicated, block: B:82:0x0186  */
+    /* JADX WARN: Code duplicated, block: B:87:0x01aa  */
+    /* JADX WARN: Code duplicated, block: B:92:0x0194 A[SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:93:? A[LOOP:0: B:80:0x0180->B:93:?, LOOP_END, SYNTHETIC] */
+    public final Object E(s51 s51Var) {
+        dk4 dk4Var;
+        qs7 qs7VarA;
+        int i;
+        SubscriptionAutoConnectType subscriptionAutoConnectType;
+        ArrayList arrayList;
+        int i2;
+        Object next;
+        int i3;
+        ArrayList arrayList2;
+        fs7 fs7Var;
+        fs7 fs7Var2;
+        Iterator it;
+        Object objR;
+        if (s51Var instanceof dk4) {
+            dk4Var = (dk4) s51Var;
+            int i4 = dk4Var.k0;
+            if ((i4 & Integer.MIN_VALUE) != 0) {
+                dk4Var.k0 = i4 - Integer.MIN_VALUE;
+            } else {
+                dk4Var = new dk4(this, s51Var);
+            }
+        } else {
+            dk4Var = new dk4(this, s51Var);
+        }
+        Object objQ = dk4Var.i0;
+        int i5 = dk4Var.k0;
+        byte b = 6;
+        c71 c71Var = c71.X;
+        dn8 dn8Var = dn8.a;
+        int i6 = 1;
+        char c = 1;
+        if (i5 == 0) {
+            w39.n0(objQ);
+            MainViewModel mainViewModelG = G();
+            dk4Var.k0 = 1;
+            objQ = gv3.q(new j31(new o(mainViewModelG.H, (byte) 14), b), dk4Var);
+            if (objQ != c71Var) {
+            }
+            return c71Var;
+        }
+        if (i5 == 1) {
+            w39.n0(objQ);
+        } else {
+            if (i5 != 2) {
+                if (i5 == 3) {
+                    w39.n0(objQ);
+                    return dn8Var;
+                }
+                bt.i("call to 'resume' before 'invoke' with coroutine");
+                return null;
+            }
+            i6 = dk4Var.h0;
+            i3 = dk4Var.g0;
+            arrayList2 = dk4Var.f0;
+            w39.n0(objQ);
+        }
+        i = i3;
+        arrayList = arrayList2;
+        i2 = i6;
+        if (i2 == 0 && (arrayList == null || !arrayList.isEmpty())) {
+            it = arrayList.iterator();
+            while (it.hasNext()) {
+                if (((qs7) ((qg5) it.next()).X).c) {
+                    dk4Var.f0 = null;
+                    dk4Var.g0 = i;
+                    dk4Var.h0 = i2;
+                    dk4Var.k0 = 3;
+                    objR = G().R(dk4Var, null, false);
+                    if (objR != c71Var) {
+                        objR = dn8Var;
+                    }
+                    if (objR == c71Var) {
+                        return c71Var;
+                    }
+                }
+            }
+        }
+        return dn8Var;
+        ConfigGroupCache configGroupCache = (ConfigGroupCache) objQ;
+        if (configGroupCache != null) {
+            String strC = configGroupCache.getSubId();
+            HappApplication happApplication = HappApplication.M0;
+            qs7VarA = k32.i().h().a(strC);
+        } else {
+            qs7VarA = null;
+        }
+        i = (qs7VarA == null || (fs7Var2 = qs7VarA.d) == null || !fs7Var2.a) ? 0 : 1;
+        if (qs7VarA == null || (fs7Var = qs7VarA.d) == null || (subscriptionAutoConnectType = fs7Var.b) == null) {
+            subscriptionAutoConnectType = SubscriptionAutoConnectType.LAST_USED;
+        }
+        CopyOnWriteArrayList<ConfigGroupCache> copyOnWriteArrayList = G().q;
+        arrayList = new ArrayList();
+        for (ConfigGroupCache configGroupCache2 : copyOnWriteArrayList) {
+            HappApplication happApplication2 = HappApplication.M0;
+            qs7 qs7VarA2 = k32.i().h().a(configGroupCache2.getSubId());
+            qg5 qg5Var = qs7VarA2 != null ? new qg5(qs7VarA2, configGroupCache2) : null;
+            if (qg5Var != null) {
+                arrayList.add(qg5Var);
+            }
+        }
+        if (i == 0 || subscriptionAutoConnectType == SubscriptionAutoConnectType.LAST_USED) {
+            if (i != 0) {
+                Iterator it2 = configGroupCache.getConfigs().iterator();
+                do {
+                    if (!it2.hasNext()) {
+                        next = null;
+                        break;
+                    }
+                    next = it2.next();
+                } while (!((ServerCache) next).getIsSelected());
+                B((ServerCache) next);
+            }
+            i2 = 0;
+            if (i2 == 0) {
+                it = arrayList.iterator();
+                while (it.hasNext()) {
+                    if (((qs7) ((qg5) it.next()).X).c) {
+                        dk4Var.f0 = null;
+                        dk4Var.g0 = i;
+                        dk4Var.h0 = i2;
+                        dk4Var.k0 = 3;
+                        objR = G().R(dk4Var, null, false);
+                        if (objR != c71Var) {
+                            objR = dn8Var;
+                        }
+                        if (objR == c71Var) {
+                        }
+                    }
+                }
+            }
+            return dn8Var;
+        }
+        ArrayList arrayList3 = G().r;
+        sd2 sd2Var = new sd2(new la2(new hu(arrayList, c == true ? 1 : 0), true, new uh3((byte) 21)), new uh3((byte) 22), z27.X);
+        arrayList3.getClass();
+        arrayList3.clear();
+        Iterator it3 = sd2Var.iterator();
+        while (true) {
+            rd2 rd2Var = (rd2) it3;
+            if (!rd2Var.hasNext()) {
+                break;
+            }
+            arrayList3.add(rd2Var.next());
+        }
+        G().s = new a23(this, subscriptionAutoConnectType, b);
+        String strC2 = configGroupCache.getSubId();
+        dk4Var.f0 = arrayList;
+        dk4Var.g0 = i;
+        dk4Var.h0 = 1;
+        dk4Var.k0 = 2;
+        Object objR2 = G().R(dk4Var, strC2, false);
+        if (objR2 != c71Var) {
+            objR2 = dn8Var;
+        }
+        if (objR2 != c71Var) {
+            i3 = i;
+            arrayList2 = arrayList;
+            i = i3;
+            arrayList = arrayList2;
+            i2 = i6;
+            if (i2 == 0) {
+                it = arrayList.iterator();
+                while (it.hasNext()) {
+                    if (((qs7) ((qg5) it.next()).X).c) {
+                        dk4Var.f0 = null;
+                        dk4Var.g0 = i;
+                        dk4Var.h0 = i2;
+                        dk4Var.k0 = 3;
+                        objR = G().R(dk4Var, null, false);
+                        if (objR != c71Var) {
+                            objR = dn8Var;
+                        }
+                        if (objR == c71Var) {
+                        }
+                    }
+                }
+            }
+            return dn8Var;
+        }
+        return c71Var;
+    }
+
+    public final dw7 F() {
+        return (dw7) this.S0.getValue();
+    }
+
+    public final MainViewModel G() {
+        return (MainViewModel) this.e1.getValue();
+    }
+
+    public final MMKV H() {
+        return (MMKV) this.V0.getValue();
+    }
+
+    public final void I(Intent intent) {
+        String stringExtra;
+        String action = intent.getAction();
+        if (action != null) {
+            int iHashCode = action.hashCode();
+            g94 g94Var = this.X;
+            q51 q51Var = null;
+            if (iHashCode == -1173171990) {
+                if (action.equals("android.intent.action.VIEW")) {
+                    jm4.Q(ys0.z(g94Var), null, new pi(intent, this, q51Var, (byte) 12), 3);
+                }
+            } else if (iHashCode == -746632332 && action.equals("reset_sub_import") && (stringExtra = intent.getStringExtra("reset_sub_url")) != null) {
+                jm4.Q(ys0.z(g94Var), null, new fk4(this, stringExtra, q51Var, (byte) 2), 3);
+            }
+        }
+    }
+
+    public final void J(t83 t83Var, boolean z) {
+        if (t83Var instanceof m83) {
+            String string = getString(y46.dialog_subscription_update_msg_parsing_error_empty_clipboard);
+            string.getClass();
+            e0(string, false);
+            return;
+        }
+        if (t83Var instanceof o83) {
+            String string2 = getString(y46.dialog_subscription_update_msg_parsing_error_invalid_deeplink);
+            string2.getClass();
+            e0(string2, z);
+            return;
+        }
+        if (t83Var instanceof s83) {
+            String string3 = getString(y46.dialog_subscription_update_msg_parsing_error_unknown_deeplink);
+            string3.getClass();
+            e0(string3, z);
+            return;
+        }
+        if (t83Var instanceof p83) {
+            String string4 = getString(y46.dialog_subscription_update_msg_parsing_error_invalid_routing);
+            string4.getClass();
+            e0(string4, z);
+            return;
+        }
+        if (t83Var instanceof q83) {
+            String string5 = getString(y46.dialog_subscription_update_msg_parsing_error_invalid_server, ((q83) t83Var).a);
+            string5.getClass();
+            e0(string5, z);
+        } else if (t83Var instanceof n83) {
+            String string6 = getString(y46.dialog_subscription_update_msg_parsing_error_invalid_array_json_server);
+            string6.getClass();
+            e0(string6, z);
+        } else {
+            if (!(t83Var instanceof r83)) {
+                b61.c();
+                return;
+            }
+            String string7 = getString(y46.dialog_subscription_update_msg_parsing_error_invalid_unknown_content_type);
+            string7.getClass();
+            e0(string7, z);
+        }
+    }
+
+    /* JADX WARN: Code duplicated, block: B:8:0x0018  */
+    public final Object K(String str, boolean z, String str2, String str3, Boolean bool, Boolean bool2, boolean z2, s51 s51Var) throws Throwable {
+        hk4 hk4Var;
+        Boolean bool3;
+        o15 o15Var;
+        Boolean bool4;
+        boolean z3;
+        boolean z4;
+        String str4;
+        String str5;
+        Object objPutIfAbsent;
+        Throwable th;
+        o15 o15Var2;
+        if (s51Var instanceof hk4) {
+            hk4Var = (hk4) s51Var;
+            int i = hk4Var.p0;
+            if ((i & Integer.MIN_VALUE) != 0) {
+                hk4Var.p0 = i - Integer.MIN_VALUE;
+            } else {
+                hk4Var = new hk4(this, s51Var);
+            }
+        } else {
+            hk4Var = new hk4(this, s51Var);
+        }
+        hk4 hk4Var2 = hk4Var;
+        Object objM = hk4Var2.n0;
+        int i2 = hk4Var2.p0;
+        c71 c71Var = c71.X;
+        try {
+            if (i2 == 0) {
+                w39.n0(objM);
+                SubId subId = new SubId(str2);
+                ConcurrentHashMap concurrentHashMap = this.n1;
+                Object objA = concurrentHashMap.get(subId);
+                if (objA == null && (objPutIfAbsent = concurrentHashMap.putIfAbsent(subId, (objA = r15.a()))) != null) {
+                    objA = objPutIfAbsent;
+                }
+                o15 o15Var3 = (o15) objA;
+                hk4Var2.f0 = str;
+                hk4Var2.g0 = str2;
+                hk4Var2.h0 = str3;
+                hk4Var2.i0 = bool;
+                hk4Var2.j0 = bool2;
+                hk4Var2.k0 = o15Var3;
+                hk4Var2.l0 = z;
+                hk4Var2.m0 = z2;
+                hk4Var2.p0 = 1;
+                if (o15Var3.g(hk4Var2) != c71Var) {
+                    bool3 = bool;
+                    o15Var = o15Var3;
+                    bool4 = bool2;
+                    z3 = z;
+                    z4 = z2;
+                    str4 = str2;
+                    str5 = str3;
+                }
+                return c71Var;
+            }
+            if (i2 != 1) {
+                if (i2 != 2) {
+                    bt.i("call to 'resume' before 'invoke' with coroutine");
+                    return null;
+                }
+                o15Var2 = hk4Var2.k0;
+                try {
+                    w39.n0(objM);
+                    Boolean bool5 = (Boolean) objM;
+                    bool5.getClass();
+                    o15Var2.m(null);
+                    return bool5;
+                } catch (Throwable th2) {
+                    th = th2;
+                    o15Var2.m(null);
+                    throw th;
+                }
+            }
+            boolean z5 = hk4Var2.m0;
+            boolean z6 = hk4Var2.l0;
+            o15Var = hk4Var2.k0;
+            Boolean bool6 = hk4Var2.j0;
+            Boolean bool7 = hk4Var2.i0;
+            String str6 = hk4Var2.h0;
+            str4 = hk4Var2.g0;
+            String str7 = hk4Var2.f0;
+            w39.n0(objM);
+            z4 = z5;
+            str = str7;
+            str5 = str6;
+            bool4 = bool6;
+            bool3 = bool7;
+            z3 = z6;
+            hk4Var2.f0 = null;
+            hk4Var2.g0 = null;
+            hk4Var2.h0 = null;
+            hk4Var2.i0 = null;
+            hk4Var2.j0 = null;
+            hk4Var2.k0 = o15Var;
+            hk4Var2.l0 = z3;
+            hk4Var2.m0 = z4;
+            hk4Var2.p0 = 2;
+            objM = M(str, this, z3, z4, str4, str5, bool3, bool4, hk4Var2);
+            if (objM != c71Var) {
+                o15Var2 = o15Var;
+                Boolean bool8 = (Boolean) objM;
+                bool8.getClass();
+                o15Var2.m(null);
+                return bool8;
+            }
+            return c71Var;
+        } catch (Throwable th3) {
+            th = th3;
+            o15Var2 = o15Var;
+            o15Var2.m(null);
+            throw th;
+        }
+    }
+
+    public final void N() {
+        try {
+            ss8 ss8Var = ss8.a;
+            String strG = ss8.g(this);
+            u84 u84VarZ = ys0.z(this.X);
+            nf1 nf1Var = tp1.a;
+            jm4.Q(u84VarZ, ye1.Z, new fk4(this, strG, null, (byte) 3), 2);
+        } catch (Throwable th) {
+            if ((th instanceof InterruptedException) || (th instanceof CancellationException)) {
+                throw th;
+            }
+        }
+    }
+
+    /* JADX WARN: Code duplicated, block: B:102:0x0368  */
+    /* JADX WARN: Code duplicated, block: B:104:0x036c  */
+    /* JADX WARN: Code duplicated, block: B:105:0x037b  */
+    /* JADX WARN: Code duplicated, block: B:107:0x0380  */
+    /* JADX WARN: Code duplicated, block: B:110:0x03ba  */
+    /* JADX WARN: Code duplicated, block: B:112:0x03c8  */
+    /* JADX WARN: Code duplicated, block: B:114:0x03d1 A[ADDED_TO_REGION] */
+    /* JADX WARN: Code duplicated, block: B:118:0x03df  */
+    /* JADX WARN: Code duplicated, block: B:121:0x0401  */
+    /* JADX WARN: Code duplicated, block: B:123:0x0408  */
+    /* JADX WARN: Code duplicated, block: B:125:0x0413  */
+    /* JADX WARN: Code duplicated, block: B:128:0x0434 A[PHI: r0 r2 r3 r4 r5 r6 r7
+  0x0434: PHI (r0v42 boolean) = (r0v35 boolean), (r0v35 boolean), (r0v43 boolean) binds: [B:124:0x0411, B:126:0x0431, B:15:0x005c] A[DONT_GENERATE, DONT_INLINE]
+  0x0434: PHI (r2v26 boolean) = (r2v19 boolean), (r2v19 boolean), (r2v27 boolean) binds: [B:124:0x0411, B:126:0x0431, B:15:0x005c] A[DONT_GENERATE, DONT_INLINE]
+  0x0434: PHI (r3v15 boolean) = (r3v8 boolean), (r3v8 boolean), (r3v16 boolean) binds: [B:124:0x0411, B:126:0x0431, B:15:0x005c] A[DONT_GENERATE, DONT_INLINE]
+  0x0434: PHI (r4v13 boolean) = (r4v6 boolean), (r4v6 boolean), (r4v14 boolean) binds: [B:124:0x0411, B:126:0x0431, B:15:0x005c] A[DONT_GENERATE, DONT_INLINE]
+  0x0434: PHI (r5v18 boolean) = (r5v11 boolean), (r5v11 boolean), (r5v19 boolean) binds: [B:124:0x0411, B:126:0x0431, B:15:0x005c] A[DONT_GENERATE, DONT_INLINE]
+  0x0434: PHI (r6v24 java.lang.String) = (r6v10 java.lang.String), (r6v10 java.lang.String), (r6v25 java.lang.String) binds: [B:124:0x0411, B:126:0x0431, B:15:0x005c] A[DONT_GENERATE, DONT_INLINE]
+  0x0434: PHI (r7v23 su.happ.proxyutility.feature.main.MainActivity) = 
+  (r7v15 su.happ.proxyutility.feature.main.MainActivity)
+  (r7v15 su.happ.proxyutility.feature.main.MainActivity)
+  (r7v24 su.happ.proxyutility.feature.main.MainActivity)
+ binds: [B:124:0x0411, B:126:0x0431, B:15:0x005c] A[DONT_GENERATE, DONT_INLINE]] */
+    /* JADX WARN: Code duplicated, block: B:133:0x0469  */
+    /* JADX WARN: Code duplicated, block: B:134:0x046c  */
+    /* JADX WARN: Code duplicated, block: B:137:0x0471  */
+    /* JADX WARN: Code duplicated, block: B:139:0x049a A[RETURN] */
+    /* JADX WARN: Code duplicated, block: B:143:0x01f5 A[EXC_TOP_SPLITTER, SYNTHETIC] */
+    /* JADX WARN: Code duplicated, block: B:14:0x0058 A[PHI: r0 r2 r3 r4 r5 r6 r7
+  0x0058: PHI (r0v44 boolean) = (r0v42 boolean), (r0v46 boolean) binds: [B:129:0x0456, B:13:0x0048] A[DONT_GENERATE, DONT_INLINE]
+  0x0058: PHI (r2v28 boolean) = (r2v26 boolean), (r2v29 boolean) binds: [B:129:0x0456, B:13:0x0048] A[DONT_GENERATE, DONT_INLINE]
+  0x0058: PHI (r3v17 boolean) = (r3v15 boolean), (r3v18 boolean) binds: [B:129:0x0456, B:13:0x0048] A[DONT_GENERATE, DONT_INLINE]
+  0x0058: PHI (r4v15 boolean) = (r4v13 boolean), (r4v16 boolean) binds: [B:129:0x0456, B:13:0x0048] A[DONT_GENERATE, DONT_INLINE]
+  0x0058: PHI (r5v20 boolean) = (r5v18 boolean), (r5v21 boolean) binds: [B:129:0x0456, B:13:0x0048] A[DONT_GENERATE, DONT_INLINE]
+  0x0058: PHI (r6v26 java.lang.String) = (r6v24 java.lang.String), (r6v34 java.lang.String) binds: [B:129:0x0456, B:13:0x0048] A[DONT_GENERATE, DONT_INLINE]
+  0x0058: PHI (r7v25 su.happ.proxyutility.feature.main.MainActivity) = (r7v23 su.happ.proxyutility.feature.main.MainActivity), (r7v26 su.happ.proxyutility.feature.main.MainActivity) binds: [B:129:0x0456, B:13:0x0048] A[DONT_GENERATE, DONT_INLINE]] */
+    /* JADX WARN: Code duplicated, block: B:60:0x01ef  */
+    /* JADX WARN: Code duplicated, block: B:71:0x0213  */
+    /* JADX WARN: Code duplicated, block: B:74:0x021b A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:75:0x021d  */
+    /* JADX WARN: Code duplicated, block: B:76:0x0233  */
+    /* JADX WARN: Code duplicated, block: B:78:0x0236  */
+    /* JADX WARN: Code duplicated, block: B:7:0x0027  */
+    /* JADX WARN: Code duplicated, block: B:81:0x0256  */
+    /* JADX WARN: Code duplicated, block: B:83:0x025e A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:84:0x0260  */
+    /* JADX WARN: Code duplicated, block: B:85:0x0276  */
+    /* JADX WARN: Code duplicated, block: B:87:0x0279  */
+    /* JADX WARN: Code duplicated, block: B:93:0x032b  */
+    /* JADX WARN: Code duplicated, block: B:96:0x033d  */
+    /* JADX WARN: Code duplicated, block: B:98:0x0345 A[DONT_INVERT] */
+    /* JADX WARN: Code duplicated, block: B:99:0x0347  */
+    /* JADX WARN: Code restructure failed: missing block: B:138:0x0498, code lost:
+    
+        if (defpackage.u70.G(r8, r10) == r12) goto L139;
+     */
+    /* JADX WARN: Code restructure failed: missing block: B:54:0x01d6, code lost:
+    
+        if (r9.a(r15, r10) == r12) goto L139;
+     */
+    /* JADX WARN: Type inference failed for: r11v12 */
+    /* JADX WARN: Type inference failed for: r11v13, types: [g83, java.lang.Boolean, java.lang.String, su.happ.proxyutility.dto.SubscriptionItem] */
+    /* JADX WARN: Type inference failed for: r11v14 */
+    /* JADX WARN: Type inference failed for: r11v15 */
+    /* JADX WARN: Type inference failed for: r11v16, types: [g83, java.lang.Boolean, java.lang.String, su.happ.proxyutility.dto.SubscriptionItem] */
+    /* JADX WARN: Type inference failed for: r11v17 */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct add '--show-bad-code' argument
+    */
+    public final java.lang.Object O(java.lang.String r22, su.happ.proxyutility.dto.SubscriptionItem r23, boolean r24, boolean r25, boolean r26, java.lang.String r27, boolean r28, boolean r29, java.lang.Boolean r30, defpackage.g83 r31, defpackage.s51 r32) {
+        /*
+            Method dump skipped, instruction units count: 1214
+            To view this dump add '--comments-level debug' option
+        */
+        throw new UnsupportedOperationException("Method not decompiled: su.happ.proxyutility.feature.main.MainActivity.O(java.lang.String, su.happ.proxyutility.dto.SubscriptionItem, boolean, boolean, boolean, java.lang.String, boolean, boolean, java.lang.Boolean, g83, s51):java.lang.Object");
+    }
+
+    public final void Q(String str, boolean z) {
+        Object rj6Var;
+        try {
+            if (TextUtils.isEmpty(str)) {
+                J(m83.a, z);
+                return;
+            }
+            HappApplication happApplication = HappApplication.M0;
+            l81 l81VarA = ((i83) k32.i().H0.getValue()).a(str);
+            boolean z2 = l81VarA.a;
+            if (l81VarA.b) {
+                MainViewModel.C(G(), false, 3);
+                pu.Q(this, y46.toast_success);
+            } else if (z2) {
+                J(n83.a, z);
+            } else {
+                J(new q83("json"), z);
+            }
+            rj6Var = dn8.a;
+            if (sj6.a(rj6Var) != null) {
+                J(new q83("json"), z);
+            }
+        } catch (Throwable th) {
+            if ((th instanceof InterruptedException) || (th instanceof CancellationException)) {
+                throw th;
+            }
+            rj6Var = new rj6(th);
+        }
+    }
+
+    public final void R() {
+        if (getPackageManager().hasSystemFeature("android.hardware.camera")) {
+            new y45((BaseActivity) this).L("android.permission.CAMERA").a(new o61(new oj4(this, (byte) 3), (byte) 15));
+        } else {
+            if (pz7.a()) {
+                return;
+            }
+            be.m(this, getString(y46.warning_text), getString(y46.switch_tv_ui_dialog), null, getString(y46.yes), getString(y46.no), null, new mj4(this, (byte) 8), null, 1170);
+        }
+    }
+
+    /* JADX WARN: Code duplicated, block: B:76:0x0213  */
+    /* JADX WARN: Code duplicated, block: B:79:0x0265  */
+    /* JADX WARN: Code duplicated, block: B:8:0x0024  */
+    /* JADX WARN: Unsupported multi-entry loop pattern (BACK_EDGE: B:79:0x0265 -> B:80:0x026c). Please report as a decompilation issue!!! */
+    /*  JADX ERROR: JadxOverflowException in pass: RegionMakerVisitor
+        jadx.core.utils.exceptions.JadxOverflowException: Regions stack size limit reached
+        	at jadx.core.utils.ErrorsCounter.addError(ErrorsCounter.java:59)
+        	at jadx.core.utils.ErrorsCounter.error(ErrorsCounter.java:31)
+        	at jadx.core.dex.attributes.nodes.NotificationAttrNode.addError(NotificationAttrNode.java:19)
+        */
+    public final java.lang.Object S(su.happ.proxyutility.dto.ImportResult r25, java.lang.String r26, su.happ.proxyutility.dto.SubscriptionItem r27, boolean r28, boolean r29, java.lang.String r30, java.lang.Boolean r31, java.lang.Boolean r32, boolean r33, boolean r34, java.util.List r35, defpackage.s51 r36) {
+        /*
+            Method dump skipped, instruction units count: 1020
+            To view this dump add '--comments-level debug' option
+        */
+        throw new UnsupportedOperationException("Method not decompiled: su.happ.proxyutility.feature.main.MainActivity.S(su.happ.proxyutility.dto.ImportResult, java.lang.String, su.happ.proxyutility.dto.SubscriptionItem, boolean, boolean, java.lang.String, java.lang.Boolean, java.lang.Boolean, boolean, boolean, java.util.List, s51):java.lang.Object");
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    /* JADX WARN: Type inference failed for: r7v0, types: [q51] */
+    /* JADX WARN: Type inference failed for: r7v4 */
+    /* JADX WARN: Type inference failed for: r7v5 */
+    /* JADX WARN: Type inference failed for: r7v6 */
+    public final boolean W(ImportResult importResult, boolean z, boolean z2) {
+        x83 x83VarC = importResult.getStatus();
+        boolean z3 = false;
+        Boolean boolValueOf = 0;
+        boolValueOf = 0;
+        boolValueOf = 0;
+        if (x83VarC instanceof v83) {
+            MainViewModel.C(G(), false, 3);
+        } else {
+            boolean z4 = x83VarC instanceof k83;
+            g94 g94Var = this.X;
+            if (z4) {
+                u84 u84VarZ = ys0.z(g94Var);
+                nf1 nf1Var = tp1.a;
+                jm4.Q(u84VarZ, dm4.a, new jy2((Object) this, x83VarC, (q51) boolValueOf, (byte) 10), 2);
+            } else if (x83VarC instanceof t83) {
+                u84 u84VarZ2 = ys0.z(g94Var);
+                nf1 nf1Var2 = tp1.a;
+                jm4.Q(u84VarZ2, dm4.a, new z81(this, z2, (t83) x83VarC, z, null, (byte) 3), 2);
+            } else {
+                if (importResult.getLastParseError() != null) {
+                    u84 u84VarZ3 = ys0.z(g94Var);
+                    nf1 nf1Var3 = tp1.a;
+                    jm4.Q(u84VarZ3, dm4.a, new z81(this, z2, importResult, z, null, (byte) 4), 2);
+                    z3 = true;
+                }
+                boolValueOf = Boolean.valueOf(z3);
+            }
+        }
+        if (boolValueOf != 0) {
+            return boolValueOf.booleanValue();
+        }
+        return true;
+    }
+
+    public final void X(String str) {
+        str.getClass();
+        u84 u84VarZ = ys0.z(this.X);
+        nf1 nf1Var = tp1.a;
+        jm4.Q(u84VarZ, ye1.Z, new qk4(this, str, (q51) null), 2);
+    }
+
+    /* JADX WARN: Code duplicated, block: B:7:0x0013  */
+    public final Object Y(s51 s51Var) {
+        bl4 bl4Var;
+        if (s51Var instanceof bl4) {
+            bl4Var = (bl4) s51Var;
+            int i = bl4Var.h0;
+            if ((i & Integer.MIN_VALUE) != 0) {
+                bl4Var.h0 = i - Integer.MIN_VALUE;
+            } else {
+                bl4Var = new bl4(this, s51Var);
+            }
+        } else {
+            bl4Var = new bl4(this, s51Var);
+        }
+        Object obj = bl4Var.f0;
+        int i2 = bl4Var.h0;
+        if (i2 == 0) {
+            w39.n0(obj);
+            if (dh3.f(((qc4) G().A.getValue()).d(), Boolean.TRUE)) {
+                ss8 ss8Var = ss8.a;
+                qe4.L0(this, "su.happ.proxyutility.action.service", 42, _UrlKt.FRAGMENT_ENCODE_SET);
+            }
+            if (G().u()) {
+                ss8 ss8Var2 = ss8.a;
+                ss8.I(this);
+            }
+            be beVar = gx1.Y;
+            long jM0 = vj8.m0(1000L, lx1.MILLISECONDS);
+            bl4Var.h0 = 1;
+            Object objG = u70.G(jM0, bl4Var);
+            c71 c71Var = c71.X;
+            if (objG == c71Var) {
+                return c71Var;
+            }
+        } else {
+            if (i2 != 1) {
+                bt.i("call to 'resume' before 'invoke' with coroutine");
+                return null;
+            }
+            w39.n0(obj);
+        }
+        i0();
+        return dn8.a;
+    }
+
+    public final void Z() {
+        a aVar = wu7.y1;
+        ml2 ml2VarN = n();
+        int i = e46.fragment_container_view;
+        wu7 wu7Var = new wu7();
+        wu7Var.V();
+        r00 r00Var = new r00(ml2VarN);
+        r00Var.o = true;
+        if (i == 0) {
+            bt.q("Must use non-zero containerViewId");
+        } else {
+            r00Var.g(i, wu7Var, "DialogSubscriptionSync", 2);
+            r00Var.e();
+        }
+    }
+
+    public final void a0() {
+        b6 b6Var = this.Q0;
+        if (b6Var != null) {
+            setBarsParams(b6Var.z0);
+        } else {
+            dh3.T("binding");
+            throw null;
+        }
+    }
+
+    public final void b0(boolean z) {
+        int i;
+        boolean z2 = ((xm4) G().x.X.getValue()).q || z;
+        b6 b6Var = this.Q0;
+        if (b6Var == null) {
+            dh3.T("binding");
+            throw null;
+        }
+        Context context = b6Var.i0.getContext();
+        b6 b6Var2 = this.Q0;
+        if (b6Var2 == null) {
+            dh3.T("binding");
+            throw null;
+        }
+        Drawable drawable = b6Var2.i0.getDrawable();
+        if (drawable == null) {
+            drawable = new ColorDrawable(0);
+        }
+        if (z2) {
+            int i2 = v26.icBtnPowerOn;
+            TypedValue typedValue = new TypedValue();
+            getTheme().resolveAttribute(i2, typedValue, true);
+            i = typedValue.resourceId;
+        } else {
+            int i3 = v26.icBtnPowerOff;
+            TypedValue typedValue2 = new TypedValue();
+            getTheme().resolveAttribute(i3, typedValue2, true);
+            i = typedValue2.resourceId;
+        }
+        Drawable drawable2 = context.getDrawable(i);
+        if (drawable2 == null) {
+            bt.q("Required value was null.");
+            return;
+        }
+        TransitionDrawable transitionDrawable = new TransitionDrawable(new Drawable[]{drawable, drawable2});
+        b6 b6Var3 = this.Q0;
+        if (b6Var3 == null) {
+            dh3.T("binding");
+            throw null;
+        }
+        b6Var3.i0.setImageDrawable(transitionDrawable);
+        transitionDrawable.setCrossFadeEnabled(true);
+        transitionDrawable.startTransition(MetaParams.MAX_LENGTH_VISIBLE_ANNOUNCE);
+    }
+
+    public final void c0(boolean z) {
+        Animation animationLoadAnimation = AnimationUtils.loadAnimation(this, R.anim.fade_out);
+        Animation animationLoadAnimation2 = AnimationUtils.loadAnimation(this, R.anim.fade_in);
+        animationLoadAnimation2.setDuration(100L);
+        animationLoadAnimation.setDuration(100L);
+        animationLoadAnimation.setAnimationListener(new cl4(this, z, animationLoadAnimation2));
+        b6 b6Var = this.Q0;
+        if (b6Var != null) {
+            b6Var.i0.startAnimation(animationLoadAnimation);
+        } else {
+            dh3.T("binding");
+            throw null;
+        }
+    }
+
+    public final void d0(String str) {
+        b6 b6Var = this.Q0;
+        if (b6Var == null) {
+            dh3.T("binding");
+            throw null;
+        }
+        TextView textView = b6Var.L0;
+        if (textView == null) {
+            textView = b6Var.o0;
+        }
+        if (textView != null) {
+            textView.setText(str);
+        }
+        C();
+    }
+
+    public final void e0(String str, boolean z) {
+        int i = zx2.B;
+        b6 b6Var = this.Q0;
+        ay2 ay2Var = null;
+        if (b6Var == null) {
+            dh3.T("binding");
+            throw null;
+        }
+        CoordinatorLayout host = b6Var.B0.getHost();
+        int i2 = pu.i(this, 0.0f);
+        String string = getString(y46.main_checkout_faq);
+        string.getClass();
+        ay2 ay2Var2 = new ay2(string, u70.O(this, q36.ic_faq), new mj4(this, (byte) 3));
+        if (z) {
+            String string2 = getString(y46.main_show_clipboard);
+            string2.getClass();
+            ay2Var = new ay2(string2, u70.O(this, q36.ic_clipboard), new mj4(this, (byte) 4));
+        }
+        k42.g(this, host, str, my2.Y, eu.q0(new ay2[]{ay2Var2, ay2Var}), i2, 64);
+    }
+
+    public final void f0(List list, boolean z) {
+        ml2 ml2VarN = n();
+        int i = e46.fragment_container_view;
+        list.getClass();
+        ok7 ok7Var = new ok7();
+        ok7Var.V();
+        Bundle bundle = new Bundle();
+        bundle.putParcelableArray("stories", (Parcelable[]) list.toArray(new ld6[0]));
+        bundle.putBoolean("is_force", z);
+        ok7Var.Q(bundle);
+        r00 r00Var = new r00(ml2VarN);
+        r00Var.o = true;
+        if (i == 0) {
+            bt.q("Must use non-zero containerViewId");
+        } else {
+            r00Var.g(i, ok7Var, "StoriesDialogFragment", 2);
+            r00Var.e();
+        }
+    }
+
+    public final void g0() {
+        b6 b6Var = this.Q0;
+        if (b6Var == null) {
+            dh3.T("binding");
+            throw null;
+        }
+        TextView textView = b6Var.L0;
+        if (textView == null) {
+            textView = b6Var.o0;
+        }
+        if (textView != null) {
+            textView.setText(getString(y46.connection_test_testing));
+        }
+        b6 b6Var2 = this.Q0;
+        if (b6Var2 == null) {
+            dh3.T("binding");
+            throw null;
+        }
+        HappTextView happTextView = b6Var2.l0;
+        rp7.e(happTextView, true);
+        happTextView.setText(getString(y46.connection_test_testing));
+        b6 b6Var3 = this.Q0;
+        if (b6Var3 == null) {
+            dh3.T("binding");
+            throw null;
+        }
+        rp7.e(b6Var3.k0, false);
+        b0(true);
+    }
+
+    /* JADX WARN: Code duplicated, block: B:7:0x0013  */
+    public final Object h0(s51 s51Var) {
+        wl4 wl4Var;
+        q15 q15Var;
+        Intent intentPrepare;
+        if (s51Var instanceof wl4) {
+            wl4Var = (wl4) s51Var;
+            int i = wl4Var.i0;
+            if ((i & Integer.MIN_VALUE) != 0) {
+                wl4Var.i0 = i - Integer.MIN_VALUE;
+            } else {
+                wl4Var = new wl4(this, s51Var);
+            }
+        } else {
+            wl4Var = new wl4(this, s51Var);
+        }
+        Object obj = wl4Var.g0;
+        int i2 = wl4Var.i0;
+        if (i2 == 0) {
+            w39.n0(obj);
+            q15 q15Var2 = this.q1;
+            wl4Var.f0 = q15Var2;
+            wl4Var.i0 = 1;
+            Object objG = q15Var2.g(wl4Var);
+            c71 c71Var = c71.X;
+            if (objG == c71Var) {
+                return c71Var;
+            }
+            q15Var = q15Var2;
+        } else {
+            if (i2 != 1) {
+                bt.i("call to 'resume' before 'invoke' with coroutine");
+                return null;
+            }
+            q15Var = wl4Var.f0;
+            w39.n0(obj);
+        }
+        try {
+            ServerConfig serverConfigG = G().G();
+            dn8 dn8Var = dn8.a;
+            if (serverConfigG == null) {
+                return dn8Var;
+            }
+            String strI = H().i("pref_mode");
+            if (strI == null) {
+                strI = "VPN";
+            }
+            if (!strI.equals("VPN") || (intentPrepare = VpnService.prepare(this)) == null) {
+                i0();
+            } else {
+                this.Y0.h0(intentPrepare);
+            }
+            return dn8Var;
+        } finally {
+            q15Var.m(null);
+        }
+    }
+
+    /* JADX WARN: Code duplicated, block: B:30:0x008a  */
+    public final void i0() {
+        boolean zF;
+        if (dh3.f(((qc4) G().A.getValue()).d(), Boolean.TRUE)) {
+            ss8 ss8Var = ss8.a;
+            qe4.L0(this, "su.happ.proxyutility.action.service", 42, _UrlKt.FRAGMENT_ENCODE_SET);
+        }
+        vz7 vz7Var = this.U0;
+        String strI = ((MMKV) vz7Var.getValue()).i("SELECTED_SERVER");
+        if (strI != null) {
+            GuId guId = new GuId(strI);
+            q51 q51Var = null;
+            if (fm7.o0(guId.getValue())) {
+                guId = null;
+            }
+            String value = guId != null ? guId.getValue() : null;
+            if (value != null) {
+                kw4 kw4Var = kw4.a;
+                ServerConfig serverConfigB = kw4.b(value);
+                if (serverConfigB != null) {
+                    SubId subId = new SubId(serverConfigB.getSubscriptionId());
+                    if (fm7.o0(subId.getValue())) {
+                        subId = null;
+                    }
+                    String value2 = subId != null ? subId.getValue() : null;
+                    if (value2 != null) {
+                        SubscriptionItem subscriptionItemF = kw4.f(value2);
+                        zF = dh3.f(subscriptionItemF != null ? subscriptionItemF.getImport() : null, Boolean.FALSE);
+                    } else {
+                        zF = false;
+                    }
+                } else {
+                    zF = false;
+                }
+                if (zF) {
+                    ((MMKV) vz7Var.getValue()).remove("SELECTED_SERVER");
+                    return;
+                }
+                this.v1 = true;
+                u84 u84VarZ = ys0.z(this.X);
+                nf1 nf1Var = tp1.a;
+                jm4.Q(u84VarZ, dm4.a, new pl4(this, q51Var, (byte) 5), 2);
+                XRayPoint xRayPoint = n69.a;
+                n69.b(this, false);
+            }
+        }
+    }
+
+    public final void j0() {
+        byte b = 0;
+        this.v1 = false;
+        Object animatedValue = this.w1.getAnimatedValue();
+        animatedValue.getClass();
+        float fFloatValue = ((Float) animatedValue).floatValue();
+        long currentPlayTime = this.w1.getCurrentPlayTime();
+        this.w1.cancel();
+        ValueAnimator valueAnimatorOfFloat = ValueAnimator.ofFloat(fFloatValue, 360.0f);
+        this.w1 = valueAnimatorOfFloat;
+        long j = 1000 - currentPlayTime;
+        if (j > 0) {
+            valueAnimatorOfFloat.setDuration(j);
+            this.w1.setInterpolator(new DecelerateInterpolator());
+            this.w1.addUpdateListener(new sj4(this, b));
+            this.w1.start();
+        }
+    }
+
+    /* JADX WARN: Code duplicated, block: B:7:0x0013  */
+    public final Object k0(s51 s51Var) {
+        xl4 xl4Var;
+        q15 q15Var;
+        if (s51Var instanceof xl4) {
+            xl4Var = (xl4) s51Var;
+            int i = xl4Var.i0;
+            if ((i & Integer.MIN_VALUE) != 0) {
+                xl4Var.i0 = i - Integer.MIN_VALUE;
+            } else {
+                xl4Var = new xl4(this, s51Var);
+            }
+        } else {
+            xl4Var = new xl4(this, s51Var);
+        }
+        Object obj = xl4Var.g0;
+        int i2 = xl4Var.i0;
+        if (i2 == 0) {
+            w39.n0(obj);
+            q15 q15Var2 = this.q1;
+            xl4Var.f0 = q15Var2;
+            xl4Var.i0 = 1;
+            Object objG = q15Var2.g(xl4Var);
+            c71 c71Var = c71.X;
+            if (objG == c71Var) {
+                return c71Var;
+            }
+            q15Var = q15Var2;
+        } else {
+            if (i2 != 1) {
+                bt.i("call to 'resume' before 'invoke' with coroutine");
+                return null;
+            }
+            q15Var = xl4Var.f0;
+            w39.n0(obj);
+        }
+        try {
+            ss8 ss8Var = ss8.a;
+            ss8.I(this);
+            List list = (List) G().H.X.getValue();
+            if (list != null && list.isEmpty()) {
+                b0(false);
+            }
+            return dn8.a;
+        } finally {
+            q15Var.m(null);
+        }
+    }
+
+    public final Object l0(uy7 uy7Var) {
+        G().K();
+        boolean zU = G().u();
+        c71 c71Var = c71.X;
+        dn8 dn8Var = dn8.a;
+        if (zU) {
+            Object objK0 = k0(uy7Var);
+            if (objK0 == c71Var) {
+                return objK0;
+            }
+        } else {
+            kw4 kw4Var = kw4.a;
+            if (!kw4.n()) {
+                be.m(this, getString(y46.main_error_no_subscriptions_title), getString(y46.main_error_no_subscriptions_description), null, getString(R.string.ok), null, new Integer(t46.dialog_alert_warning), null, null, 1874);
+                return dn8Var;
+            }
+            Object objH0 = h0(uy7Var);
+            if (objH0 == c71Var) {
+                return objH0;
+            }
+        }
+        return dn8Var;
+    }
+
+    public final Object m0(ArrayList arrayList, int i, int i2, s51 s51Var) {
+        qg5 qg5Var = (qg5) arrayList.get(i);
+        String value = ((SubId) qg5Var.X).getValue();
+        SubscriptionItem subscriptionItem = (SubscriptionItem) qg5Var.Y;
+        if (subscriptionItem != null) {
+            m51 m51Var = ko1.B1;
+            km4.l0(n(), jo1.X, null);
+            HappApplication happApplication = HappApplication.M0;
+            k32.i().d().h(new uq0(subscriptionItem, (byte) 3));
+            nv0 nv0Var = new nv0();
+            nv0Var.X = i;
+            nv0Var.Y = i2;
+            nv0Var.Z = this;
+            nv0Var.f0 = arrayList;
+            Object objP = P(this, value, subscriptionItem, true, false, false, null, true, false, null, nv0Var, s51Var, 304);
+            if (objP == c71.X) {
+                return objP;
+            }
+        }
+        return dn8.a;
+    }
+
+    public final void n0() {
+        Object rj6Var;
+        Object value;
+        xm4 xm4Var;
+        vz7 vz7Var = this.r1;
+        try {
+            NetworkCapabilities networkCapabilities = ((ConnectivityManager) vz7Var.getValue()).getNetworkCapabilities(((ConnectivityManager) vz7Var.getValue()).getActiveNetwork());
+            if (networkCapabilities == null || !networkCapabilities.hasTransport(1)) {
+                rj6Var = (networkCapabilities == null || !networkCapabilities.hasTransport(0)) ? null : a45.Y;
+            } else {
+                rj6Var = a45.X;
+            }
+        } catch (Throwable th) {
+            if ((th instanceof InterruptedException) || (th instanceof CancellationException)) {
+                throw th;
+            }
+            rj6Var = new rj6(th);
+        }
+        a45 a45Var = (a45) (rj6Var instanceof rj6 ? null : rj6Var);
+        MainViewModel mainViewModelG = G();
+        if (((xm4) mainViewModelG.x.X.getValue()).h == a45Var) {
+            return;
+        }
+        oh7 oh7Var = mainViewModelG.w;
+        do {
+            value = oh7Var.getValue();
+            xm4Var = (xm4) value;
+            xm4Var.getClass();
+        } while (!oh7Var.k(value, xm4.a(xm4Var, null, 0L, null, null, false, 0, 0, a45Var, null, false, null, false, null, false, false, null, 65407)));
+        mainViewModelG.s();
+    }
+
+    @Override // su.happ.proxyutility.ui.BaseActivity, androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
+    public final void onCreate(Bundle bundle) {
+        View viewB;
+        Object value;
+        xm4 xm4Var;
+        Object value2;
+        xm4 xm4Var2;
+        super.onCreate(bundle);
+        final byte b = 1;
+        HappApplication.P0 = true;
+        q51 q51Var = null;
+        final byte b2 = 0;
+        View viewInflate = getLayoutInflater().inflate(t46.activity_main, (ViewGroup) null, false);
+        int i = e46.bg_jobs;
+        if (((RoundableLayout) ln7.b(viewInflate, i)) != null) {
+            i = e46.btn_ai_helper;
+            HappDebouncedTextButton happDebouncedTextButton = (HappDebouncedTextButton) ln7.b(viewInflate, i);
+            if (happDebouncedTextButton != null) {
+                HappDebouncedTextButton happDebouncedTextButton2 = (HappDebouncedTextButton) ln7.b(viewInflate, e46.btn_clipboard);
+                i = e46.btn_invalid_time;
+                AppCompatImageButton appCompatImageButton = (AppCompatImageButton) ln7.b(viewInflate, i);
+                if (appCompatImageButton != null) {
+                    i = e46.btn_jobs;
+                    AppCompatImageButton appCompatImageButton2 = (AppCompatImageButton) ln7.b(viewInflate, i);
+                    if (appCompatImageButton2 != null) {
+                        i = e46.btn_notification_disabled;
+                        AppCompatImageButton appCompatImageButton3 = (AppCompatImageButton) ln7.b(viewInflate, i);
+                        if (appCompatImageButton3 != null) {
+                            i = e46.btn_power;
+                            HappDebouncedImageButton happDebouncedImageButton = (HappDebouncedImageButton) ln7.b(viewInflate, i);
+                            if (happDebouncedImageButton != null) {
+                                i = e46.btn_power_circle;
+                                AppCompatImageView appCompatImageView = (AppCompatImageView) ln7.b(viewInflate, i);
+                                if (appCompatImageView != null) {
+                                    i = e46.btn_power_connected_time;
+                                    HappTextView happTextView = (HappTextView) ln7.b(viewInflate, i);
+                                    if (happTextView != null) {
+                                        i = e46.btn_power_disconnect;
+                                        HappTextView happTextView2 = (HappTextView) ln7.b(viewInflate, i);
+                                        if (happTextView2 != null) {
+                                            HappDebouncedTextButton happDebouncedTextButton3 = (HappDebouncedTextButton) ln7.b(viewInflate, e46.btn_qr_code);
+                                            i = e46.btn_stories;
+                                            AppCompatImageButton appCompatImageButton4 = (AppCompatImageButton) ln7.b(viewInflate, i);
+                                            if (appCompatImageButton4 != null) {
+                                                AppCompatButton appCompatButton = (AppCompatButton) ln7.b(viewInflate, e46.btn_test_ping);
+                                                i = e46.composeView;
+                                                ComposeView composeView = (ComposeView) ln7.b(viewInflate, i);
+                                                if (composeView != null) {
+                                                    i = e46.fl_geo_progress;
+                                                    if (((FrameLayout) ln7.b(viewInflate, i)) != null) {
+                                                        i = e46.fragment_container_view;
+                                                        if (((FragmentContainerView) ln7.b(viewInflate, i)) != null) {
+                                                            i = e46.geo_progress;
+                                                            CardView cardView = (CardView) ln7.b(viewInflate, i);
+                                                            if (cardView != null) {
+                                                                ShapeableImageView shapeableImageView = (ShapeableImageView) ln7.b(viewInflate, e46.iv_current_server_flag);
+                                                                i = e46.iv_geo_file_progress;
+                                                                AppCompatImageView appCompatImageView2 = (AppCompatImageView) ln7.b(viewInflate, i);
+                                                                if (appCompatImageView2 != null) {
+                                                                    RelativeLayout relativeLayout = (RelativeLayout) ln7.b(viewInflate, e46.layout_hide_all);
+                                                                    i = e46.layout_main;
+                                                                    ConstraintLayout constraintLayout = (ConstraintLayout) ln7.b(viewInflate, i);
+                                                                    if (constraintLayout != null) {
+                                                                        ConstraintLayout constraintLayout2 = (ConstraintLayout) ln7.b(viewInflate, e46.layout_no_configs);
+                                                                        RelativeLayout relativeLayout2 = (RelativeLayout) ln7.b(viewInflate, e46.layout_test_current_config);
+                                                                        LinearLayout linearLayout = (LinearLayout) ln7.b(viewInflate, e46.ll_current_server);
+                                                                        i = e46.ll_hwid;
+                                                                        LinearLayout linearLayout2 = (LinearLayout) ln7.b(viewInflate, i);
+                                                                        if (linearLayout2 != null) {
+                                                                            i = e46.ll_jobs;
+                                                                            if (((LinearLayout) ln7.b(viewInflate, i)) != null) {
+                                                                                i = e46.root_layout;
+                                                                                LinearLayout linearLayout3 = (LinearLayout) ln7.b(viewInflate, i);
+                                                                                if (linearLayout3 != null && (viewB = ln7.b(viewInflate, (i = e46.rv_config_groups))) != null) {
+                                                                                    i = e46.snackbar_host_root;
+                                                                                    HappSnackbarHost happSnackbarHost = (HappSnackbarHost) ln7.b(viewInflate, i);
+                                                                                    if (happSnackbarHost != null) {
+                                                                                        i = e46.toolbar;
+                                                                                        if (((ConstraintLayout) ln7.b(viewInflate, i)) != null) {
+                                                                                            i = e46.toolbar_left_side;
+                                                                                            if (((ConstraintLayout) ln7.b(viewInflate, i)) != null) {
+                                                                                                i = e46.toolbar_main_add;
+                                                                                                AppCompatImageButton appCompatImageButton5 = (AppCompatImageButton) ln7.b(viewInflate, i);
+                                                                                                if (appCompatImageButton5 != null) {
+                                                                                                    i = e46.toolbar_main_dev_mode;
+                                                                                                    HappTextView happTextView3 = (HappTextView) ln7.b(viewInflate, i);
+                                                                                                    if (happTextView3 != null) {
+                                                                                                        i = e46.toolbar_main_settings;
+                                                                                                        AppCompatImageButton appCompatImageButton6 = (AppCompatImageButton) ln7.b(viewInflate, i);
+                                                                                                        if (appCompatImageButton6 != null) {
+                                                                                                            HappTextView happTextView4 = (HappTextView) ln7.b(viewInflate, e46.tv_current_server_title);
+                                                                                                            i = e46.tv_geo_progress_description;
+                                                                                                            HappTextView happTextView5 = (HappTextView) ln7.b(viewInflate, i);
+                                                                                                            if (happTextView5 != null) {
+                                                                                                                i = e46.tv_geo_progress_title;
+                                                                                                                HappTextView happTextView6 = (HappTextView) ln7.b(viewInflate, i);
+                                                                                                                if (happTextView6 != null) {
+                                                                                                                    HappTextView happTextView7 = (HappTextView) ln7.b(viewInflate, e46.tv_hide_all);
+                                                                                                                    i = e46.tv_hint;
+                                                                                                                    HappTextView happTextView8 = (HappTextView) ln7.b(viewInflate, i);
+                                                                                                                    if (happTextView8 != null) {
+                                                                                                                        i = e46.tv_hwid;
+                                                                                                                        HappTextView happTextView9 = (HappTextView) ln7.b(viewInflate, i);
+                                                                                                                        if (happTextView9 != null) {
+                                                                                                                            i = e46.tv_jobs;
+                                                                                                                            if (((HappTextView) ln7.b(viewInflate, i)) != null) {
+                                                                                                                                DrawerLayout drawerLayout = (DrawerLayout) viewInflate;
+                                                                                                                                this.Q0 = new b6(drawerLayout, happDebouncedTextButton, happDebouncedTextButton2, appCompatImageButton, appCompatImageButton2, appCompatImageButton3, happDebouncedImageButton, appCompatImageView, happTextView, happTextView2, happDebouncedTextButton3, appCompatImageButton4, appCompatButton, composeView, cardView, shapeableImageView, appCompatImageView2, relativeLayout, constraintLayout, constraintLayout2, relativeLayout2, linearLayout, linearLayout2, linearLayout3, viewB, happSnackbarHost, appCompatImageButton5, happTextView3, appCompatImageButton6, happTextView4, happTextView5, happTextView6, happTextView7, happTextView8, happTextView9, (HappTextView) ln7.b(viewInflate, e46.tv_test_current_config));
+                                                                                                                                setContentView(drawerLayout);
+                                                                                                                                vz7 vz7Var = this.p1;
+                                                                                                                                mb6.g((ck4) vz7Var.getValue());
+                                                                                                                                a0();
+                                                                                                                                b0(false);
+                                                                                                                                MMKV.u();
+                                                                                                                                MainViewModel mainViewModelG = G();
+                                                                                                                                int iE = ((MMKV) mainViewModelG.d.getValue()).e(0, "pref_job_open");
+                                                                                                                                oh7 oh7Var = mainViewModelG.w;
+                                                                                                                                do {
+                                                                                                                                    value = oh7Var.getValue();
+                                                                                                                                    xm4Var = (xm4) value;
+                                                                                                                                    xm4Var.getClass();
+                                                                                                                                } while (!oh7Var.k(value, xm4.a(xm4Var, null, 0L, null, null, false, 0, iE, null, null, false, null, false, null, false, false, null, 65471)));
+                                                                                                                                MainViewModel mainViewModelG2 = G();
+                                                                                                                                String strI = mainViewModelG2.n().i("SELECTED_SERVER");
+                                                                                                                                if (strI != null) {
+                                                                                                                                    kw4 kw4Var = kw4.a;
+                                                                                                                                    ServerConfig serverConfigB = kw4.b(strI);
+                                                                                                                                    if (serverConfigB != null) {
+                                                                                                                                        oh7 oh7Var2 = mainViewModelG2.w;
+                                                                                                                                        do {
+                                                                                                                                            value2 = oh7Var2.getValue();
+                                                                                                                                            xm4Var2 = (xm4) value2;
+                                                                                                                                            xm4Var2.getClass();
+                                                                                                                                        } while (!oh7Var2.k(value2, xm4.a(xm4Var2, null, 0L, serverConfigB, null, false, 0, 0, null, null, false, null, false, null, false, false, null, 65531)));
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                                g94 g94Var = this.X;
+                                                                                                                                u84 u84VarZ = ys0.z(g94Var);
+                                                                                                                                nf1 nf1Var = tp1.a;
+                                                                                                                                hv2 hv2Var = dm4.a;
+                                                                                                                                final byte b3 = 2;
+                                                                                                                                jm4.Q(u84VarZ, hv2Var, new wj4(this, q51Var, (byte) 22), 2);
+                                                                                                                                ((yz4) G().J.getValue()).e(this, new bm4(new oj4(this, b), b2));
+                                                                                                                                final byte b4 = 3;
+                                                                                                                                jm4.Q(ys0.z(g94Var), null, new wj4(this, q51Var, (byte) 24), 3);
+                                                                                                                                jm4.Q(ys0.z(g94Var), hv2Var, new wj4(this, q51Var, (byte) 26), 2);
+                                                                                                                                jm4.Q(ys0.z(g94Var), hv2Var, new wj4(this, q51Var, (byte) 28), 2);
+                                                                                                                                G().m().e(this, new bm4(new oj4(this, b3), b2));
+                                                                                                                                jm4.Q(ys0.z(g94Var), hv2Var, new pl4(this, q51Var, b2), 2);
+                                                                                                                                jm4.Q(ys0.z(g94Var), hv2Var, new pl4(this, q51Var, b3), 2);
+                                                                                                                                final byte b5 = 4;
+                                                                                                                                jm4.Q(ys0.z(g94Var), hv2Var, new pl4(this, q51Var, b5), 2);
+                                                                                                                                jm4.Q(ys0.z(g94Var), hv2Var, new wj4(this, q51Var, (byte) 16), 2);
+                                                                                                                                jm4.Q(ys0.z(g94Var), hv2Var, new wj4(this, q51Var, (byte) 18), 2);
+                                                                                                                                jm4.Q(ys0.z(g94Var), hv2Var, new wj4(this, q51Var, (byte) 21), 2);
+                                                                                                                                MainViewModel mainViewModelG3 = G();
+                                                                                                                                mainViewModelG3.X(rg8.f0);
+                                                                                                                                mainViewModelG3.m().j(om4.f0);
+                                                                                                                                Application application = mainViewModelG3.b;
+                                                                                                                                ue3.I(application, mainViewModelG3.M, new IntentFilter("su.happ.proxyutility.action.activity"), 2);
+                                                                                                                                qe4.L0(application, "su.happ.proxyutility.action.service", 1, _UrlKt.FRAGMENT_ENCODE_SET);
+                                                                                                                                final byte b6 = 13;
+                                                                                                                                qe4.L0(application, "su.happ.proxyutility.action.service", 13, _UrlKt.FRAGMENT_ENCODE_SET);
+                                                                                                                                String str = HappApplication.O0;
+                                                                                                                                str.getClass();
+                                                                                                                                mainViewModelG3.p(str);
+                                                                                                                                MainViewModel mainViewModelG4 = G();
+                                                                                                                                jm4.Q(zw8.a(mainViewModelG4), hv2Var, new oo4(mainViewModelG4, null), 2);
+                                                                                                                                jm4.Q(ys0.z(g94Var), null, new nk4(this, q51Var, b4), 3);
+                                                                                                                                G().v = this.o1;
+                                                                                                                                try {
+                                                                                                                                    ((ConnectivityManager) this.r1.getValue()).requestNetwork((NetworkRequest) this.s1.getValue(), (yj4) this.t1.getValue());
+                                                                                                                                } catch (Throwable th) {
+                                                                                                                                    if ((th instanceof InterruptedException) || (th instanceof CancellationException)) {
+                                                                                                                                        throw th;
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                                ss8 ss8Var = ss8.a;
+                                                                                                                                String strL = ss8.L(this);
+                                                                                                                                u84 u84VarZ2 = ys0.z(g94Var);
+                                                                                                                                nf1 nf1Var2 = tp1.a;
+                                                                                                                                jm4.Q(u84VarZ2, ye1.Z, new bk4(this, strL, q51Var, b2), 2);
+                                                                                                                                final byte b7 = 14;
+                                                                                                                                if (Build.VERSION.SDK_INT >= 33) {
+                                                                                                                                    new y45((BaseActivity) this).L("android.permission.POST_NOTIFICATIONS").a(new o61(new oj4(this, b2), b7));
+                                                                                                                                }
+                                                                                                                                b6 b6Var = this.Q0;
+                                                                                                                                if (b6Var == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                b6Var.p0.setContent(new zy0(-1557108490, true, new rj4(this, b2)));
+                                                                                                                                b6 b6Var2 = this.Q0;
+                                                                                                                                if (b6Var2 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                ConstraintLayout constraintLayout3 = b6Var2.v0;
+                                                                                                                                if (constraintLayout3 != null) {
+                                                                                                                                    ViewGroup.LayoutParams layoutParams = constraintLayout3.getLayoutParams();
+                                                                                                                                    layoutParams.getClass();
+                                                                                                                                    ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams;
+                                                                                                                                    marginLayoutParams.bottomMargin = u() + marginLayoutParams.bottomMargin;
+                                                                                                                                }
+                                                                                                                                b6 b6Var3 = this.Q0;
+                                                                                                                                if (b6Var3 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                final byte b8 = 9;
+                                                                                                                                b6Var3.E0.setOnClickListener(new View.OnClickListener(this) { // from class: pj4
+                                                                                                                                    public final /* synthetic */ MainActivity Y;
+
+                                                                                                                                    {
+                                                                                                                                        this.Y = this;
+                                                                                                                                    }
+
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:27:0x00f4  */
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:34:0x0114  */
+                                                                                                                                    @Override // android.view.View.OnClickListener
+                                                                                                                                    public final void onClick(View view) {
+                                                                                                                                        Object value3;
+                                                                                                                                        xm4 xm4Var3;
+                                                                                                                                        String value4;
+                                                                                                                                        int i2;
+                                                                                                                                        byte b9 = b8;
+                                                                                                                                        byte b10 = 7;
+                                                                                                                                        q51 q51Var2 = null;
+                                                                                                                                        MainActivity mainActivity = this.Y;
+                                                                                                                                        switch (b9) {
+                                                                                                                                            case 0:
+                                                                                                                                                b6 b6Var4 = mainActivity.Q0;
+                                                                                                                                                if (b6Var4 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                HappTextView happTextView10 = b6Var4.L0;
+                                                                                                                                                if (happTextView10 != null) {
+                                                                                                                                                    happTextView10.performClick();
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 1:
+                                                                                                                                                int i3 = MainActivity.y1;
+                                                                                                                                                if (mainActivity.G().u()) {
+                                                                                                                                                    mainActivity.g0();
+                                                                                                                                                    qe4.L0(mainActivity.G().b, "su.happ.proxyutility.action.service", 6, _UrlKt.FRAGMENT_ENCODE_SET);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 2:
+                                                                                                                                                int i4 = MainActivity.y1;
+                                                                                                                                                ((dr2) mainActivity.h1.getValue()).e(vq2.a);
+                                                                                                                                                oh7 oh7Var3 = mainActivity.G().w;
+                                                                                                                                                do {
+                                                                                                                                                    value3 = oh7Var3.getValue();
+                                                                                                                                                    xm4Var3 = (xm4) value3;
+                                                                                                                                                    xm4Var3.getClass();
+                                                                                                                                                } while (!oh7Var3.k(value3, xm4.a(xm4Var3, null, 0L, null, null, false, 0, 0, null, null, false, null, false, null, true, false, null, 57343)));
+                                                                                                                                                return;
+                                                                                                                                            case 3:
+                                                                                                                                                int i5 = MainActivity.y1;
+                                                                                                                                                mainActivity.N();
+                                                                                                                                                return;
+                                                                                                                                            case 4:
+                                                                                                                                                int i6 = MainActivity.y1;
+                                                                                                                                                mainActivity.R();
+                                                                                                                                                return;
+                                                                                                                                            case 5:
+                                                                                                                                                int i7 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var2 = ss8.a;
+                                                                                                                                                ss8.B(mainActivity, "https://ai-4docs.com/happ");
+                                                                                                                                                return;
+                                                                                                                                            case 6:
+                                                                                                                                                int i8 = MainActivity.y1;
+                                                                                                                                                if (((xm4) mainActivity.G().x.X.getValue()).e) {
+                                                                                                                                                    b6 b6Var5 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var5 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    HappTextView happTextView11 = b6Var5.I0;
+                                                                                                                                                    if (happTextView11 != null) {
+                                                                                                                                                        happTextView11.performClick();
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 7:
+                                                                                                                                                int i9 = MainActivity.y1;
+                                                                                                                                                MainViewModel mainViewModelG5 = mainActivity.G();
+                                                                                                                                                tu0 tu0VarA = zw8.a(mainViewModelG5);
+                                                                                                                                                nf1 nf1Var3 = tp1.a;
+                                                                                                                                                jm4.Q(tu0VarA, ye1.Z, new l40(mainViewModelG5, q51Var2, b10), 2);
+                                                                                                                                                return;
+                                                                                                                                            case 8:
+                                                                                                                                                int i10 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var3 = ss8.a;
+                                                                                                                                                ss8.E(mainActivity, ss8.j(mainActivity));
+                                                                                                                                                pu.Q(mainActivity, y46.toast_copied_to_clipboard);
+                                                                                                                                                return;
+                                                                                                                                            case 9:
+                                                                                                                                                int i11 = MainActivity.y1;
+                                                                                                                                                mainActivity.startActivity(new Intent(mainActivity, (Class<?>) SettingsActivity.class).putExtra("isRunning", mainActivity.G().u()));
+                                                                                                                                                return;
+                                                                                                                                            case 10:
+                                                                                                                                                int i12 = MainActivity.y1;
+                                                                                                                                                n51 n51Var = new n51(mainActivity, p56.CustomPopupMenuTheme);
+                                                                                                                                                b6 b6Var6 = mainActivity.Q0;
+                                                                                                                                                if (b6Var6 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                f63 f63Var = new f63(n51Var, b6Var6.C0, 0, w26.popupMenuStyle, 0);
+                                                                                                                                                du4 du4Var = (du4) f63Var.Z;
+                                                                                                                                                nt4 nt4Var = (nt4) f63Var.Y;
+                                                                                                                                                String strI2 = ((MMKV) mainActivity.U0.getValue()).i("SELECTED_SERVER");
+                                                                                                                                                if (strI2 != null) {
+                                                                                                                                                    GuId guId = new GuId(strI2);
+                                                                                                                                                    if (fm7.o0(guId.getValue())) {
+                                                                                                                                                        guId = null;
+                                                                                                                                                    }
+                                                                                                                                                    if (guId != null) {
+                                                                                                                                                        value4 = guId.getValue();
+                                                                                                                                                    } else {
+                                                                                                                                                        value4 = null;
+                                                                                                                                                    }
+                                                                                                                                                } else {
+                                                                                                                                                    value4 = null;
+                                                                                                                                                }
+                                                                                                                                                f63Var.f0 = new jn0(mainActivity, value4, (byte) 5);
+                                                                                                                                                du4Var.g = 8388613;
+                                                                                                                                                if (ue3.y(mainActivity)) {
+                                                                                                                                                    i2 = v46.menu_main_tv;
+                                                                                                                                                } else {
+                                                                                                                                                    ss8 ss8Var4 = ss8.a;
+                                                                                                                                                    if (ss8.t()) {
+                                                                                                                                                        i2 = v46.menu_main_tv;
+                                                                                                                                                    } else {
+                                                                                                                                                        i2 = v46.menu_main_mobile;
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                                new uw7(n51Var).inflate(i2, nt4Var);
+                                                                                                                                                MenuItem menuItemFindItem = nt4Var.findItem(e46.export_json_clipboard);
+                                                                                                                                                menuItemFindItem.setVisible(false);
+                                                                                                                                                u84 u84VarZ3 = ys0.z(mainActivity.X);
+                                                                                                                                                nf1 nf1Var4 = tp1.a;
+                                                                                                                                                jm4.Q(u84VarZ3, dm4.a, new co(value4, menuItemFindItem, null), 2);
+                                                                                                                                                MenuItem menuItemFindItem2 = nt4Var.findItem(e46.config_group);
+                                                                                                                                                menuItemFindItem2.setVisible(false);
+                                                                                                                                                MenuItem menuItemFindItem3 = nt4Var.findItem(e46.dialog_test);
+                                                                                                                                                menuItemFindItem3.setVisible(false);
+                                                                                                                                                ss8 ss8Var5 = ss8.a;
+                                                                                                                                                if (ss8.t()) {
+                                                                                                                                                    menuItemFindItem2.setVisible(true);
+                                                                                                                                                    menuItemFindItem3.setVisible(true);
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.b()) {
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.f != null) {
+                                                                                                                                                    du4Var.d(0, 0, false, false);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    bt.i("MenuPopupHelper cannot be used without an anchor");
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case 11:
+                                                                                                                                                int i13 = MainActivity.y1;
+                                                                                                                                                List list = (List) ((qc2) mainActivity.G().g.getValue()).h.X.getValue();
+                                                                                                                                                if (list != null) {
+                                                                                                                                                    mainActivity.f0(list, true);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    mainActivity.f0(((xm4) mainActivity.G().x.X.getValue()).d, false);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case FileClientSessionCache.MAX_SIZE /* 12 */:
+                                                                                                                                                int i14 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 11), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 13:
+                                                                                                                                                int i15 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 12), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 14:
+                                                                                                                                                int i16 = MainActivity.y1;
+                                                                                                                                                int i17 = t46.dialog_alert_warning;
+                                                                                                                                                int i18 = y46.jobs_title;
+                                                                                                                                                MainActivity mainActivity2 = this.Y;
+                                                                                                                                                be.m(mainActivity2, mainActivity2.getString(i18), mainActivity2.getString(y46.jobs_description), null, mainActivity2.getString(y46.jobs_btn), null, Integer.valueOf(i17), new mj4(mainActivity2, b10), null, 1362);
+                                                                                                                                                return;
+                                                                                                                                            default:
+                                                                                                                                                int i19 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 13), 3);
+                                                                                                                                                return;
+                                                                                                                                        }
+                                                                                                                                    }
+                                                                                                                                });
+                                                                                                                                b6 b6Var4 = this.Q0;
+                                                                                                                                if (b6Var4 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                final byte b9 = 10;
+                                                                                                                                b6Var4.C0.setOnClickListener(new View.OnClickListener(this) { // from class: pj4
+                                                                                                                                    public final /* synthetic */ MainActivity Y;
+
+                                                                                                                                    {
+                                                                                                                                        this.Y = this;
+                                                                                                                                    }
+
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:27:0x00f4  */
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:34:0x0114  */
+                                                                                                                                    @Override // android.view.View.OnClickListener
+                                                                                                                                    public final void onClick(View view) {
+                                                                                                                                        Object value3;
+                                                                                                                                        xm4 xm4Var3;
+                                                                                                                                        String value4;
+                                                                                                                                        int i2;
+                                                                                                                                        byte b10 = b9;
+                                                                                                                                        byte b11 = 7;
+                                                                                                                                        q51 q51Var2 = null;
+                                                                                                                                        MainActivity mainActivity = this.Y;
+                                                                                                                                        switch (b10) {
+                                                                                                                                            case 0:
+                                                                                                                                                b6 b6Var5 = mainActivity.Q0;
+                                                                                                                                                if (b6Var5 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                HappTextView happTextView10 = b6Var5.L0;
+                                                                                                                                                if (happTextView10 != null) {
+                                                                                                                                                    happTextView10.performClick();
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 1:
+                                                                                                                                                int i3 = MainActivity.y1;
+                                                                                                                                                if (mainActivity.G().u()) {
+                                                                                                                                                    mainActivity.g0();
+                                                                                                                                                    qe4.L0(mainActivity.G().b, "su.happ.proxyutility.action.service", 6, _UrlKt.FRAGMENT_ENCODE_SET);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 2:
+                                                                                                                                                int i4 = MainActivity.y1;
+                                                                                                                                                ((dr2) mainActivity.h1.getValue()).e(vq2.a);
+                                                                                                                                                oh7 oh7Var3 = mainActivity.G().w;
+                                                                                                                                                do {
+                                                                                                                                                    value3 = oh7Var3.getValue();
+                                                                                                                                                    xm4Var3 = (xm4) value3;
+                                                                                                                                                    xm4Var3.getClass();
+                                                                                                                                                } while (!oh7Var3.k(value3, xm4.a(xm4Var3, null, 0L, null, null, false, 0, 0, null, null, false, null, false, null, true, false, null, 57343)));
+                                                                                                                                                return;
+                                                                                                                                            case 3:
+                                                                                                                                                int i5 = MainActivity.y1;
+                                                                                                                                                mainActivity.N();
+                                                                                                                                                return;
+                                                                                                                                            case 4:
+                                                                                                                                                int i6 = MainActivity.y1;
+                                                                                                                                                mainActivity.R();
+                                                                                                                                                return;
+                                                                                                                                            case 5:
+                                                                                                                                                int i7 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var2 = ss8.a;
+                                                                                                                                                ss8.B(mainActivity, "https://ai-4docs.com/happ");
+                                                                                                                                                return;
+                                                                                                                                            case 6:
+                                                                                                                                                int i8 = MainActivity.y1;
+                                                                                                                                                if (((xm4) mainActivity.G().x.X.getValue()).e) {
+                                                                                                                                                    b6 b6Var6 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var6 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    HappTextView happTextView11 = b6Var6.I0;
+                                                                                                                                                    if (happTextView11 != null) {
+                                                                                                                                                        happTextView11.performClick();
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 7:
+                                                                                                                                                int i9 = MainActivity.y1;
+                                                                                                                                                MainViewModel mainViewModelG5 = mainActivity.G();
+                                                                                                                                                tu0 tu0VarA = zw8.a(mainViewModelG5);
+                                                                                                                                                nf1 nf1Var3 = tp1.a;
+                                                                                                                                                jm4.Q(tu0VarA, ye1.Z, new l40(mainViewModelG5, q51Var2, b11), 2);
+                                                                                                                                                return;
+                                                                                                                                            case 8:
+                                                                                                                                                int i10 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var3 = ss8.a;
+                                                                                                                                                ss8.E(mainActivity, ss8.j(mainActivity));
+                                                                                                                                                pu.Q(mainActivity, y46.toast_copied_to_clipboard);
+                                                                                                                                                return;
+                                                                                                                                            case 9:
+                                                                                                                                                int i11 = MainActivity.y1;
+                                                                                                                                                mainActivity.startActivity(new Intent(mainActivity, (Class<?>) SettingsActivity.class).putExtra("isRunning", mainActivity.G().u()));
+                                                                                                                                                return;
+                                                                                                                                            case 10:
+                                                                                                                                                int i12 = MainActivity.y1;
+                                                                                                                                                n51 n51Var = new n51(mainActivity, p56.CustomPopupMenuTheme);
+                                                                                                                                                b6 b6Var7 = mainActivity.Q0;
+                                                                                                                                                if (b6Var7 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                f63 f63Var = new f63(n51Var, b6Var7.C0, 0, w26.popupMenuStyle, 0);
+                                                                                                                                                du4 du4Var = (du4) f63Var.Z;
+                                                                                                                                                nt4 nt4Var = (nt4) f63Var.Y;
+                                                                                                                                                String strI2 = ((MMKV) mainActivity.U0.getValue()).i("SELECTED_SERVER");
+                                                                                                                                                if (strI2 != null) {
+                                                                                                                                                    GuId guId = new GuId(strI2);
+                                                                                                                                                    if (fm7.o0(guId.getValue())) {
+                                                                                                                                                        guId = null;
+                                                                                                                                                    }
+                                                                                                                                                    if (guId != null) {
+                                                                                                                                                        value4 = guId.getValue();
+                                                                                                                                                    } else {
+                                                                                                                                                        value4 = null;
+                                                                                                                                                    }
+                                                                                                                                                } else {
+                                                                                                                                                    value4 = null;
+                                                                                                                                                }
+                                                                                                                                                f63Var.f0 = new jn0(mainActivity, value4, (byte) 5);
+                                                                                                                                                du4Var.g = 8388613;
+                                                                                                                                                if (ue3.y(mainActivity)) {
+                                                                                                                                                    i2 = v46.menu_main_tv;
+                                                                                                                                                } else {
+                                                                                                                                                    ss8 ss8Var4 = ss8.a;
+                                                                                                                                                    if (ss8.t()) {
+                                                                                                                                                        i2 = v46.menu_main_tv;
+                                                                                                                                                    } else {
+                                                                                                                                                        i2 = v46.menu_main_mobile;
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                                new uw7(n51Var).inflate(i2, nt4Var);
+                                                                                                                                                MenuItem menuItemFindItem = nt4Var.findItem(e46.export_json_clipboard);
+                                                                                                                                                menuItemFindItem.setVisible(false);
+                                                                                                                                                u84 u84VarZ3 = ys0.z(mainActivity.X);
+                                                                                                                                                nf1 nf1Var4 = tp1.a;
+                                                                                                                                                jm4.Q(u84VarZ3, dm4.a, new co(value4, menuItemFindItem, null), 2);
+                                                                                                                                                MenuItem menuItemFindItem2 = nt4Var.findItem(e46.config_group);
+                                                                                                                                                menuItemFindItem2.setVisible(false);
+                                                                                                                                                MenuItem menuItemFindItem3 = nt4Var.findItem(e46.dialog_test);
+                                                                                                                                                menuItemFindItem3.setVisible(false);
+                                                                                                                                                ss8 ss8Var5 = ss8.a;
+                                                                                                                                                if (ss8.t()) {
+                                                                                                                                                    menuItemFindItem2.setVisible(true);
+                                                                                                                                                    menuItemFindItem3.setVisible(true);
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.b()) {
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.f != null) {
+                                                                                                                                                    du4Var.d(0, 0, false, false);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    bt.i("MenuPopupHelper cannot be used without an anchor");
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case 11:
+                                                                                                                                                int i13 = MainActivity.y1;
+                                                                                                                                                List list = (List) ((qc2) mainActivity.G().g.getValue()).h.X.getValue();
+                                                                                                                                                if (list != null) {
+                                                                                                                                                    mainActivity.f0(list, true);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    mainActivity.f0(((xm4) mainActivity.G().x.X.getValue()).d, false);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case FileClientSessionCache.MAX_SIZE /* 12 */:
+                                                                                                                                                int i14 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 11), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 13:
+                                                                                                                                                int i15 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 12), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 14:
+                                                                                                                                                int i16 = MainActivity.y1;
+                                                                                                                                                int i17 = t46.dialog_alert_warning;
+                                                                                                                                                int i18 = y46.jobs_title;
+                                                                                                                                                MainActivity mainActivity2 = this.Y;
+                                                                                                                                                be.m(mainActivity2, mainActivity2.getString(i18), mainActivity2.getString(y46.jobs_description), null, mainActivity2.getString(y46.jobs_btn), null, Integer.valueOf(i17), new mj4(mainActivity2, b11), null, 1362);
+                                                                                                                                                return;
+                                                                                                                                            default:
+                                                                                                                                                int i19 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 13), 3);
+                                                                                                                                                return;
+                                                                                                                                        }
+                                                                                                                                    }
+                                                                                                                                });
+                                                                                                                                b6 b6Var5 = this.Q0;
+                                                                                                                                if (b6Var5 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                final byte b10 = 11;
+                                                                                                                                b6Var5.n0.setOnClickListener(new View.OnClickListener(this) { // from class: pj4
+                                                                                                                                    public final /* synthetic */ MainActivity Y;
+
+                                                                                                                                    {
+                                                                                                                                        this.Y = this;
+                                                                                                                                    }
+
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:27:0x00f4  */
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:34:0x0114  */
+                                                                                                                                    @Override // android.view.View.OnClickListener
+                                                                                                                                    public final void onClick(View view) {
+                                                                                                                                        Object value3;
+                                                                                                                                        xm4 xm4Var3;
+                                                                                                                                        String value4;
+                                                                                                                                        int i2;
+                                                                                                                                        byte b11 = b10;
+                                                                                                                                        byte b12 = 7;
+                                                                                                                                        q51 q51Var2 = null;
+                                                                                                                                        MainActivity mainActivity = this.Y;
+                                                                                                                                        switch (b11) {
+                                                                                                                                            case 0:
+                                                                                                                                                b6 b6Var6 = mainActivity.Q0;
+                                                                                                                                                if (b6Var6 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                HappTextView happTextView10 = b6Var6.L0;
+                                                                                                                                                if (happTextView10 != null) {
+                                                                                                                                                    happTextView10.performClick();
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 1:
+                                                                                                                                                int i3 = MainActivity.y1;
+                                                                                                                                                if (mainActivity.G().u()) {
+                                                                                                                                                    mainActivity.g0();
+                                                                                                                                                    qe4.L0(mainActivity.G().b, "su.happ.proxyutility.action.service", 6, _UrlKt.FRAGMENT_ENCODE_SET);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 2:
+                                                                                                                                                int i4 = MainActivity.y1;
+                                                                                                                                                ((dr2) mainActivity.h1.getValue()).e(vq2.a);
+                                                                                                                                                oh7 oh7Var3 = mainActivity.G().w;
+                                                                                                                                                do {
+                                                                                                                                                    value3 = oh7Var3.getValue();
+                                                                                                                                                    xm4Var3 = (xm4) value3;
+                                                                                                                                                    xm4Var3.getClass();
+                                                                                                                                                } while (!oh7Var3.k(value3, xm4.a(xm4Var3, null, 0L, null, null, false, 0, 0, null, null, false, null, false, null, true, false, null, 57343)));
+                                                                                                                                                return;
+                                                                                                                                            case 3:
+                                                                                                                                                int i5 = MainActivity.y1;
+                                                                                                                                                mainActivity.N();
+                                                                                                                                                return;
+                                                                                                                                            case 4:
+                                                                                                                                                int i6 = MainActivity.y1;
+                                                                                                                                                mainActivity.R();
+                                                                                                                                                return;
+                                                                                                                                            case 5:
+                                                                                                                                                int i7 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var2 = ss8.a;
+                                                                                                                                                ss8.B(mainActivity, "https://ai-4docs.com/happ");
+                                                                                                                                                return;
+                                                                                                                                            case 6:
+                                                                                                                                                int i8 = MainActivity.y1;
+                                                                                                                                                if (((xm4) mainActivity.G().x.X.getValue()).e) {
+                                                                                                                                                    b6 b6Var7 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var7 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    HappTextView happTextView11 = b6Var7.I0;
+                                                                                                                                                    if (happTextView11 != null) {
+                                                                                                                                                        happTextView11.performClick();
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 7:
+                                                                                                                                                int i9 = MainActivity.y1;
+                                                                                                                                                MainViewModel mainViewModelG5 = mainActivity.G();
+                                                                                                                                                tu0 tu0VarA = zw8.a(mainViewModelG5);
+                                                                                                                                                nf1 nf1Var3 = tp1.a;
+                                                                                                                                                jm4.Q(tu0VarA, ye1.Z, new l40(mainViewModelG5, q51Var2, b12), 2);
+                                                                                                                                                return;
+                                                                                                                                            case 8:
+                                                                                                                                                int i10 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var3 = ss8.a;
+                                                                                                                                                ss8.E(mainActivity, ss8.j(mainActivity));
+                                                                                                                                                pu.Q(mainActivity, y46.toast_copied_to_clipboard);
+                                                                                                                                                return;
+                                                                                                                                            case 9:
+                                                                                                                                                int i11 = MainActivity.y1;
+                                                                                                                                                mainActivity.startActivity(new Intent(mainActivity, (Class<?>) SettingsActivity.class).putExtra("isRunning", mainActivity.G().u()));
+                                                                                                                                                return;
+                                                                                                                                            case 10:
+                                                                                                                                                int i12 = MainActivity.y1;
+                                                                                                                                                n51 n51Var = new n51(mainActivity, p56.CustomPopupMenuTheme);
+                                                                                                                                                b6 b6Var8 = mainActivity.Q0;
+                                                                                                                                                if (b6Var8 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                f63 f63Var = new f63(n51Var, b6Var8.C0, 0, w26.popupMenuStyle, 0);
+                                                                                                                                                du4 du4Var = (du4) f63Var.Z;
+                                                                                                                                                nt4 nt4Var = (nt4) f63Var.Y;
+                                                                                                                                                String strI2 = ((MMKV) mainActivity.U0.getValue()).i("SELECTED_SERVER");
+                                                                                                                                                if (strI2 != null) {
+                                                                                                                                                    GuId guId = new GuId(strI2);
+                                                                                                                                                    if (fm7.o0(guId.getValue())) {
+                                                                                                                                                        guId = null;
+                                                                                                                                                    }
+                                                                                                                                                    if (guId != null) {
+                                                                                                                                                        value4 = guId.getValue();
+                                                                                                                                                    } else {
+                                                                                                                                                        value4 = null;
+                                                                                                                                                    }
+                                                                                                                                                } else {
+                                                                                                                                                    value4 = null;
+                                                                                                                                                }
+                                                                                                                                                f63Var.f0 = new jn0(mainActivity, value4, (byte) 5);
+                                                                                                                                                du4Var.g = 8388613;
+                                                                                                                                                if (ue3.y(mainActivity)) {
+                                                                                                                                                    i2 = v46.menu_main_tv;
+                                                                                                                                                } else {
+                                                                                                                                                    ss8 ss8Var4 = ss8.a;
+                                                                                                                                                    if (ss8.t()) {
+                                                                                                                                                        i2 = v46.menu_main_tv;
+                                                                                                                                                    } else {
+                                                                                                                                                        i2 = v46.menu_main_mobile;
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                                new uw7(n51Var).inflate(i2, nt4Var);
+                                                                                                                                                MenuItem menuItemFindItem = nt4Var.findItem(e46.export_json_clipboard);
+                                                                                                                                                menuItemFindItem.setVisible(false);
+                                                                                                                                                u84 u84VarZ3 = ys0.z(mainActivity.X);
+                                                                                                                                                nf1 nf1Var4 = tp1.a;
+                                                                                                                                                jm4.Q(u84VarZ3, dm4.a, new co(value4, menuItemFindItem, null), 2);
+                                                                                                                                                MenuItem menuItemFindItem2 = nt4Var.findItem(e46.config_group);
+                                                                                                                                                menuItemFindItem2.setVisible(false);
+                                                                                                                                                MenuItem menuItemFindItem3 = nt4Var.findItem(e46.dialog_test);
+                                                                                                                                                menuItemFindItem3.setVisible(false);
+                                                                                                                                                ss8 ss8Var5 = ss8.a;
+                                                                                                                                                if (ss8.t()) {
+                                                                                                                                                    menuItemFindItem2.setVisible(true);
+                                                                                                                                                    menuItemFindItem3.setVisible(true);
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.b()) {
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.f != null) {
+                                                                                                                                                    du4Var.d(0, 0, false, false);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    bt.i("MenuPopupHelper cannot be used without an anchor");
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case 11:
+                                                                                                                                                int i13 = MainActivity.y1;
+                                                                                                                                                List list = (List) ((qc2) mainActivity.G().g.getValue()).h.X.getValue();
+                                                                                                                                                if (list != null) {
+                                                                                                                                                    mainActivity.f0(list, true);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    mainActivity.f0(((xm4) mainActivity.G().x.X.getValue()).d, false);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case FileClientSessionCache.MAX_SIZE /* 12 */:
+                                                                                                                                                int i14 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 11), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 13:
+                                                                                                                                                int i15 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 12), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 14:
+                                                                                                                                                int i16 = MainActivity.y1;
+                                                                                                                                                int i17 = t46.dialog_alert_warning;
+                                                                                                                                                int i18 = y46.jobs_title;
+                                                                                                                                                MainActivity mainActivity2 = this.Y;
+                                                                                                                                                be.m(mainActivity2, mainActivity2.getString(i18), mainActivity2.getString(y46.jobs_description), null, mainActivity2.getString(y46.jobs_btn), null, Integer.valueOf(i17), new mj4(mainActivity2, b12), null, 1362);
+                                                                                                                                                return;
+                                                                                                                                            default:
+                                                                                                                                                int i19 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 13), 3);
+                                                                                                                                                return;
+                                                                                                                                        }
+                                                                                                                                    }
+                                                                                                                                });
+                                                                                                                                b6 b6Var6 = this.Q0;
+                                                                                                                                if (b6Var6 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                final byte b11 = 12;
+                                                                                                                                b6Var6.f0.setOnClickListener(new View.OnClickListener(this) { // from class: pj4
+                                                                                                                                    public final /* synthetic */ MainActivity Y;
+
+                                                                                                                                    {
+                                                                                                                                        this.Y = this;
+                                                                                                                                    }
+
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:27:0x00f4  */
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:34:0x0114  */
+                                                                                                                                    @Override // android.view.View.OnClickListener
+                                                                                                                                    public final void onClick(View view) {
+                                                                                                                                        Object value3;
+                                                                                                                                        xm4 xm4Var3;
+                                                                                                                                        String value4;
+                                                                                                                                        int i2;
+                                                                                                                                        byte b12 = b11;
+                                                                                                                                        byte b13 = 7;
+                                                                                                                                        q51 q51Var2 = null;
+                                                                                                                                        MainActivity mainActivity = this.Y;
+                                                                                                                                        switch (b12) {
+                                                                                                                                            case 0:
+                                                                                                                                                b6 b6Var7 = mainActivity.Q0;
+                                                                                                                                                if (b6Var7 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                HappTextView happTextView10 = b6Var7.L0;
+                                                                                                                                                if (happTextView10 != null) {
+                                                                                                                                                    happTextView10.performClick();
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 1:
+                                                                                                                                                int i3 = MainActivity.y1;
+                                                                                                                                                if (mainActivity.G().u()) {
+                                                                                                                                                    mainActivity.g0();
+                                                                                                                                                    qe4.L0(mainActivity.G().b, "su.happ.proxyutility.action.service", 6, _UrlKt.FRAGMENT_ENCODE_SET);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 2:
+                                                                                                                                                int i4 = MainActivity.y1;
+                                                                                                                                                ((dr2) mainActivity.h1.getValue()).e(vq2.a);
+                                                                                                                                                oh7 oh7Var3 = mainActivity.G().w;
+                                                                                                                                                do {
+                                                                                                                                                    value3 = oh7Var3.getValue();
+                                                                                                                                                    xm4Var3 = (xm4) value3;
+                                                                                                                                                    xm4Var3.getClass();
+                                                                                                                                                } while (!oh7Var3.k(value3, xm4.a(xm4Var3, null, 0L, null, null, false, 0, 0, null, null, false, null, false, null, true, false, null, 57343)));
+                                                                                                                                                return;
+                                                                                                                                            case 3:
+                                                                                                                                                int i5 = MainActivity.y1;
+                                                                                                                                                mainActivity.N();
+                                                                                                                                                return;
+                                                                                                                                            case 4:
+                                                                                                                                                int i6 = MainActivity.y1;
+                                                                                                                                                mainActivity.R();
+                                                                                                                                                return;
+                                                                                                                                            case 5:
+                                                                                                                                                int i7 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var2 = ss8.a;
+                                                                                                                                                ss8.B(mainActivity, "https://ai-4docs.com/happ");
+                                                                                                                                                return;
+                                                                                                                                            case 6:
+                                                                                                                                                int i8 = MainActivity.y1;
+                                                                                                                                                if (((xm4) mainActivity.G().x.X.getValue()).e) {
+                                                                                                                                                    b6 b6Var8 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var8 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    HappTextView happTextView11 = b6Var8.I0;
+                                                                                                                                                    if (happTextView11 != null) {
+                                                                                                                                                        happTextView11.performClick();
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 7:
+                                                                                                                                                int i9 = MainActivity.y1;
+                                                                                                                                                MainViewModel mainViewModelG5 = mainActivity.G();
+                                                                                                                                                tu0 tu0VarA = zw8.a(mainViewModelG5);
+                                                                                                                                                nf1 nf1Var3 = tp1.a;
+                                                                                                                                                jm4.Q(tu0VarA, ye1.Z, new l40(mainViewModelG5, q51Var2, b13), 2);
+                                                                                                                                                return;
+                                                                                                                                            case 8:
+                                                                                                                                                int i10 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var3 = ss8.a;
+                                                                                                                                                ss8.E(mainActivity, ss8.j(mainActivity));
+                                                                                                                                                pu.Q(mainActivity, y46.toast_copied_to_clipboard);
+                                                                                                                                                return;
+                                                                                                                                            case 9:
+                                                                                                                                                int i11 = MainActivity.y1;
+                                                                                                                                                mainActivity.startActivity(new Intent(mainActivity, (Class<?>) SettingsActivity.class).putExtra("isRunning", mainActivity.G().u()));
+                                                                                                                                                return;
+                                                                                                                                            case 10:
+                                                                                                                                                int i12 = MainActivity.y1;
+                                                                                                                                                n51 n51Var = new n51(mainActivity, p56.CustomPopupMenuTheme);
+                                                                                                                                                b6 b6Var9 = mainActivity.Q0;
+                                                                                                                                                if (b6Var9 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                f63 f63Var = new f63(n51Var, b6Var9.C0, 0, w26.popupMenuStyle, 0);
+                                                                                                                                                du4 du4Var = (du4) f63Var.Z;
+                                                                                                                                                nt4 nt4Var = (nt4) f63Var.Y;
+                                                                                                                                                String strI2 = ((MMKV) mainActivity.U0.getValue()).i("SELECTED_SERVER");
+                                                                                                                                                if (strI2 != null) {
+                                                                                                                                                    GuId guId = new GuId(strI2);
+                                                                                                                                                    if (fm7.o0(guId.getValue())) {
+                                                                                                                                                        guId = null;
+                                                                                                                                                    }
+                                                                                                                                                    if (guId != null) {
+                                                                                                                                                        value4 = guId.getValue();
+                                                                                                                                                    } else {
+                                                                                                                                                        value4 = null;
+                                                                                                                                                    }
+                                                                                                                                                } else {
+                                                                                                                                                    value4 = null;
+                                                                                                                                                }
+                                                                                                                                                f63Var.f0 = new jn0(mainActivity, value4, (byte) 5);
+                                                                                                                                                du4Var.g = 8388613;
+                                                                                                                                                if (ue3.y(mainActivity)) {
+                                                                                                                                                    i2 = v46.menu_main_tv;
+                                                                                                                                                } else {
+                                                                                                                                                    ss8 ss8Var4 = ss8.a;
+                                                                                                                                                    if (ss8.t()) {
+                                                                                                                                                        i2 = v46.menu_main_tv;
+                                                                                                                                                    } else {
+                                                                                                                                                        i2 = v46.menu_main_mobile;
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                                new uw7(n51Var).inflate(i2, nt4Var);
+                                                                                                                                                MenuItem menuItemFindItem = nt4Var.findItem(e46.export_json_clipboard);
+                                                                                                                                                menuItemFindItem.setVisible(false);
+                                                                                                                                                u84 u84VarZ3 = ys0.z(mainActivity.X);
+                                                                                                                                                nf1 nf1Var4 = tp1.a;
+                                                                                                                                                jm4.Q(u84VarZ3, dm4.a, new co(value4, menuItemFindItem, null), 2);
+                                                                                                                                                MenuItem menuItemFindItem2 = nt4Var.findItem(e46.config_group);
+                                                                                                                                                menuItemFindItem2.setVisible(false);
+                                                                                                                                                MenuItem menuItemFindItem3 = nt4Var.findItem(e46.dialog_test);
+                                                                                                                                                menuItemFindItem3.setVisible(false);
+                                                                                                                                                ss8 ss8Var5 = ss8.a;
+                                                                                                                                                if (ss8.t()) {
+                                                                                                                                                    menuItemFindItem2.setVisible(true);
+                                                                                                                                                    menuItemFindItem3.setVisible(true);
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.b()) {
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.f != null) {
+                                                                                                                                                    du4Var.d(0, 0, false, false);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    bt.i("MenuPopupHelper cannot be used without an anchor");
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case 11:
+                                                                                                                                                int i13 = MainActivity.y1;
+                                                                                                                                                List list = (List) ((qc2) mainActivity.G().g.getValue()).h.X.getValue();
+                                                                                                                                                if (list != null) {
+                                                                                                                                                    mainActivity.f0(list, true);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    mainActivity.f0(((xm4) mainActivity.G().x.X.getValue()).d, false);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case FileClientSessionCache.MAX_SIZE /* 12 */:
+                                                                                                                                                int i14 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 11), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 13:
+                                                                                                                                                int i15 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 12), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 14:
+                                                                                                                                                int i16 = MainActivity.y1;
+                                                                                                                                                int i17 = t46.dialog_alert_warning;
+                                                                                                                                                int i18 = y46.jobs_title;
+                                                                                                                                                MainActivity mainActivity2 = this.Y;
+                                                                                                                                                be.m(mainActivity2, mainActivity2.getString(i18), mainActivity2.getString(y46.jobs_description), null, mainActivity2.getString(y46.jobs_btn), null, Integer.valueOf(i17), new mj4(mainActivity2, b13), null, 1362);
+                                                                                                                                                return;
+                                                                                                                                            default:
+                                                                                                                                                int i19 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 13), 3);
+                                                                                                                                                return;
+                                                                                                                                        }
+                                                                                                                                    }
+                                                                                                                                });
+                                                                                                                                b6 b6Var7 = this.Q0;
+                                                                                                                                if (b6Var7 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                b6Var7.h0.setOnClickListener(new View.OnClickListener(this) { // from class: pj4
+                                                                                                                                    public final /* synthetic */ MainActivity Y;
+
+                                                                                                                                    {
+                                                                                                                                        this.Y = this;
+                                                                                                                                    }
+
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:27:0x00f4  */
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:34:0x0114  */
+                                                                                                                                    @Override // android.view.View.OnClickListener
+                                                                                                                                    public final void onClick(View view) {
+                                                                                                                                        Object value3;
+                                                                                                                                        xm4 xm4Var3;
+                                                                                                                                        String value4;
+                                                                                                                                        int i2;
+                                                                                                                                        byte b12 = b6;
+                                                                                                                                        byte b13 = 7;
+                                                                                                                                        q51 q51Var2 = null;
+                                                                                                                                        MainActivity mainActivity = this.Y;
+                                                                                                                                        switch (b12) {
+                                                                                                                                            case 0:
+                                                                                                                                                b6 b6Var8 = mainActivity.Q0;
+                                                                                                                                                if (b6Var8 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                HappTextView happTextView10 = b6Var8.L0;
+                                                                                                                                                if (happTextView10 != null) {
+                                                                                                                                                    happTextView10.performClick();
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 1:
+                                                                                                                                                int i3 = MainActivity.y1;
+                                                                                                                                                if (mainActivity.G().u()) {
+                                                                                                                                                    mainActivity.g0();
+                                                                                                                                                    qe4.L0(mainActivity.G().b, "su.happ.proxyutility.action.service", 6, _UrlKt.FRAGMENT_ENCODE_SET);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 2:
+                                                                                                                                                int i4 = MainActivity.y1;
+                                                                                                                                                ((dr2) mainActivity.h1.getValue()).e(vq2.a);
+                                                                                                                                                oh7 oh7Var3 = mainActivity.G().w;
+                                                                                                                                                do {
+                                                                                                                                                    value3 = oh7Var3.getValue();
+                                                                                                                                                    xm4Var3 = (xm4) value3;
+                                                                                                                                                    xm4Var3.getClass();
+                                                                                                                                                } while (!oh7Var3.k(value3, xm4.a(xm4Var3, null, 0L, null, null, false, 0, 0, null, null, false, null, false, null, true, false, null, 57343)));
+                                                                                                                                                return;
+                                                                                                                                            case 3:
+                                                                                                                                                int i5 = MainActivity.y1;
+                                                                                                                                                mainActivity.N();
+                                                                                                                                                return;
+                                                                                                                                            case 4:
+                                                                                                                                                int i6 = MainActivity.y1;
+                                                                                                                                                mainActivity.R();
+                                                                                                                                                return;
+                                                                                                                                            case 5:
+                                                                                                                                                int i7 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var2 = ss8.a;
+                                                                                                                                                ss8.B(mainActivity, "https://ai-4docs.com/happ");
+                                                                                                                                                return;
+                                                                                                                                            case 6:
+                                                                                                                                                int i8 = MainActivity.y1;
+                                                                                                                                                if (((xm4) mainActivity.G().x.X.getValue()).e) {
+                                                                                                                                                    b6 b6Var9 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var9 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    HappTextView happTextView11 = b6Var9.I0;
+                                                                                                                                                    if (happTextView11 != null) {
+                                                                                                                                                        happTextView11.performClick();
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 7:
+                                                                                                                                                int i9 = MainActivity.y1;
+                                                                                                                                                MainViewModel mainViewModelG5 = mainActivity.G();
+                                                                                                                                                tu0 tu0VarA = zw8.a(mainViewModelG5);
+                                                                                                                                                nf1 nf1Var3 = tp1.a;
+                                                                                                                                                jm4.Q(tu0VarA, ye1.Z, new l40(mainViewModelG5, q51Var2, b13), 2);
+                                                                                                                                                return;
+                                                                                                                                            case 8:
+                                                                                                                                                int i10 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var3 = ss8.a;
+                                                                                                                                                ss8.E(mainActivity, ss8.j(mainActivity));
+                                                                                                                                                pu.Q(mainActivity, y46.toast_copied_to_clipboard);
+                                                                                                                                                return;
+                                                                                                                                            case 9:
+                                                                                                                                                int i11 = MainActivity.y1;
+                                                                                                                                                mainActivity.startActivity(new Intent(mainActivity, (Class<?>) SettingsActivity.class).putExtra("isRunning", mainActivity.G().u()));
+                                                                                                                                                return;
+                                                                                                                                            case 10:
+                                                                                                                                                int i12 = MainActivity.y1;
+                                                                                                                                                n51 n51Var = new n51(mainActivity, p56.CustomPopupMenuTheme);
+                                                                                                                                                b6 b6Var10 = mainActivity.Q0;
+                                                                                                                                                if (b6Var10 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                f63 f63Var = new f63(n51Var, b6Var10.C0, 0, w26.popupMenuStyle, 0);
+                                                                                                                                                du4 du4Var = (du4) f63Var.Z;
+                                                                                                                                                nt4 nt4Var = (nt4) f63Var.Y;
+                                                                                                                                                String strI2 = ((MMKV) mainActivity.U0.getValue()).i("SELECTED_SERVER");
+                                                                                                                                                if (strI2 != null) {
+                                                                                                                                                    GuId guId = new GuId(strI2);
+                                                                                                                                                    if (fm7.o0(guId.getValue())) {
+                                                                                                                                                        guId = null;
+                                                                                                                                                    }
+                                                                                                                                                    if (guId != null) {
+                                                                                                                                                        value4 = guId.getValue();
+                                                                                                                                                    } else {
+                                                                                                                                                        value4 = null;
+                                                                                                                                                    }
+                                                                                                                                                } else {
+                                                                                                                                                    value4 = null;
+                                                                                                                                                }
+                                                                                                                                                f63Var.f0 = new jn0(mainActivity, value4, (byte) 5);
+                                                                                                                                                du4Var.g = 8388613;
+                                                                                                                                                if (ue3.y(mainActivity)) {
+                                                                                                                                                    i2 = v46.menu_main_tv;
+                                                                                                                                                } else {
+                                                                                                                                                    ss8 ss8Var4 = ss8.a;
+                                                                                                                                                    if (ss8.t()) {
+                                                                                                                                                        i2 = v46.menu_main_tv;
+                                                                                                                                                    } else {
+                                                                                                                                                        i2 = v46.menu_main_mobile;
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                                new uw7(n51Var).inflate(i2, nt4Var);
+                                                                                                                                                MenuItem menuItemFindItem = nt4Var.findItem(e46.export_json_clipboard);
+                                                                                                                                                menuItemFindItem.setVisible(false);
+                                                                                                                                                u84 u84VarZ3 = ys0.z(mainActivity.X);
+                                                                                                                                                nf1 nf1Var4 = tp1.a;
+                                                                                                                                                jm4.Q(u84VarZ3, dm4.a, new co(value4, menuItemFindItem, null), 2);
+                                                                                                                                                MenuItem menuItemFindItem2 = nt4Var.findItem(e46.config_group);
+                                                                                                                                                menuItemFindItem2.setVisible(false);
+                                                                                                                                                MenuItem menuItemFindItem3 = nt4Var.findItem(e46.dialog_test);
+                                                                                                                                                menuItemFindItem3.setVisible(false);
+                                                                                                                                                ss8 ss8Var5 = ss8.a;
+                                                                                                                                                if (ss8.t()) {
+                                                                                                                                                    menuItemFindItem2.setVisible(true);
+                                                                                                                                                    menuItemFindItem3.setVisible(true);
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.b()) {
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.f != null) {
+                                                                                                                                                    du4Var.d(0, 0, false, false);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    bt.i("MenuPopupHelper cannot be used without an anchor");
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case 11:
+                                                                                                                                                int i13 = MainActivity.y1;
+                                                                                                                                                List list = (List) ((qc2) mainActivity.G().g.getValue()).h.X.getValue();
+                                                                                                                                                if (list != null) {
+                                                                                                                                                    mainActivity.f0(list, true);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    mainActivity.f0(((xm4) mainActivity.G().x.X.getValue()).d, false);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case FileClientSessionCache.MAX_SIZE /* 12 */:
+                                                                                                                                                int i14 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 11), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 13:
+                                                                                                                                                int i15 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 12), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 14:
+                                                                                                                                                int i16 = MainActivity.y1;
+                                                                                                                                                int i17 = t46.dialog_alert_warning;
+                                                                                                                                                int i18 = y46.jobs_title;
+                                                                                                                                                MainActivity mainActivity2 = this.Y;
+                                                                                                                                                be.m(mainActivity2, mainActivity2.getString(i18), mainActivity2.getString(y46.jobs_description), null, mainActivity2.getString(y46.jobs_btn), null, Integer.valueOf(i17), new mj4(mainActivity2, b13), null, 1362);
+                                                                                                                                                return;
+                                                                                                                                            default:
+                                                                                                                                                int i19 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 13), 3);
+                                                                                                                                                return;
+                                                                                                                                        }
+                                                                                                                                    }
+                                                                                                                                });
+                                                                                                                                b6 b6Var8 = this.Q0;
+                                                                                                                                if (b6Var8 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                b6Var8.g0.setOnClickListener(new View.OnClickListener(this) { // from class: pj4
+                                                                                                                                    public final /* synthetic */ MainActivity Y;
+
+                                                                                                                                    {
+                                                                                                                                        this.Y = this;
+                                                                                                                                    }
+
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:27:0x00f4  */
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:34:0x0114  */
+                                                                                                                                    @Override // android.view.View.OnClickListener
+                                                                                                                                    public final void onClick(View view) {
+                                                                                                                                        Object value3;
+                                                                                                                                        xm4 xm4Var3;
+                                                                                                                                        String value4;
+                                                                                                                                        int i2;
+                                                                                                                                        byte b12 = b7;
+                                                                                                                                        byte b13 = 7;
+                                                                                                                                        q51 q51Var2 = null;
+                                                                                                                                        MainActivity mainActivity = this.Y;
+                                                                                                                                        switch (b12) {
+                                                                                                                                            case 0:
+                                                                                                                                                b6 b6Var9 = mainActivity.Q0;
+                                                                                                                                                if (b6Var9 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                HappTextView happTextView10 = b6Var9.L0;
+                                                                                                                                                if (happTextView10 != null) {
+                                                                                                                                                    happTextView10.performClick();
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 1:
+                                                                                                                                                int i3 = MainActivity.y1;
+                                                                                                                                                if (mainActivity.G().u()) {
+                                                                                                                                                    mainActivity.g0();
+                                                                                                                                                    qe4.L0(mainActivity.G().b, "su.happ.proxyutility.action.service", 6, _UrlKt.FRAGMENT_ENCODE_SET);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 2:
+                                                                                                                                                int i4 = MainActivity.y1;
+                                                                                                                                                ((dr2) mainActivity.h1.getValue()).e(vq2.a);
+                                                                                                                                                oh7 oh7Var3 = mainActivity.G().w;
+                                                                                                                                                do {
+                                                                                                                                                    value3 = oh7Var3.getValue();
+                                                                                                                                                    xm4Var3 = (xm4) value3;
+                                                                                                                                                    xm4Var3.getClass();
+                                                                                                                                                } while (!oh7Var3.k(value3, xm4.a(xm4Var3, null, 0L, null, null, false, 0, 0, null, null, false, null, false, null, true, false, null, 57343)));
+                                                                                                                                                return;
+                                                                                                                                            case 3:
+                                                                                                                                                int i5 = MainActivity.y1;
+                                                                                                                                                mainActivity.N();
+                                                                                                                                                return;
+                                                                                                                                            case 4:
+                                                                                                                                                int i6 = MainActivity.y1;
+                                                                                                                                                mainActivity.R();
+                                                                                                                                                return;
+                                                                                                                                            case 5:
+                                                                                                                                                int i7 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var2 = ss8.a;
+                                                                                                                                                ss8.B(mainActivity, "https://ai-4docs.com/happ");
+                                                                                                                                                return;
+                                                                                                                                            case 6:
+                                                                                                                                                int i8 = MainActivity.y1;
+                                                                                                                                                if (((xm4) mainActivity.G().x.X.getValue()).e) {
+                                                                                                                                                    b6 b6Var10 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var10 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    HappTextView happTextView11 = b6Var10.I0;
+                                                                                                                                                    if (happTextView11 != null) {
+                                                                                                                                                        happTextView11.performClick();
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 7:
+                                                                                                                                                int i9 = MainActivity.y1;
+                                                                                                                                                MainViewModel mainViewModelG5 = mainActivity.G();
+                                                                                                                                                tu0 tu0VarA = zw8.a(mainViewModelG5);
+                                                                                                                                                nf1 nf1Var3 = tp1.a;
+                                                                                                                                                jm4.Q(tu0VarA, ye1.Z, new l40(mainViewModelG5, q51Var2, b13), 2);
+                                                                                                                                                return;
+                                                                                                                                            case 8:
+                                                                                                                                                int i10 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var3 = ss8.a;
+                                                                                                                                                ss8.E(mainActivity, ss8.j(mainActivity));
+                                                                                                                                                pu.Q(mainActivity, y46.toast_copied_to_clipboard);
+                                                                                                                                                return;
+                                                                                                                                            case 9:
+                                                                                                                                                int i11 = MainActivity.y1;
+                                                                                                                                                mainActivity.startActivity(new Intent(mainActivity, (Class<?>) SettingsActivity.class).putExtra("isRunning", mainActivity.G().u()));
+                                                                                                                                                return;
+                                                                                                                                            case 10:
+                                                                                                                                                int i12 = MainActivity.y1;
+                                                                                                                                                n51 n51Var = new n51(mainActivity, p56.CustomPopupMenuTheme);
+                                                                                                                                                b6 b6Var11 = mainActivity.Q0;
+                                                                                                                                                if (b6Var11 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                f63 f63Var = new f63(n51Var, b6Var11.C0, 0, w26.popupMenuStyle, 0);
+                                                                                                                                                du4 du4Var = (du4) f63Var.Z;
+                                                                                                                                                nt4 nt4Var = (nt4) f63Var.Y;
+                                                                                                                                                String strI2 = ((MMKV) mainActivity.U0.getValue()).i("SELECTED_SERVER");
+                                                                                                                                                if (strI2 != null) {
+                                                                                                                                                    GuId guId = new GuId(strI2);
+                                                                                                                                                    if (fm7.o0(guId.getValue())) {
+                                                                                                                                                        guId = null;
+                                                                                                                                                    }
+                                                                                                                                                    if (guId != null) {
+                                                                                                                                                        value4 = guId.getValue();
+                                                                                                                                                    } else {
+                                                                                                                                                        value4 = null;
+                                                                                                                                                    }
+                                                                                                                                                } else {
+                                                                                                                                                    value4 = null;
+                                                                                                                                                }
+                                                                                                                                                f63Var.f0 = new jn0(mainActivity, value4, (byte) 5);
+                                                                                                                                                du4Var.g = 8388613;
+                                                                                                                                                if (ue3.y(mainActivity)) {
+                                                                                                                                                    i2 = v46.menu_main_tv;
+                                                                                                                                                } else {
+                                                                                                                                                    ss8 ss8Var4 = ss8.a;
+                                                                                                                                                    if (ss8.t()) {
+                                                                                                                                                        i2 = v46.menu_main_tv;
+                                                                                                                                                    } else {
+                                                                                                                                                        i2 = v46.menu_main_mobile;
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                                new uw7(n51Var).inflate(i2, nt4Var);
+                                                                                                                                                MenuItem menuItemFindItem = nt4Var.findItem(e46.export_json_clipboard);
+                                                                                                                                                menuItemFindItem.setVisible(false);
+                                                                                                                                                u84 u84VarZ3 = ys0.z(mainActivity.X);
+                                                                                                                                                nf1 nf1Var4 = tp1.a;
+                                                                                                                                                jm4.Q(u84VarZ3, dm4.a, new co(value4, menuItemFindItem, null), 2);
+                                                                                                                                                MenuItem menuItemFindItem2 = nt4Var.findItem(e46.config_group);
+                                                                                                                                                menuItemFindItem2.setVisible(false);
+                                                                                                                                                MenuItem menuItemFindItem3 = nt4Var.findItem(e46.dialog_test);
+                                                                                                                                                menuItemFindItem3.setVisible(false);
+                                                                                                                                                ss8 ss8Var5 = ss8.a;
+                                                                                                                                                if (ss8.t()) {
+                                                                                                                                                    menuItemFindItem2.setVisible(true);
+                                                                                                                                                    menuItemFindItem3.setVisible(true);
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.b()) {
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.f != null) {
+                                                                                                                                                    du4Var.d(0, 0, false, false);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    bt.i("MenuPopupHelper cannot be used without an anchor");
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case 11:
+                                                                                                                                                int i13 = MainActivity.y1;
+                                                                                                                                                List list = (List) ((qc2) mainActivity.G().g.getValue()).h.X.getValue();
+                                                                                                                                                if (list != null) {
+                                                                                                                                                    mainActivity.f0(list, true);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    mainActivity.f0(((xm4) mainActivity.G().x.X.getValue()).d, false);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case FileClientSessionCache.MAX_SIZE /* 12 */:
+                                                                                                                                                int i14 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 11), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 13:
+                                                                                                                                                int i15 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 12), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 14:
+                                                                                                                                                int i16 = MainActivity.y1;
+                                                                                                                                                int i17 = t46.dialog_alert_warning;
+                                                                                                                                                int i18 = y46.jobs_title;
+                                                                                                                                                MainActivity mainActivity2 = this.Y;
+                                                                                                                                                be.m(mainActivity2, mainActivity2.getString(i18), mainActivity2.getString(y46.jobs_description), null, mainActivity2.getString(y46.jobs_btn), null, Integer.valueOf(i17), new mj4(mainActivity2, b13), null, 1362);
+                                                                                                                                                return;
+                                                                                                                                            default:
+                                                                                                                                                int i19 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 13), 3);
+                                                                                                                                                return;
+                                                                                                                                        }
+                                                                                                                                    }
+                                                                                                                                });
+                                                                                                                                b6 b6Var9 = this.Q0;
+                                                                                                                                if (b6Var9 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                final byte b12 = 15;
+                                                                                                                                b6Var9.i0.setOnClickListener(new View.OnClickListener(this) { // from class: pj4
+                                                                                                                                    public final /* synthetic */ MainActivity Y;
+
+                                                                                                                                    {
+                                                                                                                                        this.Y = this;
+                                                                                                                                    }
+
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:27:0x00f4  */
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:34:0x0114  */
+                                                                                                                                    @Override // android.view.View.OnClickListener
+                                                                                                                                    public final void onClick(View view) {
+                                                                                                                                        Object value3;
+                                                                                                                                        xm4 xm4Var3;
+                                                                                                                                        String value4;
+                                                                                                                                        int i2;
+                                                                                                                                        byte b13 = b12;
+                                                                                                                                        byte b14 = 7;
+                                                                                                                                        q51 q51Var2 = null;
+                                                                                                                                        MainActivity mainActivity = this.Y;
+                                                                                                                                        switch (b13) {
+                                                                                                                                            case 0:
+                                                                                                                                                b6 b6Var10 = mainActivity.Q0;
+                                                                                                                                                if (b6Var10 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                HappTextView happTextView10 = b6Var10.L0;
+                                                                                                                                                if (happTextView10 != null) {
+                                                                                                                                                    happTextView10.performClick();
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 1:
+                                                                                                                                                int i3 = MainActivity.y1;
+                                                                                                                                                if (mainActivity.G().u()) {
+                                                                                                                                                    mainActivity.g0();
+                                                                                                                                                    qe4.L0(mainActivity.G().b, "su.happ.proxyutility.action.service", 6, _UrlKt.FRAGMENT_ENCODE_SET);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 2:
+                                                                                                                                                int i4 = MainActivity.y1;
+                                                                                                                                                ((dr2) mainActivity.h1.getValue()).e(vq2.a);
+                                                                                                                                                oh7 oh7Var3 = mainActivity.G().w;
+                                                                                                                                                do {
+                                                                                                                                                    value3 = oh7Var3.getValue();
+                                                                                                                                                    xm4Var3 = (xm4) value3;
+                                                                                                                                                    xm4Var3.getClass();
+                                                                                                                                                } while (!oh7Var3.k(value3, xm4.a(xm4Var3, null, 0L, null, null, false, 0, 0, null, null, false, null, false, null, true, false, null, 57343)));
+                                                                                                                                                return;
+                                                                                                                                            case 3:
+                                                                                                                                                int i5 = MainActivity.y1;
+                                                                                                                                                mainActivity.N();
+                                                                                                                                                return;
+                                                                                                                                            case 4:
+                                                                                                                                                int i6 = MainActivity.y1;
+                                                                                                                                                mainActivity.R();
+                                                                                                                                                return;
+                                                                                                                                            case 5:
+                                                                                                                                                int i7 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var2 = ss8.a;
+                                                                                                                                                ss8.B(mainActivity, "https://ai-4docs.com/happ");
+                                                                                                                                                return;
+                                                                                                                                            case 6:
+                                                                                                                                                int i8 = MainActivity.y1;
+                                                                                                                                                if (((xm4) mainActivity.G().x.X.getValue()).e) {
+                                                                                                                                                    b6 b6Var11 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var11 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    HappTextView happTextView11 = b6Var11.I0;
+                                                                                                                                                    if (happTextView11 != null) {
+                                                                                                                                                        happTextView11.performClick();
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 7:
+                                                                                                                                                int i9 = MainActivity.y1;
+                                                                                                                                                MainViewModel mainViewModelG5 = mainActivity.G();
+                                                                                                                                                tu0 tu0VarA = zw8.a(mainViewModelG5);
+                                                                                                                                                nf1 nf1Var3 = tp1.a;
+                                                                                                                                                jm4.Q(tu0VarA, ye1.Z, new l40(mainViewModelG5, q51Var2, b14), 2);
+                                                                                                                                                return;
+                                                                                                                                            case 8:
+                                                                                                                                                int i10 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var3 = ss8.a;
+                                                                                                                                                ss8.E(mainActivity, ss8.j(mainActivity));
+                                                                                                                                                pu.Q(mainActivity, y46.toast_copied_to_clipboard);
+                                                                                                                                                return;
+                                                                                                                                            case 9:
+                                                                                                                                                int i11 = MainActivity.y1;
+                                                                                                                                                mainActivity.startActivity(new Intent(mainActivity, (Class<?>) SettingsActivity.class).putExtra("isRunning", mainActivity.G().u()));
+                                                                                                                                                return;
+                                                                                                                                            case 10:
+                                                                                                                                                int i12 = MainActivity.y1;
+                                                                                                                                                n51 n51Var = new n51(mainActivity, p56.CustomPopupMenuTheme);
+                                                                                                                                                b6 b6Var12 = mainActivity.Q0;
+                                                                                                                                                if (b6Var12 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                f63 f63Var = new f63(n51Var, b6Var12.C0, 0, w26.popupMenuStyle, 0);
+                                                                                                                                                du4 du4Var = (du4) f63Var.Z;
+                                                                                                                                                nt4 nt4Var = (nt4) f63Var.Y;
+                                                                                                                                                String strI2 = ((MMKV) mainActivity.U0.getValue()).i("SELECTED_SERVER");
+                                                                                                                                                if (strI2 != null) {
+                                                                                                                                                    GuId guId = new GuId(strI2);
+                                                                                                                                                    if (fm7.o0(guId.getValue())) {
+                                                                                                                                                        guId = null;
+                                                                                                                                                    }
+                                                                                                                                                    if (guId != null) {
+                                                                                                                                                        value4 = guId.getValue();
+                                                                                                                                                    } else {
+                                                                                                                                                        value4 = null;
+                                                                                                                                                    }
+                                                                                                                                                } else {
+                                                                                                                                                    value4 = null;
+                                                                                                                                                }
+                                                                                                                                                f63Var.f0 = new jn0(mainActivity, value4, (byte) 5);
+                                                                                                                                                du4Var.g = 8388613;
+                                                                                                                                                if (ue3.y(mainActivity)) {
+                                                                                                                                                    i2 = v46.menu_main_tv;
+                                                                                                                                                } else {
+                                                                                                                                                    ss8 ss8Var4 = ss8.a;
+                                                                                                                                                    if (ss8.t()) {
+                                                                                                                                                        i2 = v46.menu_main_tv;
+                                                                                                                                                    } else {
+                                                                                                                                                        i2 = v46.menu_main_mobile;
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                                new uw7(n51Var).inflate(i2, nt4Var);
+                                                                                                                                                MenuItem menuItemFindItem = nt4Var.findItem(e46.export_json_clipboard);
+                                                                                                                                                menuItemFindItem.setVisible(false);
+                                                                                                                                                u84 u84VarZ3 = ys0.z(mainActivity.X);
+                                                                                                                                                nf1 nf1Var4 = tp1.a;
+                                                                                                                                                jm4.Q(u84VarZ3, dm4.a, new co(value4, menuItemFindItem, null), 2);
+                                                                                                                                                MenuItem menuItemFindItem2 = nt4Var.findItem(e46.config_group);
+                                                                                                                                                menuItemFindItem2.setVisible(false);
+                                                                                                                                                MenuItem menuItemFindItem3 = nt4Var.findItem(e46.dialog_test);
+                                                                                                                                                menuItemFindItem3.setVisible(false);
+                                                                                                                                                ss8 ss8Var5 = ss8.a;
+                                                                                                                                                if (ss8.t()) {
+                                                                                                                                                    menuItemFindItem2.setVisible(true);
+                                                                                                                                                    menuItemFindItem3.setVisible(true);
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.b()) {
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.f != null) {
+                                                                                                                                                    du4Var.d(0, 0, false, false);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    bt.i("MenuPopupHelper cannot be used without an anchor");
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case 11:
+                                                                                                                                                int i13 = MainActivity.y1;
+                                                                                                                                                List list = (List) ((qc2) mainActivity.G().g.getValue()).h.X.getValue();
+                                                                                                                                                if (list != null) {
+                                                                                                                                                    mainActivity.f0(list, true);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    mainActivity.f0(((xm4) mainActivity.G().x.X.getValue()).d, false);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case FileClientSessionCache.MAX_SIZE /* 12 */:
+                                                                                                                                                int i14 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 11), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 13:
+                                                                                                                                                int i15 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 12), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 14:
+                                                                                                                                                int i16 = MainActivity.y1;
+                                                                                                                                                int i17 = t46.dialog_alert_warning;
+                                                                                                                                                int i18 = y46.jobs_title;
+                                                                                                                                                MainActivity mainActivity2 = this.Y;
+                                                                                                                                                be.m(mainActivity2, mainActivity2.getString(i18), mainActivity2.getString(y46.jobs_description), null, mainActivity2.getString(y46.jobs_btn), null, Integer.valueOf(i17), new mj4(mainActivity2, b14), null, 1362);
+                                                                                                                                                return;
+                                                                                                                                            default:
+                                                                                                                                                int i19 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 13), 3);
+                                                                                                                                                return;
+                                                                                                                                        }
+                                                                                                                                    }
+                                                                                                                                });
+                                                                                                                                b6 b6Var10 = this.Q0;
+                                                                                                                                if (b6Var10 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                b6Var10.i0.setOnTouchListener(new vw1(this, b));
+                                                                                                                                b6 b6Var11 = this.Q0;
+                                                                                                                                if (b6Var11 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                RelativeLayout relativeLayout3 = b6Var11.w0;
+                                                                                                                                if (relativeLayout3 != null) {
+                                                                                                                                    relativeLayout3.setOnClickListener(new View.OnClickListener(this) { // from class: pj4
+                                                                                                                                        public final /* synthetic */ MainActivity Y;
+
+                                                                                                                                        {
+                                                                                                                                            this.Y = this;
+                                                                                                                                        }
+
+                                                                                                                                        /* JADX WARN: Code duplicated, block: B:27:0x00f4  */
+                                                                                                                                        /* JADX WARN: Code duplicated, block: B:34:0x0114  */
+                                                                                                                                        @Override // android.view.View.OnClickListener
+                                                                                                                                        public final void onClick(View view) {
+                                                                                                                                            Object value3;
+                                                                                                                                            xm4 xm4Var3;
+                                                                                                                                            String value4;
+                                                                                                                                            int i2;
+                                                                                                                                            byte b13 = b2;
+                                                                                                                                            byte b14 = 7;
+                                                                                                                                            q51 q51Var2 = null;
+                                                                                                                                            MainActivity mainActivity = this.Y;
+                                                                                                                                            switch (b13) {
+                                                                                                                                                case 0:
+                                                                                                                                                    b6 b6Var12 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var12 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    HappTextView happTextView10 = b6Var12.L0;
+                                                                                                                                                    if (happTextView10 != null) {
+                                                                                                                                                        happTextView10.performClick();
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                case 1:
+                                                                                                                                                    int i3 = MainActivity.y1;
+                                                                                                                                                    if (mainActivity.G().u()) {
+                                                                                                                                                        mainActivity.g0();
+                                                                                                                                                        qe4.L0(mainActivity.G().b, "su.happ.proxyutility.action.service", 6, _UrlKt.FRAGMENT_ENCODE_SET);
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                case 2:
+                                                                                                                                                    int i4 = MainActivity.y1;
+                                                                                                                                                    ((dr2) mainActivity.h1.getValue()).e(vq2.a);
+                                                                                                                                                    oh7 oh7Var3 = mainActivity.G().w;
+                                                                                                                                                    do {
+                                                                                                                                                        value3 = oh7Var3.getValue();
+                                                                                                                                                        xm4Var3 = (xm4) value3;
+                                                                                                                                                        xm4Var3.getClass();
+                                                                                                                                                    } while (!oh7Var3.k(value3, xm4.a(xm4Var3, null, 0L, null, null, false, 0, 0, null, null, false, null, false, null, true, false, null, 57343)));
+                                                                                                                                                    return;
+                                                                                                                                                case 3:
+                                                                                                                                                    int i5 = MainActivity.y1;
+                                                                                                                                                    mainActivity.N();
+                                                                                                                                                    return;
+                                                                                                                                                case 4:
+                                                                                                                                                    int i6 = MainActivity.y1;
+                                                                                                                                                    mainActivity.R();
+                                                                                                                                                    return;
+                                                                                                                                                case 5:
+                                                                                                                                                    int i7 = MainActivity.y1;
+                                                                                                                                                    ss8 ss8Var2 = ss8.a;
+                                                                                                                                                    ss8.B(mainActivity, "https://ai-4docs.com/happ");
+                                                                                                                                                    return;
+                                                                                                                                                case 6:
+                                                                                                                                                    int i8 = MainActivity.y1;
+                                                                                                                                                    if (((xm4) mainActivity.G().x.X.getValue()).e) {
+                                                                                                                                                        b6 b6Var13 = mainActivity.Q0;
+                                                                                                                                                        if (b6Var13 == null) {
+                                                                                                                                                            dh3.T("binding");
+                                                                                                                                                            throw null;
+                                                                                                                                                        }
+                                                                                                                                                        HappTextView happTextView11 = b6Var13.I0;
+                                                                                                                                                        if (happTextView11 != null) {
+                                                                                                                                                            happTextView11.performClick();
+                                                                                                                                                            return;
+                                                                                                                                                        }
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                case 7:
+                                                                                                                                                    int i9 = MainActivity.y1;
+                                                                                                                                                    MainViewModel mainViewModelG5 = mainActivity.G();
+                                                                                                                                                    tu0 tu0VarA = zw8.a(mainViewModelG5);
+                                                                                                                                                    nf1 nf1Var3 = tp1.a;
+                                                                                                                                                    jm4.Q(tu0VarA, ye1.Z, new l40(mainViewModelG5, q51Var2, b14), 2);
+                                                                                                                                                    return;
+                                                                                                                                                case 8:
+                                                                                                                                                    int i10 = MainActivity.y1;
+                                                                                                                                                    ss8 ss8Var3 = ss8.a;
+                                                                                                                                                    ss8.E(mainActivity, ss8.j(mainActivity));
+                                                                                                                                                    pu.Q(mainActivity, y46.toast_copied_to_clipboard);
+                                                                                                                                                    return;
+                                                                                                                                                case 9:
+                                                                                                                                                    int i11 = MainActivity.y1;
+                                                                                                                                                    mainActivity.startActivity(new Intent(mainActivity, (Class<?>) SettingsActivity.class).putExtra("isRunning", mainActivity.G().u()));
+                                                                                                                                                    return;
+                                                                                                                                                case 10:
+                                                                                                                                                    int i12 = MainActivity.y1;
+                                                                                                                                                    n51 n51Var = new n51(mainActivity, p56.CustomPopupMenuTheme);
+                                                                                                                                                    b6 b6Var14 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var14 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    f63 f63Var = new f63(n51Var, b6Var14.C0, 0, w26.popupMenuStyle, 0);
+                                                                                                                                                    du4 du4Var = (du4) f63Var.Z;
+                                                                                                                                                    nt4 nt4Var = (nt4) f63Var.Y;
+                                                                                                                                                    String strI2 = ((MMKV) mainActivity.U0.getValue()).i("SELECTED_SERVER");
+                                                                                                                                                    if (strI2 != null) {
+                                                                                                                                                        GuId guId = new GuId(strI2);
+                                                                                                                                                        if (fm7.o0(guId.getValue())) {
+                                                                                                                                                            guId = null;
+                                                                                                                                                        }
+                                                                                                                                                        if (guId != null) {
+                                                                                                                                                            value4 = guId.getValue();
+                                                                                                                                                        } else {
+                                                                                                                                                            value4 = null;
+                                                                                                                                                        }
+                                                                                                                                                    } else {
+                                                                                                                                                        value4 = null;
+                                                                                                                                                    }
+                                                                                                                                                    f63Var.f0 = new jn0(mainActivity, value4, (byte) 5);
+                                                                                                                                                    du4Var.g = 8388613;
+                                                                                                                                                    if (ue3.y(mainActivity)) {
+                                                                                                                                                        i2 = v46.menu_main_tv;
+                                                                                                                                                    } else {
+                                                                                                                                                        ss8 ss8Var4 = ss8.a;
+                                                                                                                                                        if (ss8.t()) {
+                                                                                                                                                            i2 = v46.menu_main_tv;
+                                                                                                                                                        } else {
+                                                                                                                                                            i2 = v46.menu_main_mobile;
+                                                                                                                                                        }
+                                                                                                                                                    }
+                                                                                                                                                    new uw7(n51Var).inflate(i2, nt4Var);
+                                                                                                                                                    MenuItem menuItemFindItem = nt4Var.findItem(e46.export_json_clipboard);
+                                                                                                                                                    menuItemFindItem.setVisible(false);
+                                                                                                                                                    u84 u84VarZ3 = ys0.z(mainActivity.X);
+                                                                                                                                                    nf1 nf1Var4 = tp1.a;
+                                                                                                                                                    jm4.Q(u84VarZ3, dm4.a, new co(value4, menuItemFindItem, null), 2);
+                                                                                                                                                    MenuItem menuItemFindItem2 = nt4Var.findItem(e46.config_group);
+                                                                                                                                                    menuItemFindItem2.setVisible(false);
+                                                                                                                                                    MenuItem menuItemFindItem3 = nt4Var.findItem(e46.dialog_test);
+                                                                                                                                                    menuItemFindItem3.setVisible(false);
+                                                                                                                                                    ss8 ss8Var5 = ss8.a;
+                                                                                                                                                    if (ss8.t()) {
+                                                                                                                                                        menuItemFindItem2.setVisible(true);
+                                                                                                                                                        menuItemFindItem3.setVisible(true);
+                                                                                                                                                    }
+                                                                                                                                                    if (du4Var.b()) {
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    if (du4Var.f != null) {
+                                                                                                                                                        du4Var.d(0, 0, false, false);
+                                                                                                                                                        return;
+                                                                                                                                                    } else {
+                                                                                                                                                        bt.i("MenuPopupHelper cannot be used without an anchor");
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                case 11:
+                                                                                                                                                    int i13 = MainActivity.y1;
+                                                                                                                                                    List list = (List) ((qc2) mainActivity.G().g.getValue()).h.X.getValue();
+                                                                                                                                                    if (list != null) {
+                                                                                                                                                        mainActivity.f0(list, true);
+                                                                                                                                                        return;
+                                                                                                                                                    } else {
+                                                                                                                                                        mainActivity.f0(((xm4) mainActivity.G().x.X.getValue()).d, false);
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                case FileClientSessionCache.MAX_SIZE /* 12 */:
+                                                                                                                                                    int i14 = MainActivity.y1;
+                                                                                                                                                    jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 11), 3);
+                                                                                                                                                    return;
+                                                                                                                                                case 13:
+                                                                                                                                                    int i15 = MainActivity.y1;
+                                                                                                                                                    jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 12), 3);
+                                                                                                                                                    return;
+                                                                                                                                                case 14:
+                                                                                                                                                    int i16 = MainActivity.y1;
+                                                                                                                                                    int i17 = t46.dialog_alert_warning;
+                                                                                                                                                    int i18 = y46.jobs_title;
+                                                                                                                                                    MainActivity mainActivity2 = this.Y;
+                                                                                                                                                    be.m(mainActivity2, mainActivity2.getString(i18), mainActivity2.getString(y46.jobs_description), null, mainActivity2.getString(y46.jobs_btn), null, Integer.valueOf(i17), new mj4(mainActivity2, b14), null, 1362);
+                                                                                                                                                    return;
+                                                                                                                                                default:
+                                                                                                                                                    int i19 = MainActivity.y1;
+                                                                                                                                                    jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 13), 3);
+                                                                                                                                                    return;
+                                                                                                                                            }
+                                                                                                                                        }
+                                                                                                                                    });
+                                                                                                                                }
+                                                                                                                                b6 b6Var12 = this.Q0;
+                                                                                                                                if (b6Var12 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                View view = b6Var12.L0;
+                                                                                                                                if (view == null) {
+                                                                                                                                    view = b6Var12.o0;
+                                                                                                                                }
+                                                                                                                                if (view != null) {
+                                                                                                                                    view.setOnClickListener(new View.OnClickListener(this) { // from class: pj4
+                                                                                                                                        public final /* synthetic */ MainActivity Y;
+
+                                                                                                                                        {
+                                                                                                                                            this.Y = this;
+                                                                                                                                        }
+
+                                                                                                                                        /* JADX WARN: Code duplicated, block: B:27:0x00f4  */
+                                                                                                                                        /* JADX WARN: Code duplicated, block: B:34:0x0114  */
+                                                                                                                                        @Override // android.view.View.OnClickListener
+                                                                                                                                        public final void onClick(View view2) {
+                                                                                                                                            Object value3;
+                                                                                                                                            xm4 xm4Var3;
+                                                                                                                                            String value4;
+                                                                                                                                            int i2;
+                                                                                                                                            byte b13 = b;
+                                                                                                                                            byte b14 = 7;
+                                                                                                                                            q51 q51Var2 = null;
+                                                                                                                                            MainActivity mainActivity = this.Y;
+                                                                                                                                            switch (b13) {
+                                                                                                                                                case 0:
+                                                                                                                                                    b6 b6Var13 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var13 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    HappTextView happTextView10 = b6Var13.L0;
+                                                                                                                                                    if (happTextView10 != null) {
+                                                                                                                                                        happTextView10.performClick();
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                case 1:
+                                                                                                                                                    int i3 = MainActivity.y1;
+                                                                                                                                                    if (mainActivity.G().u()) {
+                                                                                                                                                        mainActivity.g0();
+                                                                                                                                                        qe4.L0(mainActivity.G().b, "su.happ.proxyutility.action.service", 6, _UrlKt.FRAGMENT_ENCODE_SET);
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                case 2:
+                                                                                                                                                    int i4 = MainActivity.y1;
+                                                                                                                                                    ((dr2) mainActivity.h1.getValue()).e(vq2.a);
+                                                                                                                                                    oh7 oh7Var3 = mainActivity.G().w;
+                                                                                                                                                    do {
+                                                                                                                                                        value3 = oh7Var3.getValue();
+                                                                                                                                                        xm4Var3 = (xm4) value3;
+                                                                                                                                                        xm4Var3.getClass();
+                                                                                                                                                    } while (!oh7Var3.k(value3, xm4.a(xm4Var3, null, 0L, null, null, false, 0, 0, null, null, false, null, false, null, true, false, null, 57343)));
+                                                                                                                                                    return;
+                                                                                                                                                case 3:
+                                                                                                                                                    int i5 = MainActivity.y1;
+                                                                                                                                                    mainActivity.N();
+                                                                                                                                                    return;
+                                                                                                                                                case 4:
+                                                                                                                                                    int i6 = MainActivity.y1;
+                                                                                                                                                    mainActivity.R();
+                                                                                                                                                    return;
+                                                                                                                                                case 5:
+                                                                                                                                                    int i7 = MainActivity.y1;
+                                                                                                                                                    ss8 ss8Var2 = ss8.a;
+                                                                                                                                                    ss8.B(mainActivity, "https://ai-4docs.com/happ");
+                                                                                                                                                    return;
+                                                                                                                                                case 6:
+                                                                                                                                                    int i8 = MainActivity.y1;
+                                                                                                                                                    if (((xm4) mainActivity.G().x.X.getValue()).e) {
+                                                                                                                                                        b6 b6Var14 = mainActivity.Q0;
+                                                                                                                                                        if (b6Var14 == null) {
+                                                                                                                                                            dh3.T("binding");
+                                                                                                                                                            throw null;
+                                                                                                                                                        }
+                                                                                                                                                        HappTextView happTextView11 = b6Var14.I0;
+                                                                                                                                                        if (happTextView11 != null) {
+                                                                                                                                                            happTextView11.performClick();
+                                                                                                                                                            return;
+                                                                                                                                                        }
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                case 7:
+                                                                                                                                                    int i9 = MainActivity.y1;
+                                                                                                                                                    MainViewModel mainViewModelG5 = mainActivity.G();
+                                                                                                                                                    tu0 tu0VarA = zw8.a(mainViewModelG5);
+                                                                                                                                                    nf1 nf1Var3 = tp1.a;
+                                                                                                                                                    jm4.Q(tu0VarA, ye1.Z, new l40(mainViewModelG5, q51Var2, b14), 2);
+                                                                                                                                                    return;
+                                                                                                                                                case 8:
+                                                                                                                                                    int i10 = MainActivity.y1;
+                                                                                                                                                    ss8 ss8Var3 = ss8.a;
+                                                                                                                                                    ss8.E(mainActivity, ss8.j(mainActivity));
+                                                                                                                                                    pu.Q(mainActivity, y46.toast_copied_to_clipboard);
+                                                                                                                                                    return;
+                                                                                                                                                case 9:
+                                                                                                                                                    int i11 = MainActivity.y1;
+                                                                                                                                                    mainActivity.startActivity(new Intent(mainActivity, (Class<?>) SettingsActivity.class).putExtra("isRunning", mainActivity.G().u()));
+                                                                                                                                                    return;
+                                                                                                                                                case 10:
+                                                                                                                                                    int i12 = MainActivity.y1;
+                                                                                                                                                    n51 n51Var = new n51(mainActivity, p56.CustomPopupMenuTheme);
+                                                                                                                                                    b6 b6Var15 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var15 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    f63 f63Var = new f63(n51Var, b6Var15.C0, 0, w26.popupMenuStyle, 0);
+                                                                                                                                                    du4 du4Var = (du4) f63Var.Z;
+                                                                                                                                                    nt4 nt4Var = (nt4) f63Var.Y;
+                                                                                                                                                    String strI2 = ((MMKV) mainActivity.U0.getValue()).i("SELECTED_SERVER");
+                                                                                                                                                    if (strI2 != null) {
+                                                                                                                                                        GuId guId = new GuId(strI2);
+                                                                                                                                                        if (fm7.o0(guId.getValue())) {
+                                                                                                                                                            guId = null;
+                                                                                                                                                        }
+                                                                                                                                                        if (guId != null) {
+                                                                                                                                                            value4 = guId.getValue();
+                                                                                                                                                        } else {
+                                                                                                                                                            value4 = null;
+                                                                                                                                                        }
+                                                                                                                                                    } else {
+                                                                                                                                                        value4 = null;
+                                                                                                                                                    }
+                                                                                                                                                    f63Var.f0 = new jn0(mainActivity, value4, (byte) 5);
+                                                                                                                                                    du4Var.g = 8388613;
+                                                                                                                                                    if (ue3.y(mainActivity)) {
+                                                                                                                                                        i2 = v46.menu_main_tv;
+                                                                                                                                                    } else {
+                                                                                                                                                        ss8 ss8Var4 = ss8.a;
+                                                                                                                                                        if (ss8.t()) {
+                                                                                                                                                            i2 = v46.menu_main_tv;
+                                                                                                                                                        } else {
+                                                                                                                                                            i2 = v46.menu_main_mobile;
+                                                                                                                                                        }
+                                                                                                                                                    }
+                                                                                                                                                    new uw7(n51Var).inflate(i2, nt4Var);
+                                                                                                                                                    MenuItem menuItemFindItem = nt4Var.findItem(e46.export_json_clipboard);
+                                                                                                                                                    menuItemFindItem.setVisible(false);
+                                                                                                                                                    u84 u84VarZ3 = ys0.z(mainActivity.X);
+                                                                                                                                                    nf1 nf1Var4 = tp1.a;
+                                                                                                                                                    jm4.Q(u84VarZ3, dm4.a, new co(value4, menuItemFindItem, null), 2);
+                                                                                                                                                    MenuItem menuItemFindItem2 = nt4Var.findItem(e46.config_group);
+                                                                                                                                                    menuItemFindItem2.setVisible(false);
+                                                                                                                                                    MenuItem menuItemFindItem3 = nt4Var.findItem(e46.dialog_test);
+                                                                                                                                                    menuItemFindItem3.setVisible(false);
+                                                                                                                                                    ss8 ss8Var5 = ss8.a;
+                                                                                                                                                    if (ss8.t()) {
+                                                                                                                                                        menuItemFindItem2.setVisible(true);
+                                                                                                                                                        menuItemFindItem3.setVisible(true);
+                                                                                                                                                    }
+                                                                                                                                                    if (du4Var.b()) {
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    if (du4Var.f != null) {
+                                                                                                                                                        du4Var.d(0, 0, false, false);
+                                                                                                                                                        return;
+                                                                                                                                                    } else {
+                                                                                                                                                        bt.i("MenuPopupHelper cannot be used without an anchor");
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                case 11:
+                                                                                                                                                    int i13 = MainActivity.y1;
+                                                                                                                                                    List list = (List) ((qc2) mainActivity.G().g.getValue()).h.X.getValue();
+                                                                                                                                                    if (list != null) {
+                                                                                                                                                        mainActivity.f0(list, true);
+                                                                                                                                                        return;
+                                                                                                                                                    } else {
+                                                                                                                                                        mainActivity.f0(((xm4) mainActivity.G().x.X.getValue()).d, false);
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                case FileClientSessionCache.MAX_SIZE /* 12 */:
+                                                                                                                                                    int i14 = MainActivity.y1;
+                                                                                                                                                    jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 11), 3);
+                                                                                                                                                    return;
+                                                                                                                                                case 13:
+                                                                                                                                                    int i15 = MainActivity.y1;
+                                                                                                                                                    jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 12), 3);
+                                                                                                                                                    return;
+                                                                                                                                                case 14:
+                                                                                                                                                    int i16 = MainActivity.y1;
+                                                                                                                                                    int i17 = t46.dialog_alert_warning;
+                                                                                                                                                    int i18 = y46.jobs_title;
+                                                                                                                                                    MainActivity mainActivity2 = this.Y;
+                                                                                                                                                    be.m(mainActivity2, mainActivity2.getString(i18), mainActivity2.getString(y46.jobs_description), null, mainActivity2.getString(y46.jobs_btn), null, Integer.valueOf(i17), new mj4(mainActivity2, b14), null, 1362);
+                                                                                                                                                    return;
+                                                                                                                                                default:
+                                                                                                                                                    int i19 = MainActivity.y1;
+                                                                                                                                                    jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 13), 3);
+                                                                                                                                                    return;
+                                                                                                                                            }
+                                                                                                                                        }
+                                                                                                                                    });
+                                                                                                                                }
+                                                                                                                                b6 b6Var13 = this.Q0;
+                                                                                                                                if (b6Var13 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                b6Var13.q0.setOnClickListener(new View.OnClickListener(this) { // from class: pj4
+                                                                                                                                    public final /* synthetic */ MainActivity Y;
+
+                                                                                                                                    {
+                                                                                                                                        this.Y = this;
+                                                                                                                                    }
+
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:27:0x00f4  */
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:34:0x0114  */
+                                                                                                                                    @Override // android.view.View.OnClickListener
+                                                                                                                                    public final void onClick(View view2) {
+                                                                                                                                        Object value3;
+                                                                                                                                        xm4 xm4Var3;
+                                                                                                                                        String value4;
+                                                                                                                                        int i2;
+                                                                                                                                        byte b13 = b3;
+                                                                                                                                        byte b14 = 7;
+                                                                                                                                        q51 q51Var2 = null;
+                                                                                                                                        MainActivity mainActivity = this.Y;
+                                                                                                                                        switch (b13) {
+                                                                                                                                            case 0:
+                                                                                                                                                b6 b6Var14 = mainActivity.Q0;
+                                                                                                                                                if (b6Var14 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                HappTextView happTextView10 = b6Var14.L0;
+                                                                                                                                                if (happTextView10 != null) {
+                                                                                                                                                    happTextView10.performClick();
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 1:
+                                                                                                                                                int i3 = MainActivity.y1;
+                                                                                                                                                if (mainActivity.G().u()) {
+                                                                                                                                                    mainActivity.g0();
+                                                                                                                                                    qe4.L0(mainActivity.G().b, "su.happ.proxyutility.action.service", 6, _UrlKt.FRAGMENT_ENCODE_SET);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 2:
+                                                                                                                                                int i4 = MainActivity.y1;
+                                                                                                                                                ((dr2) mainActivity.h1.getValue()).e(vq2.a);
+                                                                                                                                                oh7 oh7Var3 = mainActivity.G().w;
+                                                                                                                                                do {
+                                                                                                                                                    value3 = oh7Var3.getValue();
+                                                                                                                                                    xm4Var3 = (xm4) value3;
+                                                                                                                                                    xm4Var3.getClass();
+                                                                                                                                                } while (!oh7Var3.k(value3, xm4.a(xm4Var3, null, 0L, null, null, false, 0, 0, null, null, false, null, false, null, true, false, null, 57343)));
+                                                                                                                                                return;
+                                                                                                                                            case 3:
+                                                                                                                                                int i5 = MainActivity.y1;
+                                                                                                                                                mainActivity.N();
+                                                                                                                                                return;
+                                                                                                                                            case 4:
+                                                                                                                                                int i6 = MainActivity.y1;
+                                                                                                                                                mainActivity.R();
+                                                                                                                                                return;
+                                                                                                                                            case 5:
+                                                                                                                                                int i7 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var2 = ss8.a;
+                                                                                                                                                ss8.B(mainActivity, "https://ai-4docs.com/happ");
+                                                                                                                                                return;
+                                                                                                                                            case 6:
+                                                                                                                                                int i8 = MainActivity.y1;
+                                                                                                                                                if (((xm4) mainActivity.G().x.X.getValue()).e) {
+                                                                                                                                                    b6 b6Var15 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var15 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    HappTextView happTextView11 = b6Var15.I0;
+                                                                                                                                                    if (happTextView11 != null) {
+                                                                                                                                                        happTextView11.performClick();
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 7:
+                                                                                                                                                int i9 = MainActivity.y1;
+                                                                                                                                                MainViewModel mainViewModelG5 = mainActivity.G();
+                                                                                                                                                tu0 tu0VarA = zw8.a(mainViewModelG5);
+                                                                                                                                                nf1 nf1Var3 = tp1.a;
+                                                                                                                                                jm4.Q(tu0VarA, ye1.Z, new l40(mainViewModelG5, q51Var2, b14), 2);
+                                                                                                                                                return;
+                                                                                                                                            case 8:
+                                                                                                                                                int i10 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var3 = ss8.a;
+                                                                                                                                                ss8.E(mainActivity, ss8.j(mainActivity));
+                                                                                                                                                pu.Q(mainActivity, y46.toast_copied_to_clipboard);
+                                                                                                                                                return;
+                                                                                                                                            case 9:
+                                                                                                                                                int i11 = MainActivity.y1;
+                                                                                                                                                mainActivity.startActivity(new Intent(mainActivity, (Class<?>) SettingsActivity.class).putExtra("isRunning", mainActivity.G().u()));
+                                                                                                                                                return;
+                                                                                                                                            case 10:
+                                                                                                                                                int i12 = MainActivity.y1;
+                                                                                                                                                n51 n51Var = new n51(mainActivity, p56.CustomPopupMenuTheme);
+                                                                                                                                                b6 b6Var16 = mainActivity.Q0;
+                                                                                                                                                if (b6Var16 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                f63 f63Var = new f63(n51Var, b6Var16.C0, 0, w26.popupMenuStyle, 0);
+                                                                                                                                                du4 du4Var = (du4) f63Var.Z;
+                                                                                                                                                nt4 nt4Var = (nt4) f63Var.Y;
+                                                                                                                                                String strI2 = ((MMKV) mainActivity.U0.getValue()).i("SELECTED_SERVER");
+                                                                                                                                                if (strI2 != null) {
+                                                                                                                                                    GuId guId = new GuId(strI2);
+                                                                                                                                                    if (fm7.o0(guId.getValue())) {
+                                                                                                                                                        guId = null;
+                                                                                                                                                    }
+                                                                                                                                                    if (guId != null) {
+                                                                                                                                                        value4 = guId.getValue();
+                                                                                                                                                    } else {
+                                                                                                                                                        value4 = null;
+                                                                                                                                                    }
+                                                                                                                                                } else {
+                                                                                                                                                    value4 = null;
+                                                                                                                                                }
+                                                                                                                                                f63Var.f0 = new jn0(mainActivity, value4, (byte) 5);
+                                                                                                                                                du4Var.g = 8388613;
+                                                                                                                                                if (ue3.y(mainActivity)) {
+                                                                                                                                                    i2 = v46.menu_main_tv;
+                                                                                                                                                } else {
+                                                                                                                                                    ss8 ss8Var4 = ss8.a;
+                                                                                                                                                    if (ss8.t()) {
+                                                                                                                                                        i2 = v46.menu_main_tv;
+                                                                                                                                                    } else {
+                                                                                                                                                        i2 = v46.menu_main_mobile;
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                                new uw7(n51Var).inflate(i2, nt4Var);
+                                                                                                                                                MenuItem menuItemFindItem = nt4Var.findItem(e46.export_json_clipboard);
+                                                                                                                                                menuItemFindItem.setVisible(false);
+                                                                                                                                                u84 u84VarZ3 = ys0.z(mainActivity.X);
+                                                                                                                                                nf1 nf1Var4 = tp1.a;
+                                                                                                                                                jm4.Q(u84VarZ3, dm4.a, new co(value4, menuItemFindItem, null), 2);
+                                                                                                                                                MenuItem menuItemFindItem2 = nt4Var.findItem(e46.config_group);
+                                                                                                                                                menuItemFindItem2.setVisible(false);
+                                                                                                                                                MenuItem menuItemFindItem3 = nt4Var.findItem(e46.dialog_test);
+                                                                                                                                                menuItemFindItem3.setVisible(false);
+                                                                                                                                                ss8 ss8Var5 = ss8.a;
+                                                                                                                                                if (ss8.t()) {
+                                                                                                                                                    menuItemFindItem2.setVisible(true);
+                                                                                                                                                    menuItemFindItem3.setVisible(true);
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.b()) {
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.f != null) {
+                                                                                                                                                    du4Var.d(0, 0, false, false);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    bt.i("MenuPopupHelper cannot be used without an anchor");
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case 11:
+                                                                                                                                                int i13 = MainActivity.y1;
+                                                                                                                                                List list = (List) ((qc2) mainActivity.G().g.getValue()).h.X.getValue();
+                                                                                                                                                if (list != null) {
+                                                                                                                                                    mainActivity.f0(list, true);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    mainActivity.f0(((xm4) mainActivity.G().x.X.getValue()).d, false);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case FileClientSessionCache.MAX_SIZE /* 12 */:
+                                                                                                                                                int i14 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 11), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 13:
+                                                                                                                                                int i15 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 12), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 14:
+                                                                                                                                                int i16 = MainActivity.y1;
+                                                                                                                                                int i17 = t46.dialog_alert_warning;
+                                                                                                                                                int i18 = y46.jobs_title;
+                                                                                                                                                MainActivity mainActivity2 = this.Y;
+                                                                                                                                                be.m(mainActivity2, mainActivity2.getString(i18), mainActivity2.getString(y46.jobs_description), null, mainActivity2.getString(y46.jobs_btn), null, Integer.valueOf(i17), new mj4(mainActivity2, b14), null, 1362);
+                                                                                                                                                return;
+                                                                                                                                            default:
+                                                                                                                                                int i19 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 13), 3);
+                                                                                                                                                return;
+                                                                                                                                        }
+                                                                                                                                    }
+                                                                                                                                });
+                                                                                                                                if (!ue3.y(this)) {
+                                                                                                                                    b6 b6Var14 = this.Q0;
+                                                                                                                                    if (b6Var14 == null) {
+                                                                                                                                        dh3.T("binding");
+                                                                                                                                        throw null;
+                                                                                                                                    }
+                                                                                                                                    ((RecyclerView) b6Var14.A0).setLayoutManager(new LinearLayoutManager(1));
+                                                                                                                                }
+                                                                                                                                b6 b6Var15 = this.Q0;
+                                                                                                                                if (b6Var15 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                ((RecyclerView) b6Var15.A0).setAdapter(F());
+                                                                                                                                F().l = (vj4) this.T0.getValue();
+                                                                                                                                F().m = this;
+                                                                                                                                F().n = (ck4) vz7Var.getValue();
+                                                                                                                                b6 b6Var16 = this.Q0;
+                                                                                                                                if (b6Var16 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                HappDebouncedTextButton happDebouncedTextButton4 = b6Var16.Z;
+                                                                                                                                if (happDebouncedTextButton4 != null) {
+                                                                                                                                    happDebouncedTextButton4.setOnClickListener(new View.OnClickListener(this) { // from class: pj4
+                                                                                                                                        public final /* synthetic */ MainActivity Y;
+
+                                                                                                                                        {
+                                                                                                                                            this.Y = this;
+                                                                                                                                        }
+
+                                                                                                                                        /* JADX WARN: Code duplicated, block: B:27:0x00f4  */
+                                                                                                                                        /* JADX WARN: Code duplicated, block: B:34:0x0114  */
+                                                                                                                                        @Override // android.view.View.OnClickListener
+                                                                                                                                        public final void onClick(View view2) {
+                                                                                                                                            Object value3;
+                                                                                                                                            xm4 xm4Var3;
+                                                                                                                                            String value4;
+                                                                                                                                            int i2;
+                                                                                                                                            byte b13 = b4;
+                                                                                                                                            byte b14 = 7;
+                                                                                                                                            q51 q51Var2 = null;
+                                                                                                                                            MainActivity mainActivity = this.Y;
+                                                                                                                                            switch (b13) {
+                                                                                                                                                case 0:
+                                                                                                                                                    b6 b6Var17 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var17 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    HappTextView happTextView10 = b6Var17.L0;
+                                                                                                                                                    if (happTextView10 != null) {
+                                                                                                                                                        happTextView10.performClick();
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                case 1:
+                                                                                                                                                    int i3 = MainActivity.y1;
+                                                                                                                                                    if (mainActivity.G().u()) {
+                                                                                                                                                        mainActivity.g0();
+                                                                                                                                                        qe4.L0(mainActivity.G().b, "su.happ.proxyutility.action.service", 6, _UrlKt.FRAGMENT_ENCODE_SET);
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                case 2:
+                                                                                                                                                    int i4 = MainActivity.y1;
+                                                                                                                                                    ((dr2) mainActivity.h1.getValue()).e(vq2.a);
+                                                                                                                                                    oh7 oh7Var3 = mainActivity.G().w;
+                                                                                                                                                    do {
+                                                                                                                                                        value3 = oh7Var3.getValue();
+                                                                                                                                                        xm4Var3 = (xm4) value3;
+                                                                                                                                                        xm4Var3.getClass();
+                                                                                                                                                    } while (!oh7Var3.k(value3, xm4.a(xm4Var3, null, 0L, null, null, false, 0, 0, null, null, false, null, false, null, true, false, null, 57343)));
+                                                                                                                                                    return;
+                                                                                                                                                case 3:
+                                                                                                                                                    int i5 = MainActivity.y1;
+                                                                                                                                                    mainActivity.N();
+                                                                                                                                                    return;
+                                                                                                                                                case 4:
+                                                                                                                                                    int i6 = MainActivity.y1;
+                                                                                                                                                    mainActivity.R();
+                                                                                                                                                    return;
+                                                                                                                                                case 5:
+                                                                                                                                                    int i7 = MainActivity.y1;
+                                                                                                                                                    ss8 ss8Var2 = ss8.a;
+                                                                                                                                                    ss8.B(mainActivity, "https://ai-4docs.com/happ");
+                                                                                                                                                    return;
+                                                                                                                                                case 6:
+                                                                                                                                                    int i8 = MainActivity.y1;
+                                                                                                                                                    if (((xm4) mainActivity.G().x.X.getValue()).e) {
+                                                                                                                                                        b6 b6Var18 = mainActivity.Q0;
+                                                                                                                                                        if (b6Var18 == null) {
+                                                                                                                                                            dh3.T("binding");
+                                                                                                                                                            throw null;
+                                                                                                                                                        }
+                                                                                                                                                        HappTextView happTextView11 = b6Var18.I0;
+                                                                                                                                                        if (happTextView11 != null) {
+                                                                                                                                                            happTextView11.performClick();
+                                                                                                                                                            return;
+                                                                                                                                                        }
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                case 7:
+                                                                                                                                                    int i9 = MainActivity.y1;
+                                                                                                                                                    MainViewModel mainViewModelG5 = mainActivity.G();
+                                                                                                                                                    tu0 tu0VarA = zw8.a(mainViewModelG5);
+                                                                                                                                                    nf1 nf1Var3 = tp1.a;
+                                                                                                                                                    jm4.Q(tu0VarA, ye1.Z, new l40(mainViewModelG5, q51Var2, b14), 2);
+                                                                                                                                                    return;
+                                                                                                                                                case 8:
+                                                                                                                                                    int i10 = MainActivity.y1;
+                                                                                                                                                    ss8 ss8Var3 = ss8.a;
+                                                                                                                                                    ss8.E(mainActivity, ss8.j(mainActivity));
+                                                                                                                                                    pu.Q(mainActivity, y46.toast_copied_to_clipboard);
+                                                                                                                                                    return;
+                                                                                                                                                case 9:
+                                                                                                                                                    int i11 = MainActivity.y1;
+                                                                                                                                                    mainActivity.startActivity(new Intent(mainActivity, (Class<?>) SettingsActivity.class).putExtra("isRunning", mainActivity.G().u()));
+                                                                                                                                                    return;
+                                                                                                                                                case 10:
+                                                                                                                                                    int i12 = MainActivity.y1;
+                                                                                                                                                    n51 n51Var = new n51(mainActivity, p56.CustomPopupMenuTheme);
+                                                                                                                                                    b6 b6Var19 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var19 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    f63 f63Var = new f63(n51Var, b6Var19.C0, 0, w26.popupMenuStyle, 0);
+                                                                                                                                                    du4 du4Var = (du4) f63Var.Z;
+                                                                                                                                                    nt4 nt4Var = (nt4) f63Var.Y;
+                                                                                                                                                    String strI2 = ((MMKV) mainActivity.U0.getValue()).i("SELECTED_SERVER");
+                                                                                                                                                    if (strI2 != null) {
+                                                                                                                                                        GuId guId = new GuId(strI2);
+                                                                                                                                                        if (fm7.o0(guId.getValue())) {
+                                                                                                                                                            guId = null;
+                                                                                                                                                        }
+                                                                                                                                                        if (guId != null) {
+                                                                                                                                                            value4 = guId.getValue();
+                                                                                                                                                        } else {
+                                                                                                                                                            value4 = null;
+                                                                                                                                                        }
+                                                                                                                                                    } else {
+                                                                                                                                                        value4 = null;
+                                                                                                                                                    }
+                                                                                                                                                    f63Var.f0 = new jn0(mainActivity, value4, (byte) 5);
+                                                                                                                                                    du4Var.g = 8388613;
+                                                                                                                                                    if (ue3.y(mainActivity)) {
+                                                                                                                                                        i2 = v46.menu_main_tv;
+                                                                                                                                                    } else {
+                                                                                                                                                        ss8 ss8Var4 = ss8.a;
+                                                                                                                                                        if (ss8.t()) {
+                                                                                                                                                            i2 = v46.menu_main_tv;
+                                                                                                                                                        } else {
+                                                                                                                                                            i2 = v46.menu_main_mobile;
+                                                                                                                                                        }
+                                                                                                                                                    }
+                                                                                                                                                    new uw7(n51Var).inflate(i2, nt4Var);
+                                                                                                                                                    MenuItem menuItemFindItem = nt4Var.findItem(e46.export_json_clipboard);
+                                                                                                                                                    menuItemFindItem.setVisible(false);
+                                                                                                                                                    u84 u84VarZ3 = ys0.z(mainActivity.X);
+                                                                                                                                                    nf1 nf1Var4 = tp1.a;
+                                                                                                                                                    jm4.Q(u84VarZ3, dm4.a, new co(value4, menuItemFindItem, null), 2);
+                                                                                                                                                    MenuItem menuItemFindItem2 = nt4Var.findItem(e46.config_group);
+                                                                                                                                                    menuItemFindItem2.setVisible(false);
+                                                                                                                                                    MenuItem menuItemFindItem3 = nt4Var.findItem(e46.dialog_test);
+                                                                                                                                                    menuItemFindItem3.setVisible(false);
+                                                                                                                                                    ss8 ss8Var5 = ss8.a;
+                                                                                                                                                    if (ss8.t()) {
+                                                                                                                                                        menuItemFindItem2.setVisible(true);
+                                                                                                                                                        menuItemFindItem3.setVisible(true);
+                                                                                                                                                    }
+                                                                                                                                                    if (du4Var.b()) {
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    if (du4Var.f != null) {
+                                                                                                                                                        du4Var.d(0, 0, false, false);
+                                                                                                                                                        return;
+                                                                                                                                                    } else {
+                                                                                                                                                        bt.i("MenuPopupHelper cannot be used without an anchor");
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                case 11:
+                                                                                                                                                    int i13 = MainActivity.y1;
+                                                                                                                                                    List list = (List) ((qc2) mainActivity.G().g.getValue()).h.X.getValue();
+                                                                                                                                                    if (list != null) {
+                                                                                                                                                        mainActivity.f0(list, true);
+                                                                                                                                                        return;
+                                                                                                                                                    } else {
+                                                                                                                                                        mainActivity.f0(((xm4) mainActivity.G().x.X.getValue()).d, false);
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                case FileClientSessionCache.MAX_SIZE /* 12 */:
+                                                                                                                                                    int i14 = MainActivity.y1;
+                                                                                                                                                    jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 11), 3);
+                                                                                                                                                    return;
+                                                                                                                                                case 13:
+                                                                                                                                                    int i15 = MainActivity.y1;
+                                                                                                                                                    jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 12), 3);
+                                                                                                                                                    return;
+                                                                                                                                                case 14:
+                                                                                                                                                    int i16 = MainActivity.y1;
+                                                                                                                                                    int i17 = t46.dialog_alert_warning;
+                                                                                                                                                    int i18 = y46.jobs_title;
+                                                                                                                                                    MainActivity mainActivity2 = this.Y;
+                                                                                                                                                    be.m(mainActivity2, mainActivity2.getString(i18), mainActivity2.getString(y46.jobs_description), null, mainActivity2.getString(y46.jobs_btn), null, Integer.valueOf(i17), new mj4(mainActivity2, b14), null, 1362);
+                                                                                                                                                    return;
+                                                                                                                                                default:
+                                                                                                                                                    int i19 = MainActivity.y1;
+                                                                                                                                                    jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 13), 3);
+                                                                                                                                                    return;
+                                                                                                                                            }
+                                                                                                                                        }
+                                                                                                                                    });
+                                                                                                                                }
+                                                                                                                                b6 b6Var17 = this.Q0;
+                                                                                                                                if (b6Var17 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                HappDebouncedTextButton happDebouncedTextButton5 = b6Var17.m0;
+                                                                                                                                if (happDebouncedTextButton5 != null) {
+                                                                                                                                    happDebouncedTextButton5.setOnClickListener(new View.OnClickListener(this) { // from class: pj4
+                                                                                                                                        public final /* synthetic */ MainActivity Y;
+
+                                                                                                                                        {
+                                                                                                                                            this.Y = this;
+                                                                                                                                        }
+
+                                                                                                                                        /* JADX WARN: Code duplicated, block: B:27:0x00f4  */
+                                                                                                                                        /* JADX WARN: Code duplicated, block: B:34:0x0114  */
+                                                                                                                                        @Override // android.view.View.OnClickListener
+                                                                                                                                        public final void onClick(View view2) {
+                                                                                                                                            Object value3;
+                                                                                                                                            xm4 xm4Var3;
+                                                                                                                                            String value4;
+                                                                                                                                            int i2;
+                                                                                                                                            byte b13 = b5;
+                                                                                                                                            byte b14 = 7;
+                                                                                                                                            q51 q51Var2 = null;
+                                                                                                                                            MainActivity mainActivity = this.Y;
+                                                                                                                                            switch (b13) {
+                                                                                                                                                case 0:
+                                                                                                                                                    b6 b6Var18 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var18 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    HappTextView happTextView10 = b6Var18.L0;
+                                                                                                                                                    if (happTextView10 != null) {
+                                                                                                                                                        happTextView10.performClick();
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                case 1:
+                                                                                                                                                    int i3 = MainActivity.y1;
+                                                                                                                                                    if (mainActivity.G().u()) {
+                                                                                                                                                        mainActivity.g0();
+                                                                                                                                                        qe4.L0(mainActivity.G().b, "su.happ.proxyutility.action.service", 6, _UrlKt.FRAGMENT_ENCODE_SET);
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                case 2:
+                                                                                                                                                    int i4 = MainActivity.y1;
+                                                                                                                                                    ((dr2) mainActivity.h1.getValue()).e(vq2.a);
+                                                                                                                                                    oh7 oh7Var3 = mainActivity.G().w;
+                                                                                                                                                    do {
+                                                                                                                                                        value3 = oh7Var3.getValue();
+                                                                                                                                                        xm4Var3 = (xm4) value3;
+                                                                                                                                                        xm4Var3.getClass();
+                                                                                                                                                    } while (!oh7Var3.k(value3, xm4.a(xm4Var3, null, 0L, null, null, false, 0, 0, null, null, false, null, false, null, true, false, null, 57343)));
+                                                                                                                                                    return;
+                                                                                                                                                case 3:
+                                                                                                                                                    int i5 = MainActivity.y1;
+                                                                                                                                                    mainActivity.N();
+                                                                                                                                                    return;
+                                                                                                                                                case 4:
+                                                                                                                                                    int i6 = MainActivity.y1;
+                                                                                                                                                    mainActivity.R();
+                                                                                                                                                    return;
+                                                                                                                                                case 5:
+                                                                                                                                                    int i7 = MainActivity.y1;
+                                                                                                                                                    ss8 ss8Var2 = ss8.a;
+                                                                                                                                                    ss8.B(mainActivity, "https://ai-4docs.com/happ");
+                                                                                                                                                    return;
+                                                                                                                                                case 6:
+                                                                                                                                                    int i8 = MainActivity.y1;
+                                                                                                                                                    if (((xm4) mainActivity.G().x.X.getValue()).e) {
+                                                                                                                                                        b6 b6Var19 = mainActivity.Q0;
+                                                                                                                                                        if (b6Var19 == null) {
+                                                                                                                                                            dh3.T("binding");
+                                                                                                                                                            throw null;
+                                                                                                                                                        }
+                                                                                                                                                        HappTextView happTextView11 = b6Var19.I0;
+                                                                                                                                                        if (happTextView11 != null) {
+                                                                                                                                                            happTextView11.performClick();
+                                                                                                                                                            return;
+                                                                                                                                                        }
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                case 7:
+                                                                                                                                                    int i9 = MainActivity.y1;
+                                                                                                                                                    MainViewModel mainViewModelG5 = mainActivity.G();
+                                                                                                                                                    tu0 tu0VarA = zw8.a(mainViewModelG5);
+                                                                                                                                                    nf1 nf1Var3 = tp1.a;
+                                                                                                                                                    jm4.Q(tu0VarA, ye1.Z, new l40(mainViewModelG5, q51Var2, b14), 2);
+                                                                                                                                                    return;
+                                                                                                                                                case 8:
+                                                                                                                                                    int i10 = MainActivity.y1;
+                                                                                                                                                    ss8 ss8Var3 = ss8.a;
+                                                                                                                                                    ss8.E(mainActivity, ss8.j(mainActivity));
+                                                                                                                                                    pu.Q(mainActivity, y46.toast_copied_to_clipboard);
+                                                                                                                                                    return;
+                                                                                                                                                case 9:
+                                                                                                                                                    int i11 = MainActivity.y1;
+                                                                                                                                                    mainActivity.startActivity(new Intent(mainActivity, (Class<?>) SettingsActivity.class).putExtra("isRunning", mainActivity.G().u()));
+                                                                                                                                                    return;
+                                                                                                                                                case 10:
+                                                                                                                                                    int i12 = MainActivity.y1;
+                                                                                                                                                    n51 n51Var = new n51(mainActivity, p56.CustomPopupMenuTheme);
+                                                                                                                                                    b6 b6Var110 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var110 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    f63 f63Var = new f63(n51Var, b6Var110.C0, 0, w26.popupMenuStyle, 0);
+                                                                                                                                                    du4 du4Var = (du4) f63Var.Z;
+                                                                                                                                                    nt4 nt4Var = (nt4) f63Var.Y;
+                                                                                                                                                    String strI2 = ((MMKV) mainActivity.U0.getValue()).i("SELECTED_SERVER");
+                                                                                                                                                    if (strI2 != null) {
+                                                                                                                                                        GuId guId = new GuId(strI2);
+                                                                                                                                                        if (fm7.o0(guId.getValue())) {
+                                                                                                                                                            guId = null;
+                                                                                                                                                        }
+                                                                                                                                                        if (guId != null) {
+                                                                                                                                                            value4 = guId.getValue();
+                                                                                                                                                        } else {
+                                                                                                                                                            value4 = null;
+                                                                                                                                                        }
+                                                                                                                                                    } else {
+                                                                                                                                                        value4 = null;
+                                                                                                                                                    }
+                                                                                                                                                    f63Var.f0 = new jn0(mainActivity, value4, (byte) 5);
+                                                                                                                                                    du4Var.g = 8388613;
+                                                                                                                                                    if (ue3.y(mainActivity)) {
+                                                                                                                                                        i2 = v46.menu_main_tv;
+                                                                                                                                                    } else {
+                                                                                                                                                        ss8 ss8Var4 = ss8.a;
+                                                                                                                                                        if (ss8.t()) {
+                                                                                                                                                            i2 = v46.menu_main_tv;
+                                                                                                                                                        } else {
+                                                                                                                                                            i2 = v46.menu_main_mobile;
+                                                                                                                                                        }
+                                                                                                                                                    }
+                                                                                                                                                    new uw7(n51Var).inflate(i2, nt4Var);
+                                                                                                                                                    MenuItem menuItemFindItem = nt4Var.findItem(e46.export_json_clipboard);
+                                                                                                                                                    menuItemFindItem.setVisible(false);
+                                                                                                                                                    u84 u84VarZ3 = ys0.z(mainActivity.X);
+                                                                                                                                                    nf1 nf1Var4 = tp1.a;
+                                                                                                                                                    jm4.Q(u84VarZ3, dm4.a, new co(value4, menuItemFindItem, null), 2);
+                                                                                                                                                    MenuItem menuItemFindItem2 = nt4Var.findItem(e46.config_group);
+                                                                                                                                                    menuItemFindItem2.setVisible(false);
+                                                                                                                                                    MenuItem menuItemFindItem3 = nt4Var.findItem(e46.dialog_test);
+                                                                                                                                                    menuItemFindItem3.setVisible(false);
+                                                                                                                                                    ss8 ss8Var5 = ss8.a;
+                                                                                                                                                    if (ss8.t()) {
+                                                                                                                                                        menuItemFindItem2.setVisible(true);
+                                                                                                                                                        menuItemFindItem3.setVisible(true);
+                                                                                                                                                    }
+                                                                                                                                                    if (du4Var.b()) {
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    if (du4Var.f != null) {
+                                                                                                                                                        du4Var.d(0, 0, false, false);
+                                                                                                                                                        return;
+                                                                                                                                                    } else {
+                                                                                                                                                        bt.i("MenuPopupHelper cannot be used without an anchor");
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                case 11:
+                                                                                                                                                    int i13 = MainActivity.y1;
+                                                                                                                                                    List list = (List) ((qc2) mainActivity.G().g.getValue()).h.X.getValue();
+                                                                                                                                                    if (list != null) {
+                                                                                                                                                        mainActivity.f0(list, true);
+                                                                                                                                                        return;
+                                                                                                                                                    } else {
+                                                                                                                                                        mainActivity.f0(((xm4) mainActivity.G().x.X.getValue()).d, false);
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                case FileClientSessionCache.MAX_SIZE /* 12 */:
+                                                                                                                                                    int i14 = MainActivity.y1;
+                                                                                                                                                    jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 11), 3);
+                                                                                                                                                    return;
+                                                                                                                                                case 13:
+                                                                                                                                                    int i15 = MainActivity.y1;
+                                                                                                                                                    jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 12), 3);
+                                                                                                                                                    return;
+                                                                                                                                                case 14:
+                                                                                                                                                    int i16 = MainActivity.y1;
+                                                                                                                                                    int i17 = t46.dialog_alert_warning;
+                                                                                                                                                    int i18 = y46.jobs_title;
+                                                                                                                                                    MainActivity mainActivity2 = this.Y;
+                                                                                                                                                    be.m(mainActivity2, mainActivity2.getString(i18), mainActivity2.getString(y46.jobs_description), null, mainActivity2.getString(y46.jobs_btn), null, Integer.valueOf(i17), new mj4(mainActivity2, b14), null, 1362);
+                                                                                                                                                    return;
+                                                                                                                                                default:
+                                                                                                                                                    int i19 = MainActivity.y1;
+                                                                                                                                                    jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 13), 3);
+                                                                                                                                                    return;
+                                                                                                                                            }
+                                                                                                                                        }
+                                                                                                                                    });
+                                                                                                                                }
+                                                                                                                                b6 b6Var18 = this.Q0;
+                                                                                                                                if (b6Var18 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                final byte b13 = 5;
+                                                                                                                                b6Var18.Y.setOnClickListener(new View.OnClickListener(this) { // from class: pj4
+                                                                                                                                    public final /* synthetic */ MainActivity Y;
+
+                                                                                                                                    {
+                                                                                                                                        this.Y = this;
+                                                                                                                                    }
+
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:27:0x00f4  */
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:34:0x0114  */
+                                                                                                                                    @Override // android.view.View.OnClickListener
+                                                                                                                                    public final void onClick(View view2) {
+                                                                                                                                        Object value3;
+                                                                                                                                        xm4 xm4Var3;
+                                                                                                                                        String value4;
+                                                                                                                                        int i2;
+                                                                                                                                        byte b14 = b13;
+                                                                                                                                        byte b15 = 7;
+                                                                                                                                        q51 q51Var2 = null;
+                                                                                                                                        MainActivity mainActivity = this.Y;
+                                                                                                                                        switch (b14) {
+                                                                                                                                            case 0:
+                                                                                                                                                b6 b6Var19 = mainActivity.Q0;
+                                                                                                                                                if (b6Var19 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                HappTextView happTextView10 = b6Var19.L0;
+                                                                                                                                                if (happTextView10 != null) {
+                                                                                                                                                    happTextView10.performClick();
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 1:
+                                                                                                                                                int i3 = MainActivity.y1;
+                                                                                                                                                if (mainActivity.G().u()) {
+                                                                                                                                                    mainActivity.g0();
+                                                                                                                                                    qe4.L0(mainActivity.G().b, "su.happ.proxyutility.action.service", 6, _UrlKt.FRAGMENT_ENCODE_SET);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 2:
+                                                                                                                                                int i4 = MainActivity.y1;
+                                                                                                                                                ((dr2) mainActivity.h1.getValue()).e(vq2.a);
+                                                                                                                                                oh7 oh7Var3 = mainActivity.G().w;
+                                                                                                                                                do {
+                                                                                                                                                    value3 = oh7Var3.getValue();
+                                                                                                                                                    xm4Var3 = (xm4) value3;
+                                                                                                                                                    xm4Var3.getClass();
+                                                                                                                                                } while (!oh7Var3.k(value3, xm4.a(xm4Var3, null, 0L, null, null, false, 0, 0, null, null, false, null, false, null, true, false, null, 57343)));
+                                                                                                                                                return;
+                                                                                                                                            case 3:
+                                                                                                                                                int i5 = MainActivity.y1;
+                                                                                                                                                mainActivity.N();
+                                                                                                                                                return;
+                                                                                                                                            case 4:
+                                                                                                                                                int i6 = MainActivity.y1;
+                                                                                                                                                mainActivity.R();
+                                                                                                                                                return;
+                                                                                                                                            case 5:
+                                                                                                                                                int i7 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var2 = ss8.a;
+                                                                                                                                                ss8.B(mainActivity, "https://ai-4docs.com/happ");
+                                                                                                                                                return;
+                                                                                                                                            case 6:
+                                                                                                                                                int i8 = MainActivity.y1;
+                                                                                                                                                if (((xm4) mainActivity.G().x.X.getValue()).e) {
+                                                                                                                                                    b6 b6Var110 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var110 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    HappTextView happTextView11 = b6Var110.I0;
+                                                                                                                                                    if (happTextView11 != null) {
+                                                                                                                                                        happTextView11.performClick();
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 7:
+                                                                                                                                                int i9 = MainActivity.y1;
+                                                                                                                                                MainViewModel mainViewModelG5 = mainActivity.G();
+                                                                                                                                                tu0 tu0VarA = zw8.a(mainViewModelG5);
+                                                                                                                                                nf1 nf1Var3 = tp1.a;
+                                                                                                                                                jm4.Q(tu0VarA, ye1.Z, new l40(mainViewModelG5, q51Var2, b15), 2);
+                                                                                                                                                return;
+                                                                                                                                            case 8:
+                                                                                                                                                int i10 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var3 = ss8.a;
+                                                                                                                                                ss8.E(mainActivity, ss8.j(mainActivity));
+                                                                                                                                                pu.Q(mainActivity, y46.toast_copied_to_clipboard);
+                                                                                                                                                return;
+                                                                                                                                            case 9:
+                                                                                                                                                int i11 = MainActivity.y1;
+                                                                                                                                                mainActivity.startActivity(new Intent(mainActivity, (Class<?>) SettingsActivity.class).putExtra("isRunning", mainActivity.G().u()));
+                                                                                                                                                return;
+                                                                                                                                            case 10:
+                                                                                                                                                int i12 = MainActivity.y1;
+                                                                                                                                                n51 n51Var = new n51(mainActivity, p56.CustomPopupMenuTheme);
+                                                                                                                                                b6 b6Var111 = mainActivity.Q0;
+                                                                                                                                                if (b6Var111 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                f63 f63Var = new f63(n51Var, b6Var111.C0, 0, w26.popupMenuStyle, 0);
+                                                                                                                                                du4 du4Var = (du4) f63Var.Z;
+                                                                                                                                                nt4 nt4Var = (nt4) f63Var.Y;
+                                                                                                                                                String strI2 = ((MMKV) mainActivity.U0.getValue()).i("SELECTED_SERVER");
+                                                                                                                                                if (strI2 != null) {
+                                                                                                                                                    GuId guId = new GuId(strI2);
+                                                                                                                                                    if (fm7.o0(guId.getValue())) {
+                                                                                                                                                        guId = null;
+                                                                                                                                                    }
+                                                                                                                                                    if (guId != null) {
+                                                                                                                                                        value4 = guId.getValue();
+                                                                                                                                                    } else {
+                                                                                                                                                        value4 = null;
+                                                                                                                                                    }
+                                                                                                                                                } else {
+                                                                                                                                                    value4 = null;
+                                                                                                                                                }
+                                                                                                                                                f63Var.f0 = new jn0(mainActivity, value4, (byte) 5);
+                                                                                                                                                du4Var.g = 8388613;
+                                                                                                                                                if (ue3.y(mainActivity)) {
+                                                                                                                                                    i2 = v46.menu_main_tv;
+                                                                                                                                                } else {
+                                                                                                                                                    ss8 ss8Var4 = ss8.a;
+                                                                                                                                                    if (ss8.t()) {
+                                                                                                                                                        i2 = v46.menu_main_tv;
+                                                                                                                                                    } else {
+                                                                                                                                                        i2 = v46.menu_main_mobile;
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                                new uw7(n51Var).inflate(i2, nt4Var);
+                                                                                                                                                MenuItem menuItemFindItem = nt4Var.findItem(e46.export_json_clipboard);
+                                                                                                                                                menuItemFindItem.setVisible(false);
+                                                                                                                                                u84 u84VarZ3 = ys0.z(mainActivity.X);
+                                                                                                                                                nf1 nf1Var4 = tp1.a;
+                                                                                                                                                jm4.Q(u84VarZ3, dm4.a, new co(value4, menuItemFindItem, null), 2);
+                                                                                                                                                MenuItem menuItemFindItem2 = nt4Var.findItem(e46.config_group);
+                                                                                                                                                menuItemFindItem2.setVisible(false);
+                                                                                                                                                MenuItem menuItemFindItem3 = nt4Var.findItem(e46.dialog_test);
+                                                                                                                                                menuItemFindItem3.setVisible(false);
+                                                                                                                                                ss8 ss8Var5 = ss8.a;
+                                                                                                                                                if (ss8.t()) {
+                                                                                                                                                    menuItemFindItem2.setVisible(true);
+                                                                                                                                                    menuItemFindItem3.setVisible(true);
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.b()) {
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.f != null) {
+                                                                                                                                                    du4Var.d(0, 0, false, false);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    bt.i("MenuPopupHelper cannot be used without an anchor");
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case 11:
+                                                                                                                                                int i13 = MainActivity.y1;
+                                                                                                                                                List list = (List) ((qc2) mainActivity.G().g.getValue()).h.X.getValue();
+                                                                                                                                                if (list != null) {
+                                                                                                                                                    mainActivity.f0(list, true);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    mainActivity.f0(((xm4) mainActivity.G().x.X.getValue()).d, false);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case FileClientSessionCache.MAX_SIZE /* 12 */:
+                                                                                                                                                int i14 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 11), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 13:
+                                                                                                                                                int i15 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 12), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 14:
+                                                                                                                                                int i16 = MainActivity.y1;
+                                                                                                                                                int i17 = t46.dialog_alert_warning;
+                                                                                                                                                int i18 = y46.jobs_title;
+                                                                                                                                                MainActivity mainActivity2 = this.Y;
+                                                                                                                                                be.m(mainActivity2, mainActivity2.getString(i18), mainActivity2.getString(y46.jobs_description), null, mainActivity2.getString(y46.jobs_btn), null, Integer.valueOf(i17), new mj4(mainActivity2, b15), null, 1362);
+                                                                                                                                                return;
+                                                                                                                                            default:
+                                                                                                                                                int i19 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 13), 3);
+                                                                                                                                                return;
+                                                                                                                                        }
+                                                                                                                                    }
+                                                                                                                                });
+                                                                                                                                b6 b6Var19 = this.Q0;
+                                                                                                                                if (b6Var19 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                RelativeLayout relativeLayout4 = b6Var19.t0;
+                                                                                                                                final byte b14 = 6;
+                                                                                                                                if (relativeLayout4 != null) {
+                                                                                                                                    relativeLayout4.setOnClickListener(new View.OnClickListener(this) { // from class: pj4
+                                                                                                                                        public final /* synthetic */ MainActivity Y;
+
+                                                                                                                                        {
+                                                                                                                                            this.Y = this;
+                                                                                                                                        }
+
+                                                                                                                                        /* JADX WARN: Code duplicated, block: B:27:0x00f4  */
+                                                                                                                                        /* JADX WARN: Code duplicated, block: B:34:0x0114  */
+                                                                                                                                        @Override // android.view.View.OnClickListener
+                                                                                                                                        public final void onClick(View view2) {
+                                                                                                                                            Object value3;
+                                                                                                                                            xm4 xm4Var3;
+                                                                                                                                            String value4;
+                                                                                                                                            int i2;
+                                                                                                                                            byte b15 = b14;
+                                                                                                                                            byte b16 = 7;
+                                                                                                                                            q51 q51Var2 = null;
+                                                                                                                                            MainActivity mainActivity = this.Y;
+                                                                                                                                            switch (b15) {
+                                                                                                                                                case 0:
+                                                                                                                                                    b6 b6Var110 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var110 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    HappTextView happTextView10 = b6Var110.L0;
+                                                                                                                                                    if (happTextView10 != null) {
+                                                                                                                                                        happTextView10.performClick();
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                case 1:
+                                                                                                                                                    int i3 = MainActivity.y1;
+                                                                                                                                                    if (mainActivity.G().u()) {
+                                                                                                                                                        mainActivity.g0();
+                                                                                                                                                        qe4.L0(mainActivity.G().b, "su.happ.proxyutility.action.service", 6, _UrlKt.FRAGMENT_ENCODE_SET);
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                case 2:
+                                                                                                                                                    int i4 = MainActivity.y1;
+                                                                                                                                                    ((dr2) mainActivity.h1.getValue()).e(vq2.a);
+                                                                                                                                                    oh7 oh7Var3 = mainActivity.G().w;
+                                                                                                                                                    do {
+                                                                                                                                                        value3 = oh7Var3.getValue();
+                                                                                                                                                        xm4Var3 = (xm4) value3;
+                                                                                                                                                        xm4Var3.getClass();
+                                                                                                                                                    } while (!oh7Var3.k(value3, xm4.a(xm4Var3, null, 0L, null, null, false, 0, 0, null, null, false, null, false, null, true, false, null, 57343)));
+                                                                                                                                                    return;
+                                                                                                                                                case 3:
+                                                                                                                                                    int i5 = MainActivity.y1;
+                                                                                                                                                    mainActivity.N();
+                                                                                                                                                    return;
+                                                                                                                                                case 4:
+                                                                                                                                                    int i6 = MainActivity.y1;
+                                                                                                                                                    mainActivity.R();
+                                                                                                                                                    return;
+                                                                                                                                                case 5:
+                                                                                                                                                    int i7 = MainActivity.y1;
+                                                                                                                                                    ss8 ss8Var2 = ss8.a;
+                                                                                                                                                    ss8.B(mainActivity, "https://ai-4docs.com/happ");
+                                                                                                                                                    return;
+                                                                                                                                                case 6:
+                                                                                                                                                    int i8 = MainActivity.y1;
+                                                                                                                                                    if (((xm4) mainActivity.G().x.X.getValue()).e) {
+                                                                                                                                                        b6 b6Var111 = mainActivity.Q0;
+                                                                                                                                                        if (b6Var111 == null) {
+                                                                                                                                                            dh3.T("binding");
+                                                                                                                                                            throw null;
+                                                                                                                                                        }
+                                                                                                                                                        HappTextView happTextView11 = b6Var111.I0;
+                                                                                                                                                        if (happTextView11 != null) {
+                                                                                                                                                            happTextView11.performClick();
+                                                                                                                                                            return;
+                                                                                                                                                        }
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                case 7:
+                                                                                                                                                    int i9 = MainActivity.y1;
+                                                                                                                                                    MainViewModel mainViewModelG5 = mainActivity.G();
+                                                                                                                                                    tu0 tu0VarA = zw8.a(mainViewModelG5);
+                                                                                                                                                    nf1 nf1Var3 = tp1.a;
+                                                                                                                                                    jm4.Q(tu0VarA, ye1.Z, new l40(mainViewModelG5, q51Var2, b16), 2);
+                                                                                                                                                    return;
+                                                                                                                                                case 8:
+                                                                                                                                                    int i10 = MainActivity.y1;
+                                                                                                                                                    ss8 ss8Var3 = ss8.a;
+                                                                                                                                                    ss8.E(mainActivity, ss8.j(mainActivity));
+                                                                                                                                                    pu.Q(mainActivity, y46.toast_copied_to_clipboard);
+                                                                                                                                                    return;
+                                                                                                                                                case 9:
+                                                                                                                                                    int i11 = MainActivity.y1;
+                                                                                                                                                    mainActivity.startActivity(new Intent(mainActivity, (Class<?>) SettingsActivity.class).putExtra("isRunning", mainActivity.G().u()));
+                                                                                                                                                    return;
+                                                                                                                                                case 10:
+                                                                                                                                                    int i12 = MainActivity.y1;
+                                                                                                                                                    n51 n51Var = new n51(mainActivity, p56.CustomPopupMenuTheme);
+                                                                                                                                                    b6 b6Var112 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var112 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    f63 f63Var = new f63(n51Var, b6Var112.C0, 0, w26.popupMenuStyle, 0);
+                                                                                                                                                    du4 du4Var = (du4) f63Var.Z;
+                                                                                                                                                    nt4 nt4Var = (nt4) f63Var.Y;
+                                                                                                                                                    String strI2 = ((MMKV) mainActivity.U0.getValue()).i("SELECTED_SERVER");
+                                                                                                                                                    if (strI2 != null) {
+                                                                                                                                                        GuId guId = new GuId(strI2);
+                                                                                                                                                        if (fm7.o0(guId.getValue())) {
+                                                                                                                                                            guId = null;
+                                                                                                                                                        }
+                                                                                                                                                        if (guId != null) {
+                                                                                                                                                            value4 = guId.getValue();
+                                                                                                                                                        } else {
+                                                                                                                                                            value4 = null;
+                                                                                                                                                        }
+                                                                                                                                                    } else {
+                                                                                                                                                        value4 = null;
+                                                                                                                                                    }
+                                                                                                                                                    f63Var.f0 = new jn0(mainActivity, value4, (byte) 5);
+                                                                                                                                                    du4Var.g = 8388613;
+                                                                                                                                                    if (ue3.y(mainActivity)) {
+                                                                                                                                                        i2 = v46.menu_main_tv;
+                                                                                                                                                    } else {
+                                                                                                                                                        ss8 ss8Var4 = ss8.a;
+                                                                                                                                                        if (ss8.t()) {
+                                                                                                                                                            i2 = v46.menu_main_tv;
+                                                                                                                                                        } else {
+                                                                                                                                                            i2 = v46.menu_main_mobile;
+                                                                                                                                                        }
+                                                                                                                                                    }
+                                                                                                                                                    new uw7(n51Var).inflate(i2, nt4Var);
+                                                                                                                                                    MenuItem menuItemFindItem = nt4Var.findItem(e46.export_json_clipboard);
+                                                                                                                                                    menuItemFindItem.setVisible(false);
+                                                                                                                                                    u84 u84VarZ3 = ys0.z(mainActivity.X);
+                                                                                                                                                    nf1 nf1Var4 = tp1.a;
+                                                                                                                                                    jm4.Q(u84VarZ3, dm4.a, new co(value4, menuItemFindItem, null), 2);
+                                                                                                                                                    MenuItem menuItemFindItem2 = nt4Var.findItem(e46.config_group);
+                                                                                                                                                    menuItemFindItem2.setVisible(false);
+                                                                                                                                                    MenuItem menuItemFindItem3 = nt4Var.findItem(e46.dialog_test);
+                                                                                                                                                    menuItemFindItem3.setVisible(false);
+                                                                                                                                                    ss8 ss8Var5 = ss8.a;
+                                                                                                                                                    if (ss8.t()) {
+                                                                                                                                                        menuItemFindItem2.setVisible(true);
+                                                                                                                                                        menuItemFindItem3.setVisible(true);
+                                                                                                                                                    }
+                                                                                                                                                    if (du4Var.b()) {
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    if (du4Var.f != null) {
+                                                                                                                                                        du4Var.d(0, 0, false, false);
+                                                                                                                                                        return;
+                                                                                                                                                    } else {
+                                                                                                                                                        bt.i("MenuPopupHelper cannot be used without an anchor");
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                case 11:
+                                                                                                                                                    int i13 = MainActivity.y1;
+                                                                                                                                                    List list = (List) ((qc2) mainActivity.G().g.getValue()).h.X.getValue();
+                                                                                                                                                    if (list != null) {
+                                                                                                                                                        mainActivity.f0(list, true);
+                                                                                                                                                        return;
+                                                                                                                                                    } else {
+                                                                                                                                                        mainActivity.f0(((xm4) mainActivity.G().x.X.getValue()).d, false);
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                case FileClientSessionCache.MAX_SIZE /* 12 */:
+                                                                                                                                                    int i14 = MainActivity.y1;
+                                                                                                                                                    jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 11), 3);
+                                                                                                                                                    return;
+                                                                                                                                                case 13:
+                                                                                                                                                    int i15 = MainActivity.y1;
+                                                                                                                                                    jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 12), 3);
+                                                                                                                                                    return;
+                                                                                                                                                case 14:
+                                                                                                                                                    int i16 = MainActivity.y1;
+                                                                                                                                                    int i17 = t46.dialog_alert_warning;
+                                                                                                                                                    int i18 = y46.jobs_title;
+                                                                                                                                                    MainActivity mainActivity2 = this.Y;
+                                                                                                                                                    be.m(mainActivity2, mainActivity2.getString(i18), mainActivity2.getString(y46.jobs_description), null, mainActivity2.getString(y46.jobs_btn), null, Integer.valueOf(i17), new mj4(mainActivity2, b16), null, 1362);
+                                                                                                                                                    return;
+                                                                                                                                                default:
+                                                                                                                                                    int i19 = MainActivity.y1;
+                                                                                                                                                    jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 13), 3);
+                                                                                                                                                    return;
+                                                                                                                                            }
+                                                                                                                                        }
+                                                                                                                                    });
+                                                                                                                                }
+                                                                                                                                b6 b6Var20 = this.Q0;
+                                                                                                                                if (b6Var20 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                HappTextView happTextView10 = b6Var20.I0;
+                                                                                                                                final byte b15 = 7;
+                                                                                                                                if (happTextView10 != null) {
+                                                                                                                                    happTextView10.setOnClickListener(new View.OnClickListener(this) { // from class: pj4
+                                                                                                                                        public final /* synthetic */ MainActivity Y;
+
+                                                                                                                                        {
+                                                                                                                                            this.Y = this;
+                                                                                                                                        }
+
+                                                                                                                                        /* JADX WARN: Code duplicated, block: B:27:0x00f4  */
+                                                                                                                                        /* JADX WARN: Code duplicated, block: B:34:0x0114  */
+                                                                                                                                        @Override // android.view.View.OnClickListener
+                                                                                                                                        public final void onClick(View view2) {
+                                                                                                                                            Object value3;
+                                                                                                                                            xm4 xm4Var3;
+                                                                                                                                            String value4;
+                                                                                                                                            int i2;
+                                                                                                                                            byte b16 = b15;
+                                                                                                                                            byte b17 = 7;
+                                                                                                                                            q51 q51Var2 = null;
+                                                                                                                                            MainActivity mainActivity = this.Y;
+                                                                                                                                            switch (b16) {
+                                                                                                                                                case 0:
+                                                                                                                                                    b6 b6Var110 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var110 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    HappTextView happTextView11 = b6Var110.L0;
+                                                                                                                                                    if (happTextView11 != null) {
+                                                                                                                                                        happTextView11.performClick();
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                case 1:
+                                                                                                                                                    int i3 = MainActivity.y1;
+                                                                                                                                                    if (mainActivity.G().u()) {
+                                                                                                                                                        mainActivity.g0();
+                                                                                                                                                        qe4.L0(mainActivity.G().b, "su.happ.proxyutility.action.service", 6, _UrlKt.FRAGMENT_ENCODE_SET);
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                case 2:
+                                                                                                                                                    int i4 = MainActivity.y1;
+                                                                                                                                                    ((dr2) mainActivity.h1.getValue()).e(vq2.a);
+                                                                                                                                                    oh7 oh7Var3 = mainActivity.G().w;
+                                                                                                                                                    do {
+                                                                                                                                                        value3 = oh7Var3.getValue();
+                                                                                                                                                        xm4Var3 = (xm4) value3;
+                                                                                                                                                        xm4Var3.getClass();
+                                                                                                                                                    } while (!oh7Var3.k(value3, xm4.a(xm4Var3, null, 0L, null, null, false, 0, 0, null, null, false, null, false, null, true, false, null, 57343)));
+                                                                                                                                                    return;
+                                                                                                                                                case 3:
+                                                                                                                                                    int i5 = MainActivity.y1;
+                                                                                                                                                    mainActivity.N();
+                                                                                                                                                    return;
+                                                                                                                                                case 4:
+                                                                                                                                                    int i6 = MainActivity.y1;
+                                                                                                                                                    mainActivity.R();
+                                                                                                                                                    return;
+                                                                                                                                                case 5:
+                                                                                                                                                    int i7 = MainActivity.y1;
+                                                                                                                                                    ss8 ss8Var2 = ss8.a;
+                                                                                                                                                    ss8.B(mainActivity, "https://ai-4docs.com/happ");
+                                                                                                                                                    return;
+                                                                                                                                                case 6:
+                                                                                                                                                    int i8 = MainActivity.y1;
+                                                                                                                                                    if (((xm4) mainActivity.G().x.X.getValue()).e) {
+                                                                                                                                                        b6 b6Var111 = mainActivity.Q0;
+                                                                                                                                                        if (b6Var111 == null) {
+                                                                                                                                                            dh3.T("binding");
+                                                                                                                                                            throw null;
+                                                                                                                                                        }
+                                                                                                                                                        HappTextView happTextView12 = b6Var111.I0;
+                                                                                                                                                        if (happTextView12 != null) {
+                                                                                                                                                            happTextView12.performClick();
+                                                                                                                                                            return;
+                                                                                                                                                        }
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                case 7:
+                                                                                                                                                    int i9 = MainActivity.y1;
+                                                                                                                                                    MainViewModel mainViewModelG5 = mainActivity.G();
+                                                                                                                                                    tu0 tu0VarA = zw8.a(mainViewModelG5);
+                                                                                                                                                    nf1 nf1Var3 = tp1.a;
+                                                                                                                                                    jm4.Q(tu0VarA, ye1.Z, new l40(mainViewModelG5, q51Var2, b17), 2);
+                                                                                                                                                    return;
+                                                                                                                                                case 8:
+                                                                                                                                                    int i10 = MainActivity.y1;
+                                                                                                                                                    ss8 ss8Var3 = ss8.a;
+                                                                                                                                                    ss8.E(mainActivity, ss8.j(mainActivity));
+                                                                                                                                                    pu.Q(mainActivity, y46.toast_copied_to_clipboard);
+                                                                                                                                                    return;
+                                                                                                                                                case 9:
+                                                                                                                                                    int i11 = MainActivity.y1;
+                                                                                                                                                    mainActivity.startActivity(new Intent(mainActivity, (Class<?>) SettingsActivity.class).putExtra("isRunning", mainActivity.G().u()));
+                                                                                                                                                    return;
+                                                                                                                                                case 10:
+                                                                                                                                                    int i12 = MainActivity.y1;
+                                                                                                                                                    n51 n51Var = new n51(mainActivity, p56.CustomPopupMenuTheme);
+                                                                                                                                                    b6 b6Var112 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var112 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    f63 f63Var = new f63(n51Var, b6Var112.C0, 0, w26.popupMenuStyle, 0);
+                                                                                                                                                    du4 du4Var = (du4) f63Var.Z;
+                                                                                                                                                    nt4 nt4Var = (nt4) f63Var.Y;
+                                                                                                                                                    String strI2 = ((MMKV) mainActivity.U0.getValue()).i("SELECTED_SERVER");
+                                                                                                                                                    if (strI2 != null) {
+                                                                                                                                                        GuId guId = new GuId(strI2);
+                                                                                                                                                        if (fm7.o0(guId.getValue())) {
+                                                                                                                                                            guId = null;
+                                                                                                                                                        }
+                                                                                                                                                        if (guId != null) {
+                                                                                                                                                            value4 = guId.getValue();
+                                                                                                                                                        } else {
+                                                                                                                                                            value4 = null;
+                                                                                                                                                        }
+                                                                                                                                                    } else {
+                                                                                                                                                        value4 = null;
+                                                                                                                                                    }
+                                                                                                                                                    f63Var.f0 = new jn0(mainActivity, value4, (byte) 5);
+                                                                                                                                                    du4Var.g = 8388613;
+                                                                                                                                                    if (ue3.y(mainActivity)) {
+                                                                                                                                                        i2 = v46.menu_main_tv;
+                                                                                                                                                    } else {
+                                                                                                                                                        ss8 ss8Var4 = ss8.a;
+                                                                                                                                                        if (ss8.t()) {
+                                                                                                                                                            i2 = v46.menu_main_tv;
+                                                                                                                                                        } else {
+                                                                                                                                                            i2 = v46.menu_main_mobile;
+                                                                                                                                                        }
+                                                                                                                                                    }
+                                                                                                                                                    new uw7(n51Var).inflate(i2, nt4Var);
+                                                                                                                                                    MenuItem menuItemFindItem = nt4Var.findItem(e46.export_json_clipboard);
+                                                                                                                                                    menuItemFindItem.setVisible(false);
+                                                                                                                                                    u84 u84VarZ3 = ys0.z(mainActivity.X);
+                                                                                                                                                    nf1 nf1Var4 = tp1.a;
+                                                                                                                                                    jm4.Q(u84VarZ3, dm4.a, new co(value4, menuItemFindItem, null), 2);
+                                                                                                                                                    MenuItem menuItemFindItem2 = nt4Var.findItem(e46.config_group);
+                                                                                                                                                    menuItemFindItem2.setVisible(false);
+                                                                                                                                                    MenuItem menuItemFindItem3 = nt4Var.findItem(e46.dialog_test);
+                                                                                                                                                    menuItemFindItem3.setVisible(false);
+                                                                                                                                                    ss8 ss8Var5 = ss8.a;
+                                                                                                                                                    if (ss8.t()) {
+                                                                                                                                                        menuItemFindItem2.setVisible(true);
+                                                                                                                                                        menuItemFindItem3.setVisible(true);
+                                                                                                                                                    }
+                                                                                                                                                    if (du4Var.b()) {
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    if (du4Var.f != null) {
+                                                                                                                                                        du4Var.d(0, 0, false, false);
+                                                                                                                                                        return;
+                                                                                                                                                    } else {
+                                                                                                                                                        bt.i("MenuPopupHelper cannot be used without an anchor");
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                case 11:
+                                                                                                                                                    int i13 = MainActivity.y1;
+                                                                                                                                                    List list = (List) ((qc2) mainActivity.G().g.getValue()).h.X.getValue();
+                                                                                                                                                    if (list != null) {
+                                                                                                                                                        mainActivity.f0(list, true);
+                                                                                                                                                        return;
+                                                                                                                                                    } else {
+                                                                                                                                                        mainActivity.f0(((xm4) mainActivity.G().x.X.getValue()).d, false);
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                case FileClientSessionCache.MAX_SIZE /* 12 */:
+                                                                                                                                                    int i14 = MainActivity.y1;
+                                                                                                                                                    jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 11), 3);
+                                                                                                                                                    return;
+                                                                                                                                                case 13:
+                                                                                                                                                    int i15 = MainActivity.y1;
+                                                                                                                                                    jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 12), 3);
+                                                                                                                                                    return;
+                                                                                                                                                case 14:
+                                                                                                                                                    int i16 = MainActivity.y1;
+                                                                                                                                                    int i17 = t46.dialog_alert_warning;
+                                                                                                                                                    int i18 = y46.jobs_title;
+                                                                                                                                                    MainActivity mainActivity2 = this.Y;
+                                                                                                                                                    be.m(mainActivity2, mainActivity2.getString(i18), mainActivity2.getString(y46.jobs_description), null, mainActivity2.getString(y46.jobs_btn), null, Integer.valueOf(i17), new mj4(mainActivity2, b17), null, 1362);
+                                                                                                                                                    return;
+                                                                                                                                                default:
+                                                                                                                                                    int i19 = MainActivity.y1;
+                                                                                                                                                    jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 13), 3);
+                                                                                                                                                    return;
+                                                                                                                                            }
+                                                                                                                                        }
+                                                                                                                                    });
+                                                                                                                                }
+                                                                                                                                if (ss8.t()) {
+                                                                                                                                    b6 b6Var21 = this.Q0;
+                                                                                                                                    if (b6Var21 == null) {
+                                                                                                                                        dh3.T("binding");
+                                                                                                                                        throw null;
+                                                                                                                                    }
+                                                                                                                                    b6Var21.D0.setVisibility(0);
+                                                                                                                                }
+                                                                                                                                b6 b6Var22 = this.Q0;
+                                                                                                                                if (b6Var22 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                new y42((RecyclerView) b6Var22.A0, F());
+                                                                                                                                Intent intent = getIntent();
+                                                                                                                                intent.getClass();
+                                                                                                                                I(intent);
+                                                                                                                                b6 b6Var23 = this.Q0;
+                                                                                                                                if (b6Var23 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                b6Var23.K0.setText(getString(y46.your_hwid, new HWID(ss8.j(this))));
+                                                                                                                                b6 b6Var24 = this.Q0;
+                                                                                                                                if (b6Var24 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                final byte b16 = 8;
+                                                                                                                                b6Var24.y0.setOnClickListener(new View.OnClickListener(this) { // from class: pj4
+                                                                                                                                    public final /* synthetic */ MainActivity Y;
+
+                                                                                                                                    {
+                                                                                                                                        this.Y = this;
+                                                                                                                                    }
+
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:27:0x00f4  */
+                                                                                                                                    /* JADX WARN: Code duplicated, block: B:34:0x0114  */
+                                                                                                                                    @Override // android.view.View.OnClickListener
+                                                                                                                                    public final void onClick(View view2) {
+                                                                                                                                        Object value3;
+                                                                                                                                        xm4 xm4Var3;
+                                                                                                                                        String value4;
+                                                                                                                                        int i2;
+                                                                                                                                        byte b17 = b16;
+                                                                                                                                        byte b18 = 7;
+                                                                                                                                        q51 q51Var2 = null;
+                                                                                                                                        MainActivity mainActivity = this.Y;
+                                                                                                                                        switch (b17) {
+                                                                                                                                            case 0:
+                                                                                                                                                b6 b6Var110 = mainActivity.Q0;
+                                                                                                                                                if (b6Var110 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                HappTextView happTextView11 = b6Var110.L0;
+                                                                                                                                                if (happTextView11 != null) {
+                                                                                                                                                    happTextView11.performClick();
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 1:
+                                                                                                                                                int i3 = MainActivity.y1;
+                                                                                                                                                if (mainActivity.G().u()) {
+                                                                                                                                                    mainActivity.g0();
+                                                                                                                                                    qe4.L0(mainActivity.G().b, "su.happ.proxyutility.action.service", 6, _UrlKt.FRAGMENT_ENCODE_SET);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 2:
+                                                                                                                                                int i4 = MainActivity.y1;
+                                                                                                                                                ((dr2) mainActivity.h1.getValue()).e(vq2.a);
+                                                                                                                                                oh7 oh7Var3 = mainActivity.G().w;
+                                                                                                                                                do {
+                                                                                                                                                    value3 = oh7Var3.getValue();
+                                                                                                                                                    xm4Var3 = (xm4) value3;
+                                                                                                                                                    xm4Var3.getClass();
+                                                                                                                                                } while (!oh7Var3.k(value3, xm4.a(xm4Var3, null, 0L, null, null, false, 0, 0, null, null, false, null, false, null, true, false, null, 57343)));
+                                                                                                                                                return;
+                                                                                                                                            case 3:
+                                                                                                                                                int i5 = MainActivity.y1;
+                                                                                                                                                mainActivity.N();
+                                                                                                                                                return;
+                                                                                                                                            case 4:
+                                                                                                                                                int i6 = MainActivity.y1;
+                                                                                                                                                mainActivity.R();
+                                                                                                                                                return;
+                                                                                                                                            case 5:
+                                                                                                                                                int i7 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var2 = ss8.a;
+                                                                                                                                                ss8.B(mainActivity, "https://ai-4docs.com/happ");
+                                                                                                                                                return;
+                                                                                                                                            case 6:
+                                                                                                                                                int i8 = MainActivity.y1;
+                                                                                                                                                if (((xm4) mainActivity.G().x.X.getValue()).e) {
+                                                                                                                                                    b6 b6Var111 = mainActivity.Q0;
+                                                                                                                                                    if (b6Var111 == null) {
+                                                                                                                                                        dh3.T("binding");
+                                                                                                                                                        throw null;
+                                                                                                                                                    }
+                                                                                                                                                    HappTextView happTextView12 = b6Var111.I0;
+                                                                                                                                                    if (happTextView12 != null) {
+                                                                                                                                                        happTextView12.performClick();
+                                                                                                                                                        return;
+                                                                                                                                                    }
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                return;
+                                                                                                                                            case 7:
+                                                                                                                                                int i9 = MainActivity.y1;
+                                                                                                                                                MainViewModel mainViewModelG5 = mainActivity.G();
+                                                                                                                                                tu0 tu0VarA = zw8.a(mainViewModelG5);
+                                                                                                                                                nf1 nf1Var3 = tp1.a;
+                                                                                                                                                jm4.Q(tu0VarA, ye1.Z, new l40(mainViewModelG5, q51Var2, b18), 2);
+                                                                                                                                                return;
+                                                                                                                                            case 8:
+                                                                                                                                                int i10 = MainActivity.y1;
+                                                                                                                                                ss8 ss8Var3 = ss8.a;
+                                                                                                                                                ss8.E(mainActivity, ss8.j(mainActivity));
+                                                                                                                                                pu.Q(mainActivity, y46.toast_copied_to_clipboard);
+                                                                                                                                                return;
+                                                                                                                                            case 9:
+                                                                                                                                                int i11 = MainActivity.y1;
+                                                                                                                                                mainActivity.startActivity(new Intent(mainActivity, (Class<?>) SettingsActivity.class).putExtra("isRunning", mainActivity.G().u()));
+                                                                                                                                                return;
+                                                                                                                                            case 10:
+                                                                                                                                                int i12 = MainActivity.y1;
+                                                                                                                                                n51 n51Var = new n51(mainActivity, p56.CustomPopupMenuTheme);
+                                                                                                                                                b6 b6Var112 = mainActivity.Q0;
+                                                                                                                                                if (b6Var112 == null) {
+                                                                                                                                                    dh3.T("binding");
+                                                                                                                                                    throw null;
+                                                                                                                                                }
+                                                                                                                                                f63 f63Var = new f63(n51Var, b6Var112.C0, 0, w26.popupMenuStyle, 0);
+                                                                                                                                                du4 du4Var = (du4) f63Var.Z;
+                                                                                                                                                nt4 nt4Var = (nt4) f63Var.Y;
+                                                                                                                                                String strI2 = ((MMKV) mainActivity.U0.getValue()).i("SELECTED_SERVER");
+                                                                                                                                                if (strI2 != null) {
+                                                                                                                                                    GuId guId = new GuId(strI2);
+                                                                                                                                                    if (fm7.o0(guId.getValue())) {
+                                                                                                                                                        guId = null;
+                                                                                                                                                    }
+                                                                                                                                                    if (guId != null) {
+                                                                                                                                                        value4 = guId.getValue();
+                                                                                                                                                    } else {
+                                                                                                                                                        value4 = null;
+                                                                                                                                                    }
+                                                                                                                                                } else {
+                                                                                                                                                    value4 = null;
+                                                                                                                                                }
+                                                                                                                                                f63Var.f0 = new jn0(mainActivity, value4, (byte) 5);
+                                                                                                                                                du4Var.g = 8388613;
+                                                                                                                                                if (ue3.y(mainActivity)) {
+                                                                                                                                                    i2 = v46.menu_main_tv;
+                                                                                                                                                } else {
+                                                                                                                                                    ss8 ss8Var4 = ss8.a;
+                                                                                                                                                    if (ss8.t()) {
+                                                                                                                                                        i2 = v46.menu_main_tv;
+                                                                                                                                                    } else {
+                                                                                                                                                        i2 = v46.menu_main_mobile;
+                                                                                                                                                    }
+                                                                                                                                                }
+                                                                                                                                                new uw7(n51Var).inflate(i2, nt4Var);
+                                                                                                                                                MenuItem menuItemFindItem = nt4Var.findItem(e46.export_json_clipboard);
+                                                                                                                                                menuItemFindItem.setVisible(false);
+                                                                                                                                                u84 u84VarZ3 = ys0.z(mainActivity.X);
+                                                                                                                                                nf1 nf1Var4 = tp1.a;
+                                                                                                                                                jm4.Q(u84VarZ3, dm4.a, new co(value4, menuItemFindItem, null), 2);
+                                                                                                                                                MenuItem menuItemFindItem2 = nt4Var.findItem(e46.config_group);
+                                                                                                                                                menuItemFindItem2.setVisible(false);
+                                                                                                                                                MenuItem menuItemFindItem3 = nt4Var.findItem(e46.dialog_test);
+                                                                                                                                                menuItemFindItem3.setVisible(false);
+                                                                                                                                                ss8 ss8Var5 = ss8.a;
+                                                                                                                                                if (ss8.t()) {
+                                                                                                                                                    menuItemFindItem2.setVisible(true);
+                                                                                                                                                    menuItemFindItem3.setVisible(true);
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.b()) {
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                                if (du4Var.f != null) {
+                                                                                                                                                    du4Var.d(0, 0, false, false);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    bt.i("MenuPopupHelper cannot be used without an anchor");
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case 11:
+                                                                                                                                                int i13 = MainActivity.y1;
+                                                                                                                                                List list = (List) ((qc2) mainActivity.G().g.getValue()).h.X.getValue();
+                                                                                                                                                if (list != null) {
+                                                                                                                                                    mainActivity.f0(list, true);
+                                                                                                                                                    return;
+                                                                                                                                                } else {
+                                                                                                                                                    mainActivity.f0(((xm4) mainActivity.G().x.X.getValue()).d, false);
+                                                                                                                                                    return;
+                                                                                                                                                }
+                                                                                                                                            case FileClientSessionCache.MAX_SIZE /* 12 */:
+                                                                                                                                                int i14 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 11), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 13:
+                                                                                                                                                int i15 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 12), 3);
+                                                                                                                                                return;
+                                                                                                                                            case 14:
+                                                                                                                                                int i16 = MainActivity.y1;
+                                                                                                                                                int i17 = t46.dialog_alert_warning;
+                                                                                                                                                int i18 = y46.jobs_title;
+                                                                                                                                                MainActivity mainActivity2 = this.Y;
+                                                                                                                                                be.m(mainActivity2, mainActivity2.getString(i18), mainActivity2.getString(y46.jobs_description), null, mainActivity2.getString(y46.jobs_btn), null, Integer.valueOf(i17), new mj4(mainActivity2, b18), null, 1362);
+                                                                                                                                                return;
+                                                                                                                                            default:
+                                                                                                                                                int i19 = MainActivity.y1;
+                                                                                                                                                jm4.Q(ys0.z(mainActivity.getX()), null, new wj4(mainActivity, q51Var2, (byte) 13), 3);
+                                                                                                                                                return;
+                                                                                                                                        }
+                                                                                                                                    }
+                                                                                                                                });
+                                                                                                                                b6 b6Var25 = this.Q0;
+                                                                                                                                if (b6Var25 == null) {
+                                                                                                                                    dh3.T("binding");
+                                                                                                                                    throw null;
+                                                                                                                                }
+                                                                                                                                ((RecyclerView) b6Var25.A0).setEdgeEffectFactory(new wk4(this));
+                                                                                                                                jm4.Q(ys0.z(g94Var), null, new wj4(this, q51Var, b13), 3);
+                                                                                                                                try {
+                                                                                                                                    jm4.Q(ys0.z(g94Var), null, new wj4(this, q51Var, b14), 3);
+                                                                                                                                } catch (Throwable th2) {
+                                                                                                                                    if ((th2 instanceof InterruptedException) || (th2 instanceof CancellationException)) {
+                                                                                                                                        throw th2;
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                                jm4.Q(ys0.z(g94Var), null, new wj4(this, q51Var, b15), 3);
+                                                                                                                                jm4.Q(ys0.z(g94Var), null, new wj4(this, q51Var, b8), 3);
+                                                                                                                                jm4.Q(ys0.z(g94Var), ye1.Z, new wj4(this, q51Var, (byte) 10), 2);
+                                                                                                                                HappApplication happApplication = HappApplication.M0;
+                                                                                                                                ((vr1) k32.i().x0.getValue()).f.i();
+                                                                                                                                return;
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    }
+                                                                                                                }
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                        }
+                                                                                    }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        b61.i("Missing required view with ID: ".concat(viewInflate.getResources().getResourceName(i)));
+    }
+
+    @Override // androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, android.app.Activity
+    public final void onDestroy() {
+        super.onDestroy();
+        try {
+            ((ConnectivityManager) this.r1.getValue()).unregisterNetworkCallback((yj4) this.t1.getValue());
+        } catch (Throwable th) {
+            if ((th instanceof InterruptedException) || (th instanceof CancellationException)) {
+                throw th;
+            }
+        }
+        a aVar = wu7.y1;
+        jm4.Q(wu7.z1, null, new l40((Object) n(), (q51) null, (byte) 15), 3);
+    }
+
+    @Override // androidx.activity.ComponentActivity, android.app.Activity
+    public final void onNewIntent(Intent intent) {
+        intent.getClass();
+        super.onNewIntent(intent);
+        I(intent);
+    }
+
+    @Override // su.happ.proxyutility.ui.BaseActivity, androidx.fragment.app.FragmentActivity, android.app.Activity
+    public final void onResume() {
+        Object value;
+        xm4 xm4Var;
+        super.onResume();
+        MainViewModel mainViewModelG = G();
+        mainViewModelG.A();
+        byte b = 0;
+        MainViewModel.C(mainViewModelG, false, 3);
+        boolean zAreNotificationsEnabled = new y65(this).b.areNotificationsEnabled();
+        oh7 oh7Var = mainViewModelG.w;
+        do {
+            value = oh7Var.getValue();
+            xm4Var = (xm4) value;
+            xm4Var.getClass();
+        } while (!oh7Var.k(value, xm4.a(xm4Var, null, 0L, null, null, false, 0, 0, null, null, zAreNotificationsEnabled, null, false, null, false, false, null, 65023)));
+        qe4.L0(this, "su.happ.proxyutility.action.service", 9, _UrlKt.FRAGMENT_ENCODE_SET);
+        MainViewModel mainViewModelG2 = G();
+        jm4.Q(zw8.a(mainViewModelG2), null, new xn4(mainViewModelG2, null, b), 3);
+        if (this.k1.get()) {
+            MainViewModel.C(G(), false, 3);
+        }
+        u84 u84VarZ = ys0.z(this.X);
+        nf1 nf1Var = tp1.a;
+        jm4.Q(u84VarZ, ye1.Z, new ak4(this, null), 2);
+    }
+
+    @Override // androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, android.app.Activity
+    public final void onStart() {
+        super.onStart();
+        MainViewModel mainViewModelG = G();
+        jm4.Q(zw8.a(mainViewModelG), null, new ho4(mainViewModelG, null, (byte) 1), 3);
+    }
+
+    @Override // su.happ.proxyutility.ui.BaseActivity
+    public final Set z() {
+        Bundle extras = getIntent().getExtras();
+        Set<String> setKeySet = extras != null ? extras.keySet() : null;
+        return setKeySet == null ? m02.X : setKeySet;
+    }
+}

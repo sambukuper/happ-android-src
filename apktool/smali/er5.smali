@@ -1,0 +1,325 @@
+.class public Ler5;
+.super Ljava/lang/Object;
+.source "r8-map-id-44e235b9ef01a485f680d0275e0bd7ddccd9597cc07e9835722c2ab00d70acf5"
+
+
+# instance fields
+.field public a:[Ljava/lang/Object;
+
+.field public b:I
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .line 18
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const/16 v0, 0x100
+
+    .line 19
+    new-array v0, v0, [Ljava/lang/Object;
+
+    iput-object v0, p0, Ler5;->a:[Ljava/lang/Object;
+
+    return-void
+.end method
+
+.method public constructor <init>(I)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    if-lez p1, :cond_0
+
+    .line 5
+    .line 6
+    new-array p1, p1, [Ljava/lang/Object;
+
+    .line 7
+    .line 8
+    iput-object p1, p0, Ler5;->a:[Ljava/lang/Object;
+
+    .line 9
+    .line 10
+    return-void
+
+    .line 11
+    :cond_0
+    const-string p0, "The max pool size must be > 0"
+
+    .line 12
+    .line 13
+    invoke-static {p0}, Lbt;->q(Ljava/lang/String;)V
+
+    .line 14
+    .line 15
+    .line 16
+    const/4 p0, 0x0
+
+    .line 17
+    throw p0
+.end method
+
+
+# virtual methods
+.method public a()Ljava/lang/Object;
+    .locals 4
+
+    .line 1
+    iget-object v0, p0, Ler5;->a:[Ljava/lang/Object;
+
+    .line 2
+    .line 3
+    iget v1, p0, Ler5;->b:I
+
+    .line 4
+    .line 5
+    const/4 v2, 0x0
+
+    .line 6
+    if-lez v1, :cond_0
+
+    .line 7
+    .line 8
+    add-int/lit8 v1, v1, -0x1
+
+    .line 9
+    .line 10
+    aget-object v3, v0, v1
+
+    .line 11
+    .line 12
+    invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+
+    .line 13
+    .line 14
+    .line 15
+    aput-object v2, v0, v1
+
+    .line 16
+    .line 17
+    iget v0, p0, Ler5;->b:I
+
+    .line 18
+    .line 19
+    add-int/lit8 v0, v0, -0x1
+
+    .line 20
+    .line 21
+    iput v0, p0, Ler5;->b:I
+
+    .line 22
+    .line 23
+    return-object v3
+
+    .line 24
+    :cond_0
+    return-object v2
+.end method
+
+.method public b(Ljava/lang/Object;)V
+    .locals 4
+
+    .line 1
+    iget v0, p0, Ler5;->b:I
+
+    .line 2
+    .line 3
+    iget-object v1, p0, Ler5;->a:[Ljava/lang/Object;
+
+    .line 4
+    .line 5
+    if-nez v1, :cond_0
+
+    .line 6
+    .line 7
+    const/16 v1, 0x10
+
+    .line 8
+    .line 9
+    new-array v1, v1, [Ljava/lang/Object;
+
+    .line 10
+    .line 11
+    iput-object v1, p0, Ler5;->a:[Ljava/lang/Object;
+
+    .line 12
+    .line 13
+    goto :goto_0
+
+    .line 14
+    :cond_0
+    array-length v2, v1
+
+    .line 15
+    if-ne v0, v2, :cond_1
+
+    .line 16
+    .line 17
+    shr-int/lit8 v2, v0, 0x2
+
+    .line 18
+    .line 19
+    add-int/2addr v2, v0
+
+    .line 20
+    new-array v2, v2, [Ljava/lang/Object;
+
+    .line 21
+    .line 22
+    const/4 v3, 0x0
+
+    .line 23
+    invoke-static {v1, v3, v2, v3, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 24
+    .line 25
+    .line 26
+    iput-object v2, p0, Ler5;->a:[Ljava/lang/Object;
+
+    .line 27
+    .line 28
+    move-object v1, v2
+
+    .line 29
+    :cond_1
+    :goto_0
+    aput-object p1, v1, v0
+
+    .line 30
+    .line 31
+    add-int/lit8 v0, v0, 0x1
+
+    .line 32
+    .line 33
+    iput v0, p0, Ler5;->b:I
+
+    .line 34
+    .line 35
+    return-void
+.end method
+
+.method public c(Ljava/lang/Object;)V
+    .locals 3
+
+    .line 1
+    iget v0, p0, Ler5;->b:I
+
+    .line 2
+    .line 3
+    iget-object v1, p0, Ler5;->a:[Ljava/lang/Object;
+
+    .line 4
+    .line 5
+    array-length v2, v1
+
+    .line 6
+    if-ge v0, v2, :cond_0
+
+    .line 7
+    .line 8
+    aput-object p1, v1, v0
+
+    .line 9
+    .line 10
+    add-int/lit8 v0, v0, 0x1
+
+    .line 11
+    .line 12
+    iput v0, p0, Ler5;->b:I
+
+    .line 13
+    .line 14
+    :cond_0
+    return-void
+.end method
+
+.method public d(Ljava/lang/Object;)Z
+    .locals 5
+
+    .line 1
+    iget-object v0, p0, Ler5;->a:[Ljava/lang/Object;
+
+    .line 2
+    .line 3
+    iget v1, p0, Ler5;->b:I
+
+    .line 4
+    .line 5
+    const/4 v2, 0x0
+
+    .line 6
+    move v3, v2
+
+    .line 7
+    :goto_0
+    if-ge v3, v1, :cond_1
+
+    .line 8
+    .line 9
+    aget-object v4, v0, v3
+
+    .line 10
+    .line 11
+    if-eq v4, p1, :cond_0
+
+    .line 12
+    .line 13
+    add-int/lit8 v3, v3, 0x1
+
+    .line 14
+    .line 15
+    goto :goto_0
+
+    .line 16
+    :cond_0
+    const-string p0, "Already in the pool!"
+
+    .line 17
+    .line 18
+    invoke-static {p0}, Lbt;->i(Ljava/lang/String;)V
+
+    .line 19
+    .line 20
+    .line 21
+    return v2
+
+    .line 22
+    :cond_1
+    iget v1, p0, Ler5;->b:I
+
+    .line 23
+    .line 24
+    array-length v3, v0
+
+    .line 25
+    if-ge v1, v3, :cond_2
+
+    .line 26
+    .line 27
+    aput-object p1, v0, v1
+
+    .line 28
+    .line 29
+    const/4 p1, 0x1
+
+    .line 30
+    add-int/2addr v1, p1
+
+    .line 31
+    iput v1, p0, Ler5;->b:I
+
+    .line 32
+    .line 33
+    return p1
+
+    .line 34
+    :cond_2
+    return v2
+.end method

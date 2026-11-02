@@ -1,0 +1,161 @@
+.class public final Lsy1;
+.super Ljava/lang/Object;
+.source "r8-map-id-44e235b9ef01a485f680d0275e0bd7ddccd9597cc07e9835722c2ab00d70acf5"
+
+
+# static fields
+.field public static final f:I
+
+
+# instance fields
+.field public final a:Z
+
+.field public final b:I
+
+.field public final c:I
+
+.field public final d:I
+
+.field public final e:F
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 2
+
+    .line 1
+    const-wide v0, 0x4014666666666667L    # 5.1000000000000005
+
+    .line 2
+    .line 3
+    .line 4
+    .line 5
+    .line 6
+    invoke-static {v0, v1}, Ljava/lang/Math;->round(D)J
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-wide v0
+
+    .line 10
+    long-to-int v0, v0
+
+    .line 11
+    sput v0, Lsy1;->f:I
+
+    .line 12
+    .line 13
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 5
+
+    .line 1
+    sget v0, Lu26;->elevationOverlayEnabled:I
+
+    .line 2
+    .line 3
+    invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v1
+
+    .line 7
+    const/4 v2, 0x0
+
+    .line 8
+    invoke-static {v1, v0, v2}, Lu70;->f0(Landroid/content/res/Resources$Theme;IZ)Z
+
+    .line 9
+    .line 10
+    .line 11
+    move-result v0
+
+    .line 12
+    sget v1, Lu26;->elevationOverlayColor:I
+
+    .line 13
+    .line 14
+    invoke-static {p1, v1, v2}, Lyn0;->C(Landroid/content/Context;II)I
+
+    .line 15
+    .line 16
+    .line 17
+    move-result v1
+
+    .line 18
+    sget v3, Lu26;->elevationOverlayAccentColor:I
+
+    .line 19
+    .line 20
+    invoke-static {p1, v3, v2}, Lyn0;->C(Landroid/content/Context;II)I
+
+    .line 21
+    .line 22
+    .line 23
+    move-result v3
+
+    .line 24
+    sget v4, Lu26;->colorSurface:I
+
+    .line 25
+    .line 26
+    invoke-static {p1, v4, v2}, Lyn0;->C(Landroid/content/Context;II)I
+
+    .line 27
+    .line 28
+    .line 29
+    move-result v2
+
+    .line 30
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    .line 31
+    .line 32
+    .line 33
+    move-result-object p1
+
+    .line 34
+    invoke-virtual {p1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object p1
+
+    .line 38
+    iget p1, p1, Landroid/util/DisplayMetrics;->density:F
+
+    .line 39
+    .line 40
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 41
+    .line 42
+    .line 43
+    iput-boolean v0, p0, Lsy1;->a:Z
+
+    .line 44
+    .line 45
+    iput v1, p0, Lsy1;->b:I
+
+    .line 46
+    .line 47
+    iput v3, p0, Lsy1;->c:I
+
+    .line 48
+    .line 49
+    iput v2, p0, Lsy1;->d:I
+
+    .line 50
+    .line 51
+    iput p1, p0, Lsy1;->e:F
+
+    .line 52
+    .line 53
+    return-void
+.end method

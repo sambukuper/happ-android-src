@@ -1,0 +1,25 @@
+package defpackage;
+
+/* JADX INFO: compiled from: r8-map-id-44e235b9ef01a485f680d0275e0bd7ddccd9597cc07e9835722c2ab00d70acf5 */
+/* JADX INFO: loaded from: classes.dex */
+public final class x44 {
+    public final v15 a;
+    public final ta6 b;
+
+    public x44(v15 v15Var, ta6 ta6Var) {
+        v15Var.getClass();
+        this.a = v15Var;
+        this.b = ta6Var;
+    }
+
+    public final boolean equals(Object obj) {
+        if (obj instanceof x44) {
+            return dh3.f(this.a, ((x44) obj).a);
+        }
+        return false;
+    }
+
+    public final int hashCode() {
+        return this.a.hashCode();
+    }
+}
